@@ -1,7 +1,7 @@
 import React from 'react';
 
 type ButtonProps = Omit<React.ComponentProps<'button'>, 'type'> & {
-  onClick: () => void;
+  onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   className?: string;
