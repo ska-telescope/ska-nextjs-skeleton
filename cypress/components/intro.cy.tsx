@@ -1,5 +1,5 @@
 import React from 'react';
-import Intro, { benefits } from './intro';
+import Intro, { benefits } from '@/components/intro';
 
 describe('<Intro />', () => {
   it('renders should have appropriate components', () => {

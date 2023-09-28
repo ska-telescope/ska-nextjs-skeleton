@@ -30,19 +30,19 @@
         "./src/components/*"
       ],
       "@/models": [
-        "./models/*"
+        "./src/models/*"
       ],
       "@/pages": [
-        "src/pages/*"
+        "./src/pages/*"
       ],
       "@/services": [
-        "./services/*"
+        "./src/services/*"
       ],
       "@/styles": [
-        "./styles/*"
+        "./src/styles/*"
       ],
       "@/utils": [
-        "./utils/*"
+        "./src/utils/*"
       ],
       "@/*": [
         "./src/*"

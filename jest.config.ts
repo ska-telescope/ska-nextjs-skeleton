@@ -3,12 +3,8 @@ const config = {
   // on node 14.x coverage provider v8 offers good speed and more or less good report
   coverageProvider: 'v8',
   collectCoverageFrom: [
-    '**/src/*.{js,jsx,ts,tsx}',
-    '!**/*.cy.{js,jsx,ts,tsx}',
-    '!**/*.e2e.{js,jsx,ts,tsx}',
-    '!**/next-env.d.*',
-    '!**/*.setup.*',
-    '!**/*.config.*'
+    './src/*.{js,jsx,ts,tsx}',
+    './src/**/*.{js,jsx,ts,tsx}'
   ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)

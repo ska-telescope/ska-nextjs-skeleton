@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './button';
+import Button from '@/components/button';
 
 describe('<Button />', () => {
   it('renders with text and onClick', () => {

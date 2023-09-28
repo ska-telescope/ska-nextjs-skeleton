@@ -5,6 +5,7 @@ type ButtonProps = Omit<React.ComponentProps<'button'>, 'type'> & {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   className?: string;
+  title?: string;
 };
 
 const defaultProps: ButtonProps = {
@@ -14,10 +15,11 @@ const defaultProps: ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
-  type,
-  disabled,
+  type='submit',
+  disabled=false,
   children,
   className,
+  title=''
 }: ButtonProps) => {
   const handleClick = () => {
     if (!disabled && onClick) {
@@ -30,6 +32,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={handleClick}
       disabled={disabled}
       className={className}
+      title={title}
     >
       {children}
     </button>

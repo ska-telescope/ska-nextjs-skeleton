@@ -1,43 +1,35 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Intro, { benefits } from './intro';
+import Footer from '@/components/footer';
 
-describe('Home', () => {
+describe('Footer', () => {
   beforeEach(() => {
-    render(<Intro />);
+    render(<Footer />);
   });
 
-  it('renders a div with class main', () => {
-    const div = screen.getByRole('div');
-    expect(div).toBeInTheDocument();
-    expect(div.getAttribute('id')).toBe('introduction');
+  // it('renders a div with class main', () => {
+  //   const div = screen.getByRole('div');
+  //   expect(div).toBeInTheDocument();
+  //   expect(div.getAttribute('id')).toBe('introduction');
+  // });
+
+  it('renders should return link with apprpriate attributes', () => {
+    const archor = screen.getByRole('link');
+    expect(archor).toBeInTheDocument();
+    expect(archor.getAttribute('href')).toBe('/en');
+    expect(archor.getAttribute('rel')).toBe('home');
+    expect(archor.getAttribute('class')).toBe('logo');
   });
 
-  it('renders a h1 with class main', () => {
-    const h1 = screen.getByRole('h1');
-    expect(h1).toBeInTheDocument();
-    expect(h1.props.children).toBe('OSO Next.js skeleton prject');
+  it('renders should return image with apprpriate attributes', () => {
+    const image = screen.getByRole('img');
+    expect(image).toBeInTheDocument();
+    expect(image.getAttribute('src')).toBe('/images/logo-dia.svg');
+    expect(image.getAttribute('alt')).toBe('SKA Observatory');
   });
 
-  it('renders twoa h2', () => {
-    const h2 = screen.getByRole('h2');
-    expect(h2.length).toBe(2);
-  });
-
-  it('renders a p component', () => {
-    expect( screen.getByRole('p')).toBeInTheDocument();
-  });
-
-  it('renders a ol component', () => {
-    expect(screen.getByRole('ol')).toBeInTheDocument();
-  });
-
-  it('renders same number of ul components', () => {
-    expect(screen.getAllByRole('ul').length).toBe(benefits.length);
-  });
-
-  it('renders total number of li components', () => {
-    const liCount = benefits.reduce((a, total) => total + a.contents.length, 0);
-    expect(screen.getAllByRole('li').length).toBe(liCount);
+  it('renders should return copyright section', () => {
+    const container = document.querySelector('.copyright');
+    expect(container).toBeInTheDocument();
   });
 });
