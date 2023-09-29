@@ -38,6 +38,7 @@ const ContactForm = () => {
       {(formikState) => {
         const values = formikState.values;
         const errors = formikState.errors;
+
         return (
           <div className='card shadow-md'>
             <Form className='card-body'>
@@ -82,7 +83,10 @@ const ContactForm = () => {
                 <FormError className='label-text text-error' value={errors.message} />
               </div>
               <div className='card-actions justify-end'>
-                <Button className='btn btn-primary'>
+                <Button className='btn btn-primary'
+                  disabled={!(((errors.name === '') || (errors.name === undefined)) &&
+                  ((errors.email === '') || (errors.email === undefined)) &&
+                  ((errors.message === '') || (errors.message === undefined)))}>
                   Submit
                 </Button>
               </div>

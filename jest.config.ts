@@ -6,7 +6,9 @@ const config: JestConfigWithTsJest = {
   coverageProvider: 'v8',
   collectCoverageFrom: [
     './src/*.{js,jsx,ts,tsx}',
-    './src/**/*.{js,jsx,ts,tsx}'
+    './src/**/*.{js,jsx,ts,tsx}',
+    '!./src/*.test.{js,jsx,ts,tsx}',
+    '!./src/**/*.test.{js,jsx,ts,tsx}',
   ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
