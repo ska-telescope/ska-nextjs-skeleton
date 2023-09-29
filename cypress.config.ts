@@ -5,9 +5,6 @@ export default defineConfig({
     baseUrl: 'http://localhost:3000'
   },
   e2e: {
-    setupNodeEvents(on, config) {
-      // e2e testing node events setup code
-    },
     baseUrl: 'http://localhost:3000',
     specPattern: './cypress/e2e/*.e2e.{js,jsx,ts,tsx}'
   },
