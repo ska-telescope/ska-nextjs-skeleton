@@ -11,7 +11,7 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ES2015",
+    "module": "esnext",
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
@@ -48,7 +48,9 @@
     },
     "types": [
       "cypress"
-    ]
+    ],
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "include": [
     "next-env.d.ts",

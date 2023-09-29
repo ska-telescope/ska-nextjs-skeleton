@@ -2,11 +2,13 @@ import Image from 'next/image';
 import styles from '@/styles/page.module.css';
 import Footer from '@/components/footer';
 import Intro from '@/components/intro';
+// import Menu from '@/components/menu';
 
 function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        {/* <Menu /> */}
         <p id='prject-title'>
           Welcome to SKAO Next.js skeleton project
         </p>

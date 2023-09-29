@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Footer = () => {
+function Footer() {
   const currentYear = (new Date()).getFullYear();
   return (
     <footer className='footer' id='footer'>
@@ -13,6 +13,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

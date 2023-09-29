@@ -1,11 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContactForm from '@/components/contactForm';
 
 describe('ContactForm', () => {
   it('renders with all props should return button with appropriate attributes', () => {
-    const className = 'testClass';
-    const error = 'error message';
     render(<ContactForm />);
 
     const form = document.querySelector('form');

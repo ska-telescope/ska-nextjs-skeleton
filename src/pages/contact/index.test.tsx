@@ -1,11 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContactPage from '@/pages/contact/index';
 
 describe('ContactPage', () => {
   it('renders with all props should return button with appropriate attributes', () => {
-    const className = 'testClass';
-    const error = 'error message';
     render(<ContactPage />);
 
     expect(document.querySelector('form')?.length).toBe(4);

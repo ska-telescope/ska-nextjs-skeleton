@@ -5,17 +5,25 @@ describe('<Footer />', () => {
   it('renders should have appropriate components', () => {
     cy.mount(<Footer/>);
 
-    cy.get('footer').should('have.attr', 'className', 'footer');
-    cy.get('footer').should('have.attr', 'id', 'footer');
-    cy.get('div').should('have.attr', 'className', 'footer-bottom');
-    const a = cy.get('a');
-    a.should('have.attr', 'href', '/en');
-    a.should('have.attr', 'rel', 'home');
-    a.should('have.attr', 'className', 'logo');
-    cy.get('Image').should('have.attr', 'src', '/images/logo-dia.svg');
-    cy.get('Image').should('have.attr', 'alt', 'SKA Observatory');
-
+    // footer component
+    const footer = cy.get('footer');
+    footer.should('have.attr', 'class', 'footer');
+    footer.should('have.attr', 'id', 'footer');
+    // Div 3 component
+    const divs = cy.get('div');
+    divs.should('have.length', '3');
+    // Archor component
+    const archor = cy.get('a');
+    archor.should('have.attr', 'href', '/en');
+    archor.should('have.attr', 'rel', 'home');
+    archor.should('have.attr', 'class', 'logo');
+    // image component
+    const image = cy.get('img');
+    image.should('have.attr', 'src', '/images/logo-dia.svg');
+    image.should('have.attr', 'alt', 'SKA Observatory');
+    // span / copyright component
     const span = cy.get('span');
-    span.should('have.attr', 'className', 'copyright');
+    span.should('have.attr', 'class', 'copyright');
+    span.should('have.contain', '©');
   });
 });

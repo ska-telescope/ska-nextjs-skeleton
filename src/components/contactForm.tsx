@@ -36,6 +36,7 @@ const ContactForm = () => {
       validationSchema={toFormikValidationSchema(contactFormSchema)}
     >
       {(formikState) => {
+        const values = formikState.values;
         const errors = formikState.errors;
         return (
           <div className='card shadow-md'>
@@ -49,6 +50,7 @@ const ContactForm = () => {
                     name='name'
                     placeholder='e.g. John Doe'
                     className='input input-bordered w-full max-w-xs'
+                    value={values.name}
                   />
                   <FormError className='label-text text-error' value={errors.name} />
                 </div>
@@ -61,6 +63,7 @@ const ContactForm = () => {
                     name='email'
                     placeholder='e.g johndoe@gmail.com'
                     className='input input-bordered w-full max-w-xs'
+                    value={values.email}
                   />
                   <FormError className='label-text text-error' value={errors.email} />
                 </div>
@@ -74,7 +77,8 @@ const ContactForm = () => {
                   name='message'
                   className='textarea textarea-bordered h-24'
                   placeholder='Message'
-                />
+                  value={values.message}
+                  />
                 <FormError className='label-text text-error' value={errors.message} />
               </div>
               <div className='card-actions justify-end'>
