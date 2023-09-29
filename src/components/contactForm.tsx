@@ -78,7 +78,7 @@ const ContactForm = () => {
                   className='textarea textarea-bordered h-24'
                   placeholder='Message'
                   value={values.message}
-                  />
+                />
                 <FormError className='label-text text-error' value={errors.message} />
               </div>
               <div className='card-actions justify-end'>
