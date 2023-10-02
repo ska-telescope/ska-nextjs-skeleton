@@ -57,14 +57,12 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "cyoress/**/*.e2e.*.{ts,tsx}",
+    "cyoress/**/*.e2e.*.{ts,tsx,js,jsx}",
     "next.config.mjs"
   ],
   "exclude": [
     "node_modules",
-    "**/*.test.ts",
-    "**/*.test.sx",
-    "src/**/*.test.ts",
-    "src/**/*.test.sx"
+    "**/*.test.{ts,tsx,js,jsx}",
+    "src/**/*.test.{ts,tsx,js,jsx}",
   ]
 }
