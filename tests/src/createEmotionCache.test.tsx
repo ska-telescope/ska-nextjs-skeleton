@@ -1,4 +1,4 @@
-import createEmotionCache from './createEmotionCache';
+import createEmotionCache from '@/createEmotionCache';
 
 describe('createEmotionCache', () => {
   it('should return specific attributes', () => {

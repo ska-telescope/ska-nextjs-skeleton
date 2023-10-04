@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import { expect } from '@jest/globals';
 import '@testing-library/jest-dom';
 import ContactPage from '@/pages/contact/index';
 

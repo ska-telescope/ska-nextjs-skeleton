@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { ReactElement } from 'react';
-import SkaoDocument from './_document';
+import SkaoDocument from '@/pages/_document';
 
 describe('SkaoDocument', () => {
   let renderResult: ReactElement;

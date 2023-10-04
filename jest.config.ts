@@ -13,14 +13,14 @@ const config: JestConfigWithTsJest = {
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
     // https://jestjs.io/docs/webpack#mocking-css-modules
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^.+\\.module\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
 
     // Handle CSS imports (without CSS modules)
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.ts',
 
     // Handle image imports
     // https://jestjs.io/docs/webpack#handling-static-assets
-    '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.ts`,
+    '^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$/i': `<rootDir>/__mocks__/fileMock.ts`,
 
     // Handle module aliases
     '^@/(.*)$': '<rootDir>/src/$1'
@@ -29,6 +29,7 @@ const config: JestConfigWithTsJest = {
   setupFilesAfterEnv: [
     '<rootDir>/jest.setup.ts'
   ],
+  testRegex: "(/watch/web/__tests__/.*|(\\.|/)(test|spec))\\.(jsxxxx?|tsx?)$",
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
     '<rootDir>/cypress/',

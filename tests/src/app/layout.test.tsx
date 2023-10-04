@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import RootLayout from './layout';
+import RootLayout from '@/app/layout';
 
 describe('RootLayout', () => {
   it('renders a main with class main', () => {

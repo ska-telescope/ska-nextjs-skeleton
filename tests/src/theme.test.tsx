@@ -1,4 +1,4 @@
-import theme from './theme';
+import theme from '@/theme';
 import '@testing-library/jest-dom';
 
 describe('theme', () => {
