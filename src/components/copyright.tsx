@@ -9,8 +9,10 @@ export default function Copyright() {
       <MuiLink color='inherit' href='/' className='logo'>
         <Image src='/images/logo-dia.svg' alt='SKA Observatory' width='70' height='19' />
       </MuiLink>
-      {' © '}
-      {new Date().getFullYear()}.
+      <span className='copyright'>
+        {' © '}
+        {new Date().getFullYear()}.
+      </span>
     </Typography>
   );
 }

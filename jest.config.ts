@@ -15,6 +15,9 @@ const config: JestConfigWithTsJest = {
     // https://jestjs.io/docs/webpack#mocking-css-modules
     '^.+\\.module\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
 
+    // Handle various font import
+    '@next/font/(.*)': require.resolve('next/dist/build/jest/__mocks__/nextFontMock.js'),
+
     // Handle CSS imports (without CSS modules)
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.ts',
 

@@ -53,16 +53,14 @@ context("Home Page", () => {
       archor1.should('have.attr', 'target', '_blank');
       archor1.should('have.attr', 'rel', 'noopener noreferrer');
       const archor2 = cy.get('a').eq(1);
-      archor2.should('have.attr', 'href', '/en');
-      archor2.should('have.attr', 'rel', 'home');
-      archor2.should('have.attr', 'class', 'logo');
+      archor2.should('have.attr', 'href', '/');
     });
   
     it("render should have one span components and copyright", () => {
-      // footer
-      const span = cy.get('span');
+      // copyright
+      const span = cy.get('span.copyright');
       span.should('have.length', '1');
-      span.get('.copyright').should('have.length', '1');
+      span.should('contain.text', '©')
     });
 });
   

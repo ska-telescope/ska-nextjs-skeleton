@@ -20,4 +20,11 @@ describe('Copyright', () => {
     expect(img.getAttribute('alt')).toBe('SKA Observatory');
     expect(img.getAttribute('src')).toBe('/images/logo-dia.svg');
   });
+
+  it('renders should return span with appropriate attributes', () => {
+    const span = document.querySelector('div span');
+    expect(span).toBeInTheDocument();
+    expect(span.getAttribute('class')).toBe('copyright');
+    expect(span?.textContent).toContain('©');
+  });
 });

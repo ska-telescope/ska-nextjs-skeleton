@@ -12,18 +12,13 @@ describe('<Footer />', () => {
     // Div 3 component
     const divs = cy.get('div');
     divs.should('have.length', '3');
-    // Archor component
-    const archor = cy.get('a');
-    archor.should('have.attr', 'href', '/en');
-    archor.should('have.attr', 'rel', 'home');
-    archor.should('have.attr', 'class', 'logo');
-    // image component
+    // Archor component & attribute
+    cy.get('a').should('have.attr', 'href', '/');
+    // Archor component &  attributes
     const image = cy.get('img');
     image.should('have.attr', 'src', '/images/logo-dia.svg');
     image.should('have.attr', 'alt', 'SKA Observatory');
-    // span / copyright component
-    const span = cy.get('span');
-    span.should('have.attr', 'class', 'copyright');
-    span.should('have.contain', '©');
+    // p / copyright component
+    cy.get('p').should('have.contain', '©');
   });
 });

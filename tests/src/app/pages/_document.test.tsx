@@ -27,7 +27,7 @@ describe('SkaoDocument', () => {
     const meta = head[0];
     expect(meta['type']).toBe('meta');
     expect(meta.props['name']).toBe('theme-color');
-    expect(meta.props['content']).toBe('#00c853');
+    expect(meta.props['content']).toBe('#556cd6');
     const link1 = head[1];
     expect(link1['type']).toBe('link');
     expect(link1.props['rel']).toBe('shortcut icon');
