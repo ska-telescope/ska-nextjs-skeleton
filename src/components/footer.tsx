@@ -1,18 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
+import Copyright from '@/components/copyright';
 
-function Footer() {
-  const currentYear = (new Date()).getFullYear();
+const Footer = () => {
   return (
     <footer className='footer' id='footer'>
       <div className='footer-bottom'>
-        <a href='/en' rel='home' className='logo'>
-          <Image src='/images/logo-dia.svg' alt='SKA Observatory' width='70' height='19' />
-        </a>
-        <span className='copyright'>&nbsp; ©{currentYear}</span>
+        <Copyright />
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

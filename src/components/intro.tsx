@@ -58,7 +58,7 @@ export const benefits: Benefit[] = [
 function intro() {
   return (
     <div id='introduction'>
-      <h1>OSO Next.js skeleton prject</h1>
+      <h1>OSO Next.js skeleton project</h1>
       <h2>Overview</h2>
       <p>This skeleton project with TypeScript and Testing Template Project is a comprehensive and feature-rich starting point for our OSO developers team seeking to create robust, maintainable, and thoroughly tested web applications.
             Leveraging the power of Next.js and TypeScript, this template offers a solid foundation for building modern web experiences while ensuring code quality through unit tests, component tests, and integration tests.

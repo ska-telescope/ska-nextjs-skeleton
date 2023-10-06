@@ -14,7 +14,7 @@ context("Home Page", () => {
       cy.get('main').should('have.length', '1');
       const h1 = cy.get('h1');
       h1.should('have.length', '1');
-      h1.should('have.text', 'OSO Next.js skeleton prject');
+      h1.should('have.text', 'OSO Next.js skeleton project');
     });
 
     it("render should have two h2 components and text", () => {

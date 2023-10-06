@@ -10,7 +10,7 @@ describe('Home', () => {
   it('renders should return h1 and description', () => {
     const h1 = screen.getByRole('heading', { level: 1 });
     expect(h1).toBeInTheDocument();
-    expect(h1.innerHTML).toBe('OSO Next.js skeleton prject');
+    expect(h1.innerHTML).toBe('OSO Next.js skeleton project');
   });
 
   it('renders should return two h2 and description', () => {

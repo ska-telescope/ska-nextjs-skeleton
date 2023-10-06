@@ -7,7 +7,7 @@ describe('<Intro />', () => {
 
     const divs = cy.get('div');
     divs.should('have.length', '3');
-    cy.get('h1').first().contains('OSO Next.js skeleton prject');
+    cy.get('h1').first().contains('OSO Next.js skeleton project');
     cy.get('h2').should('have.length', '2');
     cy.get('h3').should('have.length', benefits.length);
     cy.get('ul').should('have.length', benefits.length);

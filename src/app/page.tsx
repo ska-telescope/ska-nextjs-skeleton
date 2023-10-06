@@ -9,7 +9,7 @@ function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         {/* <Menu /> */}
-        <p id='prject-title'>
+        <p id='project-title'>
           Welcome to SKAO Next.js skeleton project
         </p>
         <div>
