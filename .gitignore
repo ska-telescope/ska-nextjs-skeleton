@@ -1,5 +1,18 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# compiled output
+/dist
+/tmp
+/out-tsc
+/build
+/builds
+/.next/
+/out/
+/docs/build
+
+# Only exists if Bazel was run
+/bazel-out
+
 # dependencies
 /node_modules
 /.pnp
@@ -7,13 +20,25 @@
 
 # testing
 /coverage
+/reports
+linting.xml
+junit.xml
 
-# next.js
-/.next/
-/out/
+# profiling files
+chrome-profiler-events*.json
 
-# production
-/build
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+.history/*
 
 # misc
 .DS_Store
@@ -24,6 +49,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+/libpeerconnection.log
+testem.log
+
 
 # local env files
 .env*.local
@@ -38,3 +66,10 @@ next-env.d.ts
 # cypress
 /cypress/screenshots
 /cypress/videos
+
+# compiled Helm charts
+charts/ska-ost-senscalc-ui-umbrella/charts
+charts/ska-ost-senscalc-ui-umbrella/Chart.lock
+
+PrivateRules.mak
+/src/.openapi-generator/
