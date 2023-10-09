@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+<testsuite package="org.eslint" time="0" tests="1" errors="1" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/favicon.ico">
+<testcase time="0" name="org.eslint.unknown" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/favicon"><error message="Parsing error: Invalid character."><![CDATA[line 1, col 0, Error - Parsing error: Invalid character.]]></error></testcase>
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/layout.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/layout.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/layout" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/page.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/page.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/app/page" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/button.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/button.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/button" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/contactForm.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/contactForm.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/contactForm" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/copyright.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/copyright.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/copyright" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/footer.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/footer.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/footer" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/formError.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/formError.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/formError" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/formLabel.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/formLabel.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/formLabel" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/intro.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/intro.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/components/intro" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/createEmotionCache.ts">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/createEmotionCache.ts" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/createEmotionCache" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/pages/_document.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/pages/_document.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/pages/_document" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/pages/contact/index.tsx">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/pages/contact/index.tsx" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/pages/contact/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="1" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/styles/globals.css">
+<testcase time="0" name="org.eslint.unknown" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/styles/globals"><error message="Parsing error: Declaration or statement expected."><![CDATA[line 1, col 0, Error - Parsing error: Declaration or statement expected.]]></error></testcase>
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="1" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/styles/page.module.css">
+<testcase time="0" name="org.eslint.unknown" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/styles/page.module"><error message="Parsing error: Declaration or statement expected."><![CDATA[line 1, col 0, Error - Parsing error: Declaration or statement expected.]]></error></testcase>
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/theme.ts">
+<testcase time="0" name="/home/rupert/ska/src/ska-nextjs-skeleton/src/theme.ts" classname="/home/rupert/ska/src/ska-nextjs-skeleton/src/theme" />
+</testsuite>
+</testsuites>

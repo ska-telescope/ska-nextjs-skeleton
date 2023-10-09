@@ -6,7 +6,7 @@
     "build": "next build",
     "build:debug": "next build --debug",
     "build:profile": "next build --profile",
-    "code-analysis": "jest --coverage",
+    "code-analysis": "./node_modules/.bin/eslint \"src/**\" -f junit -o linting.xml",
     "component": "cypress open --component",
     "component:headless": "cypress run --component --headless",
     "cypress": "cypress open",
