@@ -1,14 +1,14 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint", "prettier", "cypress"],
   "extends": [
-    "next/core-web-vitals",
+    "next",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:cypress/recommended"
   ],
   "ignorePatterns": [
     "**/*.test.ts",

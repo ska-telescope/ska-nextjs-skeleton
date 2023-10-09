@@ -2,7 +2,14 @@
 
 import * as React from 'react';
 import { ReactElement } from 'react';
-import Document, { DocumentInitialProps, DocumentContext, Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  DocumentInitialProps,
+  DocumentContext,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import createEmotionServer from '@emotion/server/create-instance';
 import createEmotionCache from '@/createEmotionCache';
@@ -10,7 +17,9 @@ import theme from '@/theme';
 
 class SkaoDocument extends Document {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(
+    ctx: DocumentContext,
+  ): Promise<DocumentInitialProps> {
     // Resolution order
     //
     // On the server:
@@ -42,7 +51,8 @@ class SkaoDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App emotionCache={cache} {...props} />),
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App emotionCache={cache} {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -61,7 +71,11 @@ class SkaoDocument extends Document {
       return {
         ...initialProps,
         // Styles fragment is rendered after the app and page rendering finish.
-        styles: [...React.Children.toArray(initialProps.styles), ...emotionStyleTags, ...sheet.getStyleElement()]
+        styles: [
+          ...React.Children.toArray(initialProps.styles),
+          ...emotionStyleTags,
+          ...sheet.getStyleElement(),
+        ],
       };
     } finally {
       sheet.seal();
@@ -70,13 +84,13 @@ class SkaoDocument extends Document {
 
   render(): ReactElement {
     return (
-      <Html lang='en'>
+      <Html lang="en">
         <Head>
-          <meta name='theme-color' content={theme.palette.primary.main} />
-          <link rel='shortcut icon' href='/skalogo.ico' />
+          <meta name="theme-color" content={theme.palette.primary.main} />
+          <link rel="shortcut icon" href="/skalogo.ico" />
           <link
-            rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
         </Head>
         <body>

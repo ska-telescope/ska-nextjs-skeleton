@@ -4,7 +4,7 @@ import '@/styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'SKAO Next.JS skeleton project',
-  description: 'This is a skeleton project for SKAO Next.JS'
+  description: 'This is a skeleton project for SKAO Next.JS',
 };
 
 // const roboto = Roboto({
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">

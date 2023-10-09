@@ -1,9 +1,9 @@
-import '@testing-library/jest-dom';
-import RootLayout from '@/app/layout';
+import "@testing-library/jest-dom";
+import RootLayout from "@/app/layout";
 
-describe('RootLayout', () => {
-  it('renders a main with class main', () => {
-    const expectedChild = 'test 1234';
+describe("RootLayout", () => {
+  it("renders a main with class main", () => {
+    const expectedChild = "test 1234";
     const children = <p>{expectedChild}</p>;
     const result = <RootLayout>{children}</RootLayout>;
     expect(result).not.toBe(null);

@@ -15,11 +15,11 @@ const defaultProps: ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
-  type='submit',
-  disabled=false,
+  type = 'submit',
+  disabled = false,
   children,
   className,
-  title=''
+  title = '',
 }: ButtonProps) => {
   const handleClick = () => {
     if (!disabled && onClick) {

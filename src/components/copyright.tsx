@@ -5,15 +5,19 @@ import Image from 'next/image';
 
 export default function Copyright() {
   return (
-    <Typography variant='body2' color='text.secondary' align='center'>
-      <MuiLink color='inherit' href='/' className='logo'>
-        <Image src='/images/logo-dia.svg' alt='SKA Observatory' width='70' height='19' />
+    <Typography variant="body2" color="text.secondary" align="center">
+      <MuiLink color="inherit" href="/" className="logo">
+        <Image
+          src="/images/logo-dia.svg"
+          alt="SKA Observatory"
+          width="70"
+          height="19"
+        />
       </MuiLink>
-      <span className='copyright'>
+      <span className="copyright">
         {' © '}
         {new Date().getFullYear()}.
       </span>
     </Typography>
   );
 }
-

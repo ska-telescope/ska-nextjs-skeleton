@@ -3,8 +3,8 @@ import Copyright from '@/components/copyright';
 
 const Footer = () => {
   return (
-    <footer className='footer' id='footer'>
-      <div className='footer-bottom'>
+    <footer className="footer" id="footer">
+      <div className="footer-bottom">
         <Copyright />
       </div>
     </footer>

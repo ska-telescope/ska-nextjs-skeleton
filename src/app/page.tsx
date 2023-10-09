@@ -9,9 +9,7 @@ function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         {/* <Menu /> */}
-        <p id='project-title'>
-          Welcome to SKAO Next.js skeleton project
-        </p>
+        <p id="project-title">Welcome to SKAO Next.js skeleton project</p>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

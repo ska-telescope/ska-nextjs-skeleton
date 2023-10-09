@@ -7,15 +7,15 @@ type FormLabelProps = Omit<React.ComponentProps<'label'>, 'type'> & {
 
 const defaultProps: FormLabelProps = {
   className: '',
-  value: ''
+  value: '',
 };
 
 const FormLabel: React.FC<FormLabelProps> = ({
   className,
-  value
+  value,
 }: FormLabelProps) => {
   return (
-    <label className='label'>
+    <label className="label">
       <span className={className}>{value}</span>
     </label>
   );

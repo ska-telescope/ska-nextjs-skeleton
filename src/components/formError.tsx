@@ -7,19 +7,17 @@ type FormErrorProps = Omit<React.ComponentProps<'label'>, 'type'> & {
 
 const defaultProps: FormErrorProps = {
   value: '',
-  className: ''
+  className: '',
 };
 
 const FormError: React.FC<FormErrorProps> = ({
   value,
-  className
+  className,
 }: FormErrorProps) => {
   if (value) {
     return (
-      <label className='label'>
-        <span className={className}>
-          {value}
-        </span>
+      <label className="label">
+        <span className={className}>{value}</span>
       </label>
     );
   }

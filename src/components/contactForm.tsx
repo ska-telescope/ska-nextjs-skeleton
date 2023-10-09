@@ -19,7 +19,7 @@ const contactFormSchema = object({
 });
 
 // Get the infered input type from the schema using TypeOf
-type ContactFormInputs = TypeOf<typeof contactFormSchema>
+type ContactFormInputs = TypeOf<typeof contactFormSchema>;
 
 const initialValue: ContactFormInputs = {
   name: '',
@@ -40,53 +40,68 @@ const ContactForm = () => {
         const errors = formikState.errors;
 
         return (
-          <div className='card shadow-md'>
-            <Form className='card-body'>
-              <div className='card-title'>Contact Us</div>
-              <div className='flex space-between gap-2'>
-                <div className='form-control w-full max-w-xs'>
-                  <FormLabel className='label-text' value='Your name' />
+          <div className="card shadow-md">
+            <Form className="card-body">
+              <div className="card-title">Contact Us</div>
+              <div className="flex space-between gap-2">
+                <div className="form-control w-full max-w-xs">
+                  <FormLabel className="label-text" value="Your name" />
                   <Field
-                    type='text'
-                    name='name'
-                    placeholder='e.g. John Doe'
-                    className='input input-bordered w-full max-w-xs'
+                    type="text"
+                    name="name"
+                    placeholder="e.g. John Doe"
+                    className="input input-bordered w-full max-w-xs"
                     value={values.name}
                   />
-                  <FormError className='label-text text-error' value={errors.name} />
+                  <FormError
+                    className="label-text text-error"
+                    value={errors.name}
+                  />
                 </div>
-                <div className='form-control w-full max-w-xs'>
-                  <FormLabel className='label-text' value='Your email' />
+                <div className="form-control w-full max-w-xs">
+                  <FormLabel className="label-text" value="Your email" />
                   {/* use the Field component instead of input we leave all props as is */}
                   {/* note that the name property should match the formik initialValues */}
                   <Field
-                    type='text'
-                    name='email'
-                    placeholder='e.g johndoe@gmail.com'
-                    className='input input-bordered w-full max-w-xs'
+                    type="text"
+                    name="email"
+                    placeholder="e.g johndoe@gmail.com"
+                    className="input input-bordered w-full max-w-xs"
                     value={values.email}
                   />
-                  <FormError className='label-text text-error' value={errors.email} />
+                  <FormError
+                    className="label-text text-error"
+                    value={errors.email}
+                  />
                 </div>
               </div>
-              <div className='form-control'>
-                <FormLabel className='label-text' value='Your message' />
+              <div className="form-control">
+                <FormLabel className="label-text" value="Your message" />
                 {/* use as property to transform the field into a textarea */}
                 <Field
-                  as='textarea'
-                  type='text'
-                  name='message'
-                  className='textarea textarea-bordered h-24'
-                  placeholder='Message'
+                  as="textarea"
+                  type="text"
+                  name="message"
+                  className="textarea textarea-bordered h-24"
+                  placeholder="Message"
                   value={values.message}
                 />
-                <FormError className='label-text text-error' value={errors.message} />
+                <FormError
+                  className="label-text text-error"
+                  value={errors.message}
+                />
               </div>
-              <div className='card-actions justify-end'>
-                <Button className='btn btn-primary'
-                  disabled={!(((errors.name === '') || (errors.name === undefined)) &&
-                  ((errors.email === '') || (errors.email === undefined)) &&
-                  ((errors.message === '') || (errors.message === undefined)))}>
+              <div className="card-actions justify-end">
+                <Button
+                  className="btn btn-primary"
+                  disabled={
+                    !(
+                      (errors.name === '' || errors.name === undefined) &&
+                      (errors.email === '' || errors.email === undefined) &&
+                      (errors.message === '' || errors.message === undefined)
+                    )
+                  }
+                >
                   Submit
                 </Button>
               </div>

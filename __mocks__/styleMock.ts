@@ -1,4 +1,3 @@
-const styleMock = {
-};
+const styleMock = {};
 
 export default styleMock;
