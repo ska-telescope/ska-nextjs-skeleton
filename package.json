@@ -2,6 +2,8 @@
   "name": "ska-nextjs-skeleton",
   "version": "0.1.0",
   "private": true,
+  "license": "BSD 3-Clause",
+  "description": "SKA Next.js Web App Skeleton",
   "scripts": {
     "build": "next build",
     "build:debug": "next build --debug",
