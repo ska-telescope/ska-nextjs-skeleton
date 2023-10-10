@@ -88,8 +88,8 @@ test-counts:
     - yarn install --immutable
   script:
     - yarn start &
-    - yarn component:ci
-    - yarn e2e:ci
+    - yarn component:headless
+    - yarn e2e:headless
     - yarn merge-reports
   artifacts:
     paths:
