@@ -1,0 +1,8 @@
+image:
+  imagePullPolicy: IfNotPresent
+  container: registry.gitlab.com/ska-telescope/templates/ska-nextjs-skeleton/ska-nextjs-skeleton
+  version: 0.0.1
+
+ingress:
+  prependByNamespace: true
+  path: nextjs-skeleton

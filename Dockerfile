@@ -1,5 +1,7 @@
+# First stage: build the app
+
 # pull the base image
-FROM node:18.17.1
+FROM node:20.6.1 as builder
 
 # Install the SKAO specific libraries
 RUN npm config set @ska-telescope:registry https://artefact.skao.int/repository/npm-internal/ &&\
@@ -7,12 +9,16 @@ RUN npm config set @ska-telescope:registry https://artefact.skao.int/repository/
 
 # # set the working direction
 WORKDIR /app
+COPY package*.json ./
+RUN npm ci
 COPY . .
+RUN npm run build
 
-# install app dependencies
-RUN yarn install && yarn cache clean
-
+# Second stage: run the app
+FROM node:20.6.1
+WORKDIR /app
+COPY --from=builder /app/out/ .
 EXPOSE 3000
 
 # start app
-CMD ["yarn", "start"]
+CMD [ "npm", "start" ]
