@@ -64,7 +64,8 @@ test_and_coverage:
     - yarn install --immutable
   script:
     - yarn start &
-    - yarn run e2e:headless
+    - yarn component:headless
+    - yarn e2e:headless
     - yarn test:coverage
     - mv coverage/clover.xml build/reports/code-coverage.xml
 
@@ -86,8 +87,8 @@ test-counts:
     - mkdir -p build/tests
     - yarn install --immutable
   script:
-    - yarn component:ci
     - yarn start &
+    - yarn component:ci
     - yarn e2e:ci
     - yarn merge-reports
   artifacts:
