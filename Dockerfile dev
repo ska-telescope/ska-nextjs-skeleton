@@ -1,0 +1,13 @@
+# First stage: build the app
+
+# pull the base image
+FROM node:20.6.1 as deps
+ENV NODE-ENV=production
+
+# # set the working direction
+WORKDIR /use/src/app
+
+COPY . .
+RUN npm install --ignore-scripts --omit=dev
+RUN npm run build
+CMD [ "npm", "run" ]
