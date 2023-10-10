@@ -17,7 +17,7 @@ RUN npm run build
 # Second stage: run the app
 FROM node:20.6.1
 WORKDIR /app
-COPY --from=builder /.next/ .
+COPY --from=builder .next/ .
 EXPOSE 3000
 
 # start app
