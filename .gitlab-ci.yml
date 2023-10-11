@@ -88,11 +88,11 @@ test-counts:
     - mkdir -p build/tests
     - yarn install --immutable
   script:
-    - yarn build
-    - yarn test:cypress:component:ci
-    - yarn start &
+    - yarn test:coverage
+    - yarn component:headless
+    - yarn e2e:headless
     - yarn test:cypress:e2e:ci
-    - yarn merge-reports
+    # - yarn merge-reports
   artifacts:
     paths:
       - build/
