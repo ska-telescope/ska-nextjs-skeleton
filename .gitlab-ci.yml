@@ -64,6 +64,7 @@ test_and_coverage:
     - mkdir -p build/.nyc_output
     - yarn install --immutable
   script:
+    - yarn build
     - yarn start &
     - yarn test:cypress:component:ci
     - yarn test:e2e:headless
@@ -90,6 +91,7 @@ test-counts:
     - mkdir -p build/tests
     - yarn install --immutable
   script:
+    - yarn build
     - yarn test:cypress:component:ci
     - yarn start &
     - yarn test:cypress:e2e:ci
