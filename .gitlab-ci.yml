@@ -64,15 +64,12 @@ test_and_coverage:
     - mkdir -p build/.nyc_output
     - yarn install --immutable
   script:
-    - yarn build
-    - yarn start &
-    - yarn test:cypress:component:ci
-    - yarn start &
-    - yarn test:e2e:headless
-    - yarn test:coverage:report:ci
+    - yarn test:coverage
+    - yarn component:headless
+    - yarn e2e:headless
+    - yarn test:report:ci
     # - mv coverage/clover.xml build/reports/code-coverage.xml
     - mv build/reports/cobertura-coverage.xml build/reports/code-coverage.xml
-
   coverage: /All\sfiles.*?\s+(\d+.\d+)/
   artifacts:
     paths:
