@@ -1,0 +1,13 @@
+apiVersion: v2
+name: ska-nextjs-skeleton-umbrella
+description: Helm umbrella chart for ska-nextjs-skeleton
+type: application
+version: 0.0.1
+appVersion: 0.0.1
+icon: https://www.skatelescope.org/wp-content/uploads/2016/07/09545_NEW_LOGO_2014.png
+dependencies:
+- name: ska-nextjs-skeleton
+  version: 0.0.1
+  repository: https://artefact.skao.int/repository/helm-internal
+
+
