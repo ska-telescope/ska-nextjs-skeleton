@@ -64,7 +64,7 @@ test_and_coverage:
     - yarn install --immutable
   script:
     - yarn start &
-    - yarn test:cypress:component:ci"
+    - yarn test:cypress:component:ci
     - yarn test:e2e:headless
     - yarn test:coverage:report:ci
     # - mv coverage/clover.xml build/reports/code-coverage.xml
