@@ -64,10 +64,11 @@ test_and_coverage:
     - yarn install --immutable
   script:
     - yarn start &
-    - yarn component:headless
-    - yarn e2e:headless
-    - yarn test:coverage
-    - mv coverage/clover.xml build/reports/code-coverage.xml
+    - yarn test:cypress:component:ci"
+    - yarn test:e2e:headless
+    - yarn test:coverage:report:ci
+    # - mv coverage/clover.xml build/reports/code-coverage.xml
+    - mv build/reports/cobertura-coverage.xml build/reports/code-coverage.xml
 
   coverage: /All\sfiles.*?\s+(\d+.\d+)/
   artifacts:
@@ -87,9 +88,9 @@ test-counts:
     - mkdir -p build/tests
     - yarn install --immutable
   script:
+    - yarn test:cypress:component:ci
     - yarn start &
-    - yarn component:headless
-    - yarn e2e:headless
+    - yarn test:cypress:e2e:ci
     #- yarn merge-reports
   artifacts:
     paths:
