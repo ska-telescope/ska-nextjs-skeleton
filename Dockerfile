@@ -11,8 +11,7 @@ RUN npm config set @ska-telescope:registry https://artefact.skao.int/repository/
 # # set the working direction
 WORKDIR /app
 COPY package*.json yarn.lock ./
-RUN npm install -g npm@10.2.0
-RUN npm install --ignore-scripts --omit=dev
+RUN yarn install
 
 # Second stage: run the app
 FROM node:20.6.1 as builder
@@ -26,11 +25,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY src ./src
 COPY public ./public
 
-# RUN npm install --ignore-scripts --omit=dev
-RUN npm install -g npm@10.2.0
-RUN npm ci
+RUN yarn install
 COPY . .
-RUN npm run build
+RUN yarn build
 
 # Production image. copy only the files needed and run next
 FROM node:20.6.1 as runner
