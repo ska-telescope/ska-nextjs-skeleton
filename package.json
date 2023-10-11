@@ -23,6 +23,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "lint:ci": "./node_modules/.bin/eslint-output \"src/**\"",
+    "merge-reports": "jrm build/reports/unit-tests.xml \"build/tests/*.xml\"",
     "prettier": "prettier --check \"**/*\"",
     "prettier:fix": "prettier --write \"**/*\"",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
