@@ -90,7 +90,7 @@ test-counts:
     - yarn start &
     - yarn component:headless
     - yarn e2e:headless
-    - yarn merge-reports
+    #- yarn merge-reports
   artifacts:
     paths:
       - build/
