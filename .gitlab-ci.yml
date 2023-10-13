@@ -37,7 +37,7 @@ dependency_graphics:
   tags:
     - k8srunner
   before_script:
-    - sudo apt install graphviz
+    - apt install graphviz
     - rm -rf node_modules
   script:
     - npm config set registry https://registry.npmjs.org/
