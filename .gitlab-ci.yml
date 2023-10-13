@@ -6,6 +6,7 @@ variables:
 
 stages:
   - dependencies
+  - dependency_graphics
   - lint
   - build
   - test
@@ -24,6 +25,41 @@ install_dependencies:
   script:
     - npm config set registry https://registry.npmjs.org/
     - yarn install
+  cache:
+    paths:
+      - node_modules/
+    policy: push
+
+#Build the dependencies graphics
+dependency_graphics:
+  stage: dependency_graphics
+  tags:
+    - k8srunner
+  before_script:
+    - sudo apt install graphviz
+    - rm -rf node_modules
+  script:
+    - npm config set registry https://registry.npmjs.org/
+    - yarn install
+    - npx dependency-cruiser --init
+    - npx depcruise --validate .dependency-cruiser.js src
+    - npx depcruise --include-only "^(src)" --output-type dot . | dot -T svg > dependencygraph.svg
+  cache:
+    paths:
+      - node_modules/
+    policy: push
+
+#Build the unused dependencies
+unused_dependencies:
+  stage: unused_dependencies
+  tags:
+    - k8srunner
+  before_script:
+    - rm -rf node_modules
+  script:
+    - npm config set registry https://registry.npmjs.org/
+    - yarn install
+    - npx ts-unused-exports tsconfig.json src/**/*.ts* --showLineNumber > unused-export.txt
   cache:
     paths:
       - node_modules/
@@ -62,6 +98,7 @@ test_and_coverage:
   before_script:
     - mkdir -p build/reports
     - mkdir -p build/.nyc_output
+    - mkdir -p build/tests
     - yarn install --immutable
   script:
     - yarn test:coverage
@@ -85,13 +122,15 @@ test-counts:
       - node_modules/
     policy: pull
   before_script:
+    - mkdir -p build/reports
+    - mkdir -p build/.nyc_output
     - mkdir -p build/tests
     - yarn install --immutable
   script:
     - yarn test:coverage
     - yarn component:headless
     - yarn e2e:headless
-    # - yarn test:cypress:e2e:ci
+    - yarn test:coverage:report:ci
     # - yarn merge-reports
   artifacts:
     paths:
