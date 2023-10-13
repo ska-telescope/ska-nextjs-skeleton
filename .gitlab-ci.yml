@@ -6,7 +6,7 @@ variables:
 
 stages:
   - dependencies
-  - dependency_graphics
+  # - dependency_graphics
   - unused_dependencies
   - lint
   - build
@@ -32,23 +32,23 @@ install_dependencies:
     policy: push
 
 #Build the dependencies graphics
-dependency_graphics:
-  stage: dependency_graphics
-  tags:
-    - k8srunner
-  before_script:
-    - apt install graphviz
-    - rm -rf node_modules
-  script:
-    - npm config set registry https://registry.npmjs.org/
-    - yarn install
-    - npx dependency-cruiser --init
-    - npx depcruise --validate .dependency-cruiser.js src
-    - npx depcruise --include-only "^(src)" --output-type dot . | dot -T svg > dependencygraph.svg
-  cache:
-    paths:
-      - node_modules/
-    policy: push
+# dependency_graphics:
+#   stage: dependency_graphics
+#   tags:
+#     - k8srunner
+#   before_script:
+#     - apt install graphviz
+#     - rm -rf node_modules
+#   script:
+#     - npm config set registry https://registry.npmjs.org/
+#     - yarn install
+#     - npx dependency-cruiser --init
+#     - npx depcruise --validate .dependency-cruiser.js src > dependency.txt
+#     - npx depcruise --include-only "^(src)" --output-type dot . | dot -T svg > dependencygraph.svg
+#   cache:
+#     paths:
+#       - node_modules/
+#     policy: push
 
 #Build the unused dependencies
 unused_dependencies:
