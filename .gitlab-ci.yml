@@ -1,5 +1,5 @@
 default:
-  image: node:18.17.1-alpine3.18
+  image: node:20.6.1
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -87,8 +87,8 @@ code_analysis:
 
 # run the test coverage reports
 test_and_coverage:
-  image: cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
-  # image: cypress/browsers:node-20.6.1-chrome-116.0.5845.187-1-ff-117.0-edge-116.0.1938.76-1
+  # image: cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
+  image: cypress/browsers:node-20.6.1-chrome-116.0.5845.187-1-ff-117.0-edge-116.0.1938.76-1
   stage: test
   tags:
     - k8srunner
@@ -113,8 +113,8 @@ test_and_coverage:
       - build/
 
 test-counts:
-  image: cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
-  # image: cypress/browsers:node-20.6.1-chrome-116.0.5845.187-1-ff-117.0-edge-116.0.1938.76-1
+  # image: cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
+  image: cypress/browsers:node-20.6.1-chrome-116.0.5845.187-1-ff-117.0-edge-116.0.1938.76-1
   stage: scan
   tags:
     - k8srunner
