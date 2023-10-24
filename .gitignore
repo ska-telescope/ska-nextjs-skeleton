@@ -68,8 +68,10 @@ next-env.d.ts
 /cypress/videos
 
 # compiled Helm charts
-charts/ska-ost-senscalc-ui-umbrella/charts
-charts/ska-ost-senscalc-ui-umbrella/Chart.lock
+charts/ska-nextjs-skeleton-umbrella/charts
+charts/ska-nextjs-skeleton-umbrella/Chart.lock
 
 PrivateRules.mak
 /src/.openapi-generator/
+
+

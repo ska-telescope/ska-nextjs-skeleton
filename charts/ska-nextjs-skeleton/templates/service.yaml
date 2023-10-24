@@ -6,8 +6,8 @@ metadata:
 {{ include "labels" . | indent 4 }}
 spec:
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 3000
+      targetPort: 3000
       name: http
   clusterIP: None
   selector:

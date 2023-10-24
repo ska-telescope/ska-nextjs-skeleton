@@ -17,6 +17,6 @@ spec:
           service:
             name: {{ $.Chart.Name }}-service
             port:
-              number: 80
+              number: 3000
         path: "{{ include "ingress.path" . }}/(.*)"
         pathType: ImplementationSpecific
