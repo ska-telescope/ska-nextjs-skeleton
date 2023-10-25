@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ska-web-apps-documentation'
-copyright = '2018, Snehal Valame'
-author = 'Snehal Valame'
+project = 'ska-nextjs-skeleton'
+copyright = '2023 SKA'
+author = 'Buttons Team'
 
 # The short X.Y version
 version = ''
@@ -35,11 +35,7 @@ release = ''
 #
 # needs_sphinx = '1.0'
 
-import sphinx_rtd_theme
-
-def setup(app):
-    app.add_css_file('css/custom.css')
-    app.add_js_file('js/github.js')
+import ska_ser_sphinx_theme
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -73,7 +69,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -88,7 +84,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'ska_ser_sphinx_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -97,7 +93,6 @@ html_theme = 'sphinx_rtd_theme'
 # html_theme_options = {}
 
 html_context = {
-    'logo': 'img/logo.jpg',
     'theme_logo_only' : True,
     'display_github': True, # Integrate GitHub
     'github_user': 'flyingfrog81', # Username
@@ -106,11 +101,6 @@ html_context = {
     'conf_py_path': '/src/', # Path in the checkout to the docs root
 
 }
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -123,87 +113,14 @@ html_static_path = ['_static']
 # html_sidebars = {}
 
 
-# -- Options for HTMLHelp output ---------------------------------------------
-
-# Output file base name for HTML help builder.
-htmlhelp_basename = 'ska-web-apps-documentationdoc'
-
-
-# -- Options for LaTeX output ------------------------------------------------
-
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'ska-web-apps-documentation.tex', 'ska-web-apps-documentation Documentation',
-     'Snehal Valame', 'manual'),
-]
-
-
-# -- Options for manual page output ------------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'ska-web-apps-documentation', 'ska-web-apps-documentation Documentation',
-     [author], 1)
-]
-
-
-# -- Options for Texinfo output ----------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'ska-web-apps-documentation', 'ska-web-apps-documentation Documentation',
-     author, 'ska-web-apps-documentation', 'One line description of project.',
-     'Miscellaneous'),
-]
-
-
-# -- Options for Epub output -------------------------------------------------
-
-# Bibliographic Dublin Core info.
-epub_title = project
-
-# The unique identifier of the text. This can be a ISBN number
-# or the project homepage.
-#
-# epub_identifier = ''
-
-# A unique identification for the text.
-#
-# epub_uid = ''
-
-# A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
-
-
 # -- Extension configuration -------------------------------------------------
 
 # -- Options for intersphinx extension ---------------------------------------
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3', None)
+}
 
 # -- Options for todo extension ----------------------------------------------
 
