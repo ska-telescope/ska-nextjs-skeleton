@@ -30,7 +30,7 @@
     "prettier:fix": "prettier --write \"**/*\"",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
     "skao:update": "yarn add @ska-telescope/ska-gui-components@latest",
-    "start": "NODE_ENV=production node .next/standalone/server.js",
+    "start": "next start",
     "test": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:coverage:report": "npx nyc report --report-dir=build/reports --reporter=html",
