@@ -18,9 +18,10 @@ FROM node:20.6.1 as builder
 ENV NODE-ENV=production
 
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV BUILD_STANDALONE=true
 
 WORKDIR /app
-COPY next.config.prod.mjs ./next.config.mjs
+COPY next.config.mjs ./next.config.mjs
 COPY package.json yarn.lock ./
 COPY --from=deps /app/node_modules ./node_modules
 
