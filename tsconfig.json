@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/app": ["./src/app/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/models": ["./src/models/*"],
+      "@/pages": ["./src/pages/*"],
+      "@/services": ["./src/services/*"],
+      "@/styles": ["./src/styles/*"],
+      "@/utils": ["./src/utils/*"],
+      "@/*": ["./src/*"]
+    },
+    "types": ["cypress"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.{ts,tsx,js,jsx}",
+    "**/*.{{ts,tsx,js,jsx}}",
+    ".next/types/**/*.ts",
+    "cyoress/**/*.e2e.*.{ts,tsx,js,jsx}",
+    "next.config.mjs",
+    "build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.{ts,tsx,js,jsx}",
+    "src/**/*.test.{ts,tsx}"
+  ]
+}

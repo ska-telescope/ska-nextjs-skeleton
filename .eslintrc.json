@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "cypress"],
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:cypress/recommended"
+  ],
+  "ignorePatterns": [
+    "**/*.test.ts",
+    "src/**/*.test.ts",
+    "__tests__/*",
+    "cypress/**/*.e2e.ts"
+  ],
+  "rules": {
+    // enable additional rules
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "windows"],
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "semi": ["error", "always"],
+
+    // override configuration set by extending "eslint:recommended"
+    "no-cond-assign": ["error", "always"],
+    "no-console": 2, // Remember, this means error!
+    "no-empty": "warn",
+    "no-trailing-spaces": 2,
+
+    // disable rules from base configurations
+    "for-direction": "off"
+  }
+}
