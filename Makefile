@@ -3,6 +3,10 @@ CAR_OCI_REGISTRY_HOST ?= artefact.skao.int
 CAR_OCI_REGISTRY_USERNAME ?= ska-telescope
 PROJECT_NAME = ska-nextjs-skeleton
 
+# Set sphinx documentation build to fail on warnings (as it is configured
+# in .readthedocs.yaml as well)
+DOCS_SPHINXOPTS ?= -W --keep-going
+
 # KUBE_NAMESPACE defines the Kubernetes Namespace that will be deployed to
 # using Helm.  If this does not already exist it will be created
 KUBE_NAMESPACE ?= ska-nextjs-skeleton
