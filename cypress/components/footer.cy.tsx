@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "@/components/footer";
+import Footer from "../../src/components/retainedForLaterReview/footer";
 
 describe("<Footer />", () => {
   it("renders should have appropriate components", () => {

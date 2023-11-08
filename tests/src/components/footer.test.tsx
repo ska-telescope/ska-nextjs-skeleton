@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Footer from "@/components/footer";
+import Footer from "../../../src/components/retainedForLaterReview/footer";
 
 describe("Footer", () => {
   beforeEach(() => {

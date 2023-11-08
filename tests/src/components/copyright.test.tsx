@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Copyright from "@/components/copyright";
+import Copyright from "../../../src/components/retainedForLaterReview/copyright";
 
 describe("Copyright", () => {
   beforeEach(() => {

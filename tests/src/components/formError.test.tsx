@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import FormError from "@/components/formError";
+import FormError from "../../../src/components/retainedForLaterReview/formError";
 
 describe("FormError", () => {
   it("renders with all props should return button with appropriate attributes", () => {

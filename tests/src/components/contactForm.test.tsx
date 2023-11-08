@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import ContactForm from "@/components/contactForm";
+import ContactForm from "../../../src/components/retainedForLaterReview/contactForm";
 
 describe("ContactForm", () => {
   it("renders with all props should return button with appropriate attributes", () => {

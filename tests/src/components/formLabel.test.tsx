@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import FormLabel from "@/components/formLabel";
+import FormLabel from "../../../src/components/retainedForLaterReview/formLabel";
 
 describe("FormLabel", () => {
   it("renders with all props should return button with appropriate attributes", () => {

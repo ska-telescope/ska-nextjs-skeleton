@@ -1,5 +1,5 @@
 import React from "react";
-import Copyright from "@/components/copyright";
+import Copyright from "../../src/components/retainedForLaterReview/copyright";
 
 describe("<Copyright />", () => {
   it("renders should have appropriate components", () => {

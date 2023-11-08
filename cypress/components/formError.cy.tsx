@@ -1,5 +1,5 @@
 import React from "react";
-import FormError from "@/components/formError";
+import FormError from "../../src/components/retainedForLaterReview/formError";
 
 describe("<FormError />", () => {
   const className = "testClass";

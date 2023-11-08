@@ -1,5 +1,5 @@
 import React from "react";
-import FormLabel from "@/components/formLabel";
+import FormLabel from "../../src/components/retainedForLaterReview/formLabel";
 
 describe("<FormLabel />", () => {
   const className = "testClass";

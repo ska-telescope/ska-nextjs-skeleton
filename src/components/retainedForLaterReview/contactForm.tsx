@@ -3,8 +3,8 @@ import { Formik, Form, Field } from 'formik';
 import { object, string, TypeOf } from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
 import Button from './button';
-import FormLabel from '@/components/formLabel';
-import FormError from '@/components/formError';
+import FormLabel from '../retainedForLaterReview/formLabel';
+import FormError from '../retainedForLaterReview/formError';
 
 const contactFormSchema = object({
   // defines a required field called name

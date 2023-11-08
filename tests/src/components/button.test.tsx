@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Button from "@/components/button";
+import Button from "../../../src/components/retainedForLaterReview/button";
 
 describe("Button", () => {
   const mockClick = () => {};

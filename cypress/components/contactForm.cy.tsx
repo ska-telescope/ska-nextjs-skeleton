@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "@/components/contactForm";
+import ContactForm from "../../src/components/retainedForLaterReview/contactForm";
 
 describe("<FormError />", () => {
   it("renders should have appropriate components", () => {
