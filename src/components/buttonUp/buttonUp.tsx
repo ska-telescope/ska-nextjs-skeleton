@@ -24,7 +24,7 @@ export default function ButtonUp() {
           color={ButtonColorTypes.Secondary}
           label="RETURN TO HOME"
           onClick={() => router.push('/')}
-          testId="continueButton"
+          testId="homeButton"
           variant={ButtonVariantTypes.Contained}
         />
       </Grid>

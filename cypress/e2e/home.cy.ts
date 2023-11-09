@@ -43,6 +43,6 @@ context("Home Page", () => {
     cy.get('[data-testid="numberId"]').should('be.visible');
     cy.get('[data-testid="testId"]').should('be.visible');
     cy.get('[data-testid="statusId"]').should('be.visible');
-    cy.get('[data-testid="continueButton"]').should('be.visible');
+    cy.get('[data-testid="homeButton"]').should('be.visible');
   });
 });
