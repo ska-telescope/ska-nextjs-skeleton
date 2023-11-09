@@ -12,6 +12,5 @@ export default defineConfig({
       framework: "next",
       bundler: "webpack",
     },
-    specPattern: "./cypress/components/*.cy.{js,jsx,ts,tsx}",
   },
 });
