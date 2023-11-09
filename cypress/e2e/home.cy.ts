@@ -38,7 +38,7 @@ context("Home Page", () => {
   });
 
   it('Render : Verify continue button and page', () => {
-    cy.get('[data-testid="continueButton"]').click();
+    cy.get('[data-testid="continueButton"]').click().wait(200);
     cy.get('[data-testid="textId"]').should('be.visible');
     cy.get('[data-testid="numberId"]').should('be.visible');
     cy.get('[data-testid="testId"]').should('be.visible');
