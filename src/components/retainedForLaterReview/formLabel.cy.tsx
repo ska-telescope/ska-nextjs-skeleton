@@ -1,19 +1,17 @@
-import React from "react";
-import FormLabel from "../../src/components/retainedForLaterReview/formLabel";
+import React from 'react';
+import FormLabel from '../../src/components/retainedForLaterReview/formLabel';
 
-describe("<FormLabel />", () => {
-  const className = "testClass";
-  const value = "value";
-  it("renders should have appropriate components", () => {
+describe('<FormLabel />', () => {
+  const className = 'testClass';
+  const value = 'value';
+  it('renders should have appropriate components', () => {
     cy.mount(<FormLabel className={className} value={value} />);
 
-    const label = cy.get("label");
-    label.should("have.length", "1");
-    label.should("have.attr", "class", "label");
+    cy.get('label').should('have.length', '1');
+    cy.get('label').should('have.attr', 'class', 'label');
 
-    const span = cy.get("span");
-    span.should("have.length", "1");
-    span.should("have.attr", "class", className);
-    span.should("have.text", value);
+    cy.get('span').should('have.length', '1');
+    cy.get('span').should('have.attr', 'class', className);
+    cy.get('span').should('have.text', value);
   });
 });
