@@ -1,7 +1,7 @@
 // pages/_document.tsx
 
-import * as React from "react";
-import { ReactElement } from "react";
+import * as React from 'react';
+import { ReactElement } from 'react';
 import Document, {
   DocumentInitialProps,
   DocumentContext,
@@ -9,11 +9,11 @@ import Document, {
   Head,
   Main,
   NextScript,
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
-import createEmotionServer from "@emotion/server/create-instance";
-import createEmotionCache from "@/createEmotionCache";
-import theme from "@/theme";
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
+import createEmotionServer from '@emotion/server/create-instance';
+import createEmotionCache from '@/createEmotionCache';
+import theme from '@/theme';
 
 class SkaoDocument extends Document {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -61,7 +61,7 @@ class SkaoDocument extends Document {
       const emotionStyles = extractCriticalToChunks(initialProps.html);
       const emotionStyleTags = emotionStyles.styles.map((style) => (
         <style
-          data-emotion={`${style.key} ${style.ids.join(" ")}`}
+          data-emotion={`${style.key} ${style.ids.join(' ')}`}
           key={style.key}
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: style.css }}

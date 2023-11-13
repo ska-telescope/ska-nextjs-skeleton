@@ -1,8 +1,8 @@
 // pages/index.tsx
 
-import React from "react";
-import { NextPage } from "next";
-import ContactForm from "../contact";
+import React from 'react';
+import { NextPage } from 'next';
+import ContactForm from '../contact';
 
 const ContactPage: NextPage = () => {
   return (

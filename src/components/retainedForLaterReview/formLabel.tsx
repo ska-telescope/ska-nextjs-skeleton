@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-type FormLabelProps = Omit<React.ComponentProps<"label">, "type"> & {
+type FormLabelProps = Omit<React.ComponentProps<'label'>, 'type'> & {
   className?: string;
   value?: string;
 };
 
 const defaultProps: FormLabelProps = {
-  className: "",
-  value: "",
+  className: '',
+  value: '',
 };
 
 const FormLabel: React.FC<FormLabelProps> = ({

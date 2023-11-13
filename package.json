@@ -8,6 +8,8 @@
     "build": "next build",
     "dev": "next dev -p 3000",
     "lint:fix": "next lint --fix",
+    "lint2": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix2": "eslint src/**/*.{js,jsx,ts,tsx} --fix",
     "prettier:fix": "prettier --write \"**/*\"",
     "skao:update": "yarn add @ska-telescope/ska-gui-components@latest @ska-telescope/ska-gui-local-storage@latest",
     "start": "NEXT_MANUAL_SIG_HANDLE=true next start -p 3000",

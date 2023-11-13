@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Box, Grid } from "@mui/material";
+import React from 'react';
+import { Box, Grid } from '@mui/material';
 import {
   DropDown,
   NumberEntry,
   Status,
   TextEntry,
-} from "@ska-telescope/ska-gui-components";
+} from '@ska-telescope/ska-gui-components';
 
 export default function EntryForm() {
   const STATUS_LEVEL = 1;
   const STATUS_SIZE = 50;
-  const BOX_WIDTH = "15%";
+  const BOX_WIDTH = '15%';
   const DUMMY_OPTIONS = [
-    { label: "Option 1", value: "1" },
-    { label: "Option 2", value: "2" },
-    { label: "Option 3", value: "3" },
+    { label: 'Option 1', value: '1' },
+    { label: 'Option 2', value: '2' },
+    { label: 'Option 3', value: '3' },
   ];
 
   const [theNumber, setTheNumber] = React.useState(0);
-  const [theText, setTheText] = React.useState("");
-  const [theDropdown, setTheDropdown] = React.useState("");
+  const [theText, setTheText] = React.useState('');
+  const [theDropdown, setTheDropdown] = React.useState('');
 
   return (
     <Grid

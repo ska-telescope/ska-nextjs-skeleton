@@ -1,19 +1,19 @@
-import React from "react";
-import { Formik, Form, Field } from "formik";
-import { object, string, TypeOf } from "zod";
-import { toFormikValidationSchema } from "zod-formik-adapter";
-import Button from "./button";
-import FormLabel from "../retainedForLaterReview/formLabel";
-import FormError from "../retainedForLaterReview/formError";
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
+import { object, string, TypeOf } from 'zod';
+import { toFormikValidationSchema } from 'zod-formik-adapter';
+import Button from './button';
+import FormLabel from '../retainedForLaterReview/formLabel';
+import FormError from '../retainedForLaterReview/formError';
 
 const contactFormSchema = object({
   // defines a required field called name
   name: string({
-    required_error: "Please enter your name",
+    required_error: 'Please enter your name',
   }),
   // defines a required field called email.
   // we use the built-in email validator from zod
-  email: string().email("Please enter a valid email"),
+  email: string().email('Please enter a valid email'),
   // defines a required field called message with length constraints of 150-1000 characters.
   message: string().min(150).max(1000),
 });
@@ -22,9 +22,9 @@ const contactFormSchema = object({
 type ContactFormInputs = TypeOf<typeof contactFormSchema>;
 
 const initialValue: ContactFormInputs = {
-  name: "",
-  email: "",
-  message: "",
+  name: '',
+  email: '',
+  message: '',
 };
 
 const ContactForm = () => {
@@ -96,9 +96,9 @@ const ContactForm = () => {
                   className="btn btn-primary"
                   disabled={
                     !(
-                      (errors.name === "" || errors.name === undefined) &&
-                      (errors.email === "" || errors.email === undefined) &&
-                      (errors.message === "" || errors.message === undefined)
+                      (errors.name === '' || errors.name === undefined) &&
+                      (errors.email === '' || errors.email === undefined) &&
+                      (errors.message === '' || errors.message === undefined)
                     )
                   }
                 >

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import StoreClient from "../components/storeClient/storeClient";
+import type { Metadata } from 'next';
+import StoreClient from '../components/storeClient/storeClient';
 
 export const metadata: Metadata = {
-  title: "NextJS Skeleton",
-  description: "TREVOR CREATED THIS",
+  title: 'NextJS Skeleton',
+  description: 'TREVOR CREATED THIS',
 };
 
 export default function RootLayout({

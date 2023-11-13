@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-type FormErrorProps = Omit<React.ComponentProps<"label">, "type"> & {
+type FormErrorProps = Omit<React.ComponentProps<'label'>, 'type'> & {
   value?: string;
   className?: string;
 };
 
 const defaultProps: FormErrorProps = {
-  value: "",
-  className: "",
+  value: '',
+  className: '',
 };
 
 const FormError: React.FC<FormErrorProps> = ({
