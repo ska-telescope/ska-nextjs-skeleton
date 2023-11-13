@@ -8,8 +8,7 @@ import {
   ButtonVariantTypes,
 } from '@ska-telescope/ska-gui-components';
 
-export default function ButtonDown() {
-  const router = useRouter();
+export default function ButtonUp() {
 
   return (
     <>
@@ -20,11 +19,11 @@ export default function ButtonDown() {
         justifyContent="space-around"
       >
         <Button
-          ariaDescription="Button down into next page"
-          color={ButtonColorTypes.Inherit}
-          label="CONTINUE"
-          onClick={() => router.push('/continue')}
-          testId="continueButton"
+          ariaDescription="Button up into next page"
+          color={ButtonColorTypes.Secondary}
+          label="RETURN TO HOME"
+          onClick={() => useRouter().push('/')}
+          testId="homeButton"
           variant={ButtonVariantTypes.Contained}
         />
       </Grid>
