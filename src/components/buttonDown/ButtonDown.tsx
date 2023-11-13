@@ -10,6 +10,11 @@ import {
 
 export default function ButtonDown() {
 
+  const ClickFunction = () => {
+    const router = useRouter();
+    router.push('/continue');
+  };
+
   return (
     <>
       <Grid
@@ -22,7 +27,7 @@ export default function ButtonDown() {
           ariaDescription="Button down into next page"
           color={ButtonColorTypes.Inherit}
           label="CONTINUE"
-          onClick={() => useRouter().push('/continue')}
+          onClick={ClickFunction}
           testId="continueButton"
           variant={ButtonVariantTypes.Contained}
         />

@@ -10,6 +10,11 @@ import {
 
 export default function ButtonUp() {
 
+  const ClickFunction = () => {
+    const router = useRouter();
+    router.push('/');
+  };
+
   return (
     <>
       <Grid
@@ -22,7 +27,7 @@ export default function ButtonUp() {
           ariaDescription="Button up into next page"
           color={ButtonColorTypes.Secondary}
           label="RETURN TO HOME"
-          onClick={() => useRouter().push('/')}
+          onClick={ClickFunction}
           testId="homeButton"
           variant={ButtonVariantTypes.Contained}
         />
