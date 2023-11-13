@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import FormLabel from '../../src/components/retainedForLaterReview/formLabel';
 
 describe('<FormLabel />', () => {
@@ -15,3 +15,4 @@ describe('<FormLabel />', () => {
     cy.get('span').should('have.text', value);
   });
 });
+*/

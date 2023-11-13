@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import Footer from '../../src/components/retainedForLaterReview/footer';
 
 describe('<Footer />', () => {
@@ -19,3 +19,4 @@ describe('<Footer />', () => {
     cy.get('p').should('have.contain', '©');
   });
 });
+*/

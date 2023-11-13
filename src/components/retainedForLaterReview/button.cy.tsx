@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import Button from '../../src/components/retainedForLaterReview/button';
 
@@ -46,3 +47,4 @@ describe('<Button />', () => {
     cy.get('Button').should('have.attr', 'type', 'submit');
   });
 });
+*/

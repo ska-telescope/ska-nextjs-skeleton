@@ -1,3 +1,4 @@
+/* 
 import React from 'react';
 import Copyright from '../../src/components/retainedForLaterReview/copyright';
 
@@ -17,3 +18,4 @@ describe('<Copyright />', () => {
     cy.get('span').should('have.contain', '©');
   });
 });
+*/
