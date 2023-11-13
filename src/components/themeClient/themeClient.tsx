@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { storageObject } from '@ska-telescope/ska-gui-local-storage';
-import { Footer, Header } from '@ska-telescope/ska-gui-components';
-import theme from '../../services/theme/theme';
+import React from "react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { storageObject } from "@ska-telescope/ska-gui-local-storage";
+import { Footer, Header } from "@ska-telescope/ska-gui-components";
+import theme from "../../services/theme/theme";
 
 export default function ThemeClient({
   children,
@@ -12,10 +12,10 @@ export default function ThemeClient({
   children: React.ReactNode;
 }) {
   const { themeMode } = storageObject.useStore();
-  const skao = 'toolTip.button.skao';
-  const mode = 'toolTip.button.mode';
+  const skao = "toolTip.button.skao";
+  const mode = "toolTip.button.mode";
   const toolTip = { skao, mode };
-  const version = 'DRAFT'; // process.env.VERSION;
+  const version = "DRAFT"; // process.env.VERSION;
 
   return (
     <ThemeProvider theme={theme(themeMode.mode)}>

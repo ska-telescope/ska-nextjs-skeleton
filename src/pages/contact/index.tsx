@@ -1,8 +1,8 @@
 // pages/index.tsx
 
-import React from 'react';
-import { NextPage } from 'next';
-import ContactForm from '../contact';
+import React from "react";
+import { NextPage } from "next";
+import ContactForm from "../contact";
 
 const ContactPage: NextPage = () => {
   return (
@@ -10,7 +10,7 @@ const ContactPage: NextPage = () => {
       <div className="grid place-content-center min-h-screen">
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-4xl my-8">Contact Form with validation</h1>
-          {false && <ContactForm /> }
+          {false && <ContactForm />}
         </div>
       </div>
     </div>

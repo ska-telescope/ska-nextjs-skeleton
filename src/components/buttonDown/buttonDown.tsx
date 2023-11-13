@@ -1,12 +1,12 @@
-'useClient';
+"useClient";
 
-import { Grid } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { Grid } from "@mui/material";
+import { useRouter } from "next/navigation";
 import {
   Button,
   ButtonColorTypes,
   ButtonVariantTypes,
-} from '@ska-telescope/ska-gui-components';
+} from "@ska-telescope/ska-gui-components";
 
 export default function ButtonDown() {
   const router = useRouter();
@@ -23,7 +23,7 @@ export default function ButtonDown() {
           ariaDescription="Button down into next page"
           color={ButtonColorTypes.Inherit}
           label="CONTINUE"
-          onClick={() => router.push('/continue')}
+          onClick={() => router.push("/continue")}
           testId="continueButton"
           variant={ButtonVariantTypes.Contained}
         />

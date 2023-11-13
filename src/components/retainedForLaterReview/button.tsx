@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-type ButtonProps = Omit<React.ComponentProps<'button'>, 'type'> & {
+type ButtonProps = Omit<React.ComponentProps<"button">, "type"> & {
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
   disabled?: boolean;
   className?: string;
   title?: string;
@@ -15,11 +15,11 @@ const defaultProps: ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
-  type = 'submit',
+  type = "submit",
   disabled = false,
   children,
   className,
-  title = '',
+  title = "",
 }: ButtonProps) => {
   const handleClick = () => {
     if (!disabled && onClick) {

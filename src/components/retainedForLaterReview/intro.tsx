@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 export interface Benefit_Item {
   title: string;
@@ -12,92 +12,92 @@ export interface Benefit {
 
 export const benefits: Benefit[] = [
   {
-    header: 'Next.js and TypeScript Synergy',
+    header: "Next.js and TypeScript Synergy",
     contents: [
       {
-        title: 'Server-Side Rendering (SSR)',
+        title: "Server-Side Rendering (SSR)",
         description:
-          'Harness the power of Next.js to achieve server-side rendering and initial page load performance',
+          "Harness the power of Next.js to achieve server-side rendering and initial page load performance",
       },
       {
-        title: 'Static Site Generation (SSG)',
+        title: "Static Site Generation (SSG)",
         description:
-          'Combine SSG capabilities with TypeScript&quote;s static typing for safer, more predictable development and require lower cost hosting package',
+          "Combine SSG capabilities with TypeScript&quote;s static typing for safer, more predictable development and require lower cost hosting package",
       },
     ],
   },
   {
-    header: 'Comprehensive Testing Suite',
+    header: "Comprehensive Testing Suite",
     contents: [
       {
-        title: 'Static Typing',
+        title: "Static Typing",
         description:
           "Benefit from TypeScript's static typing to catch errors at compile-time, enhancing code quality and maintainability and subsequently faster delivery",
       },
       {
-        title: 'IntelliSense',
+        title: "IntelliSense",
         description:
           "Leverage TypeScript's IntelliSense capabilities in modern code editors, reducing development time with auto-completion and type checking",
       },
     ],
   },
   {
-    header: 'Optimized for Performance',
+    header: "Optimized for Performance",
     contents: [
       {
-        title: 'Production-Ready Configuration',
+        title: "Production-Ready Configuration",
         description:
-          'Pre-configured settings for production deployments, including code minification, compression, and caching strategies',
+          "Pre-configured settings for production deployments, including code minification, compression, and caching strategies",
       },
       {
-        title: 'Image Optimization',
+        title: "Image Optimization",
         description:
-          'Automatic image optimization ensures optimal performance by serving images in modern formats and sizes',
+          "Automatic image optimization ensures optimal performance by serving images in modern formats and sizes",
       },
     ],
   },
   {
-    header: 'Developer-Friendly Tooling',
+    header: "Developer-Friendly Tooling",
     contents: [
       {
-        title: 'ESLint and Prettier Integration',
+        title: "ESLint and Prettier Integration",
         description:
-          'Maintain code consistency and cleanliness with ESLint and Prettier configurations pre-setup for clean and error-free code',
+          "Maintain code consistency and cleanliness with ESLint and Prettier configurations pre-setup for clean and error-free code",
       },
       {
-        title: 'Git Version Control',
+        title: "Git Version Control",
         description:
-          'Start your project with a Git repository and commit history, enabling collaborative development and version control',
+          "Start your project with a Git repository and commit history, enabling collaborative development and version control",
       },
       {
-        title: 'Customizable',
+        title: "Customizable",
         description:
-          'Tailor the template to your specific project requirements by easily adapting, adding or removing packages, libraries, and configurations',
+          "Tailor the template to your specific project requirements by easily adapting, adding or removing packages, libraries, and configurations",
       },
     ],
   },
   {
-    header: 'Testing Automation',
+    header: "Testing Automation",
     contents: [
       {
-        title: 'Continuous Integration',
+        title: "Continuous Integration",
         description:
-          'Integrate your project with GitHub CI/CD Actions to automate your testing and deployment processes.',
+          "Integrate your project with GitHub CI/CD Actions to automate your testing and deployment processes.",
       },
     ],
   },
   {
-    header: 'Documentation and Best Practices',
+    header: "Documentation and Best Practices",
     contents: [
       {
-        title: 'Documentation',
+        title: "Documentation",
         description:
-          'A comprehensive README file and inline code comments provide guidance on best practices for testing, TypeScript usage, and project structure',
+          "A comprehensive README file and inline code comments provide guidance on best practices for testing, TypeScript usage, and project structure",
       },
       {
-        title: 'Best Practices',
+        title: "Best Practices",
         description:
-          'Follow industry best practices for structuring your codebase, ensuring scalability and maintainability as your project grows',
+          "Follow industry best practices for structuring your codebase, ensuring scalability and maintainability as your project grows",
       },
     ],
   },

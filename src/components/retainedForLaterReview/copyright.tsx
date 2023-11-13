@@ -1,7 +1,7 @@
-import React from 'react';
-import Typography from '@mui/material/Typography';
-import MuiLink from '@mui/material/Link';
-import Image from 'next/image';
+import React from "react";
+import Typography from "@mui/material/Typography";
+import MuiLink from "@mui/material/Link";
+import Image from "next/image";
 
 export default function Copyright() {
   return (
@@ -15,7 +15,7 @@ export default function Copyright() {
         />
       </MuiLink>
       <span className="copyright">
-        {' © '}
+        {" © "}
         {new Date().getFullYear()}.
       </span>
     </Typography>

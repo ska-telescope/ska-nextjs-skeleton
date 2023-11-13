@@ -1,5 +1,5 @@
-import { Grid, Typography } from '@mui/material';
-import { Alert } from '@ska-telescope/ska-gui-components';
+import { Grid, Typography } from "@mui/material";
+import { Alert } from "@ska-telescope/ska-gui-components";
 
 export default function WelcomeBanner() {
   const SEVERITY = 5;

@@ -1,12 +1,12 @@
-'useClient';
+"useClient";
 
-import { Grid } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { Grid } from "@mui/material";
+import { useRouter } from "next/navigation";
 import {
   Button,
   ButtonColorTypes,
   ButtonVariantTypes,
-} from '@ska-telescope/ska-gui-components';
+} from "@ska-telescope/ska-gui-components";
 
 export default function ButtonUp() {
   const router = useRouter();
@@ -23,7 +23,7 @@ export default function ButtonUp() {
           ariaDescription="Button up into next page"
           color={ButtonColorTypes.Secondary}
           label="RETURN TO HOME"
-          onClick={() => router.push('/')}
+          onClick={() => router.push("/")}
           testId="homeButton"
           variant={ButtonVariantTypes.Contained}
         />
