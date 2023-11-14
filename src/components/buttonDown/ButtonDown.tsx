@@ -1,7 +1,6 @@
 'useClient';
 
 import { Grid } from '@mui/material';
-import { useRouter } from 'next/navigation';
 import {
   Button,
   ButtonColorTypes,
@@ -11,8 +10,7 @@ import {
 export default function ButtonDown() {
 
   const ClickFunction = () => {
-    const router = useRouter();
-    router.push('/continue');
+    location.assign('/continue');
   };
 
   return (
