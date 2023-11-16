@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "license": "BSD 3-Clause",
-  "description": "SKA Next.js Web App Skeleton",
+  "description": "SKA NextJS Web App Skeleton",
   "scripts": {
     "build": "next build",
     "build:debug": "next build --debug",
@@ -39,6 +39,11 @@
     "test:report:ci": "jest --coverage --report-dir=build/reports --reporter=cobertura",
     "test:summary": "jest --coverage --reporter=text-summary"
   },
+  "resolutions": {
+    "axios": "^1.6.0",
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31"
+  },
   "dependencies": {
     "@babel/core": "^7.23.2",
     "@babel/plugin-syntax-flow": "^7.22.5",
@@ -49,8 +54,8 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.15",
-    "@ska-telescope/ska-gui-components": "^0.1.65",
-    "@ska-telescope/ska-gui-local-storage": "^0.0.1",
+    "@ska-telescope/ska-gui-components": "^0.1.67",
+    "@ska-telescope/ska-gui-local-storage": "^0.0.3",
     "@types/node": "*",
     "@types/react": "^18.2.33",
     "formik": "^2.4.5",
