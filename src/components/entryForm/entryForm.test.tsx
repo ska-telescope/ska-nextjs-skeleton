@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react';
 import { expect } from '@jest/globals';
 import '@testing-library/jest-dom';
-import EntryForm from '../../../src/components/entryForm/entryForm';
+import EntryForm from './entryForm';
 
 
 describe('EntryForm', () => {

@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react';
 import { expect } from '@jest/globals';
 import '@testing-library/jest-dom';
-import ButtonDown from '../../../src/components/buttonDown/ButtonDown';
+import ButtonDown from './ButtonDown';
 
 
 describe('ButtonDown', () => {

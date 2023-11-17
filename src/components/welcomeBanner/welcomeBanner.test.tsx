@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import WelcomeBanner from '../../../src/components/welcomeBanner/welcomeBanner';
+import WelcomeBanner from './welcomeBanner';
 
 
 describe('WelcomeBanner', () => {
