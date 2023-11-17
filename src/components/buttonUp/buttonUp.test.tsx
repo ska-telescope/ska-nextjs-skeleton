@@ -1,8 +1,7 @@
-import {render} from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { expect } from '@jest/globals';
 import '@testing-library/jest-dom';
 import ButtonUp from './ButtonUp';
-
 
 describe('ButtonUp', () => {
   it('renders with all props should return button with appropriate attributes', () => {

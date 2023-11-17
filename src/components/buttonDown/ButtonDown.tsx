@@ -8,7 +8,6 @@ import {
 } from '@ska-telescope/ska-gui-components';
 
 export default function ButtonDown() {
-
   const ClickFunction = () => {
     location.assign('/continue');
   };
