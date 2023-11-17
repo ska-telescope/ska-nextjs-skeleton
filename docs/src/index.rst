@@ -3,13 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ska-web-apps-documentation's documentation!
-======================================================
+Welcome to Next.js Skeleton project documentation!
+====================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
 
 
 Indices and tables
@@ -18,3 +17,14 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. Developers section
+   Hidden toctree to manage the sidebar navigation.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: For Developers
+   :hidden:
+
+   architecture
+
