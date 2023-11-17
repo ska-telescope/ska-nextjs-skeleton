@@ -3,7 +3,7 @@ import StoreClient from '../components/storeClient/storeClient';
 
 export const metadata: Metadata = {
   title: 'NextJS Skeleton',
-  description: 'TREVOR CREATED THIS',
+  description: 'SKA NextJS Web application skeleton',
 };
 
 export default function RootLayout({
