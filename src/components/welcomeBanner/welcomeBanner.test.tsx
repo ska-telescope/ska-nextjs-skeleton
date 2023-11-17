@@ -3,9 +3,13 @@ import '@testing-library/jest-dom';
 import WelcomeBanner from './welcomeBanner';
 import React from 'react';
 
-
 describe('WelcomeBanner', () => {
   it('renders with all props should return button with appropriate attributes', async () => {
     render(<WelcomeBanner/>);
+  });
+});
+describe('WelcomeBanner', () => {
+  it('renders with all props should return button with appropriate attributes', async () => {
+    render(<WelcomeBanner />);
   });
 });
