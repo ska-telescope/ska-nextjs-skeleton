@@ -70,6 +70,61 @@ Depending on what you are making, it can be a good idea to include screenshots o
 
 Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
+# Local development and testing
+
+### Installing project dependencies
+
+Run `make install_dependencies` to install the latest project dependencies from package.json and package-lock.json
+
+### Check project dependencies vulnerabilities
+
+Run `npm audit` to check the latest project dependencies from package.json and package-lock for vulnerabilities currently identfied by security companies like snyk.io and etc.
+
+### Build a production deployment
+
+Run `yarn build` or `npm run build` to build the project. The build artifacts will be stored in the `.next/` directory.
+
+### Rebuild the new Next.js project structure class diagram for ReadTheDoc
+
+Run `npm run arkit-diagram` or `yarn arkit-diagram` on the base directory of the project. It will
+generate the new diagram 'nextjs_structure_class.svg' within the docs/src/_static/img/ directory.
+
+
+### Running a front end development server
+
+Run `npm dev` for a dev server. Navigate to `http://localhost:3000/`. The
+app will automatically reload if you change any of the source files.
+
+### Running unit tests
+
+Run `make test` to execute the unit tests.
+
+### Running static code analysis
+
+Run `make lint` to lint the code.
+
+### Running unit tests coverage
+
+Run `yarn test:coverage` or `npm run test:coverage` to execute the unit tests coverage.
+
+### Running component tests coverage
+
+Run `yarn component:headless` or `npm run component:headless` to execute the component tests coverage.
+
+### Running End-to-end tests coverage
+
+Run `yarn e2e:headless` or `npm run e2e:headless` to execute the End-to-end tests coverage.
+
+
+## OSO Developer check-list before moving the ticket into Ready to Review
+
+- [ ] [Run Vulnerabilities Check](`npm audit`)
+- [ ] [Run Lint Check](`npm run lint`)
+- [ ] [Run Unit Test Coverage Check](`npm run test:coverage`)
+- [ ] [Run Component Test Coverage Check](`npm run component:headless`)
+- [ ] [Run Integration Test Coverage Check](`npm run e2e:headless`)
+- [ ] [Update Project Structure Class Diagram](`npm run arkit-diagram`)
+
 ## Usage
 
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
