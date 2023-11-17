@@ -1,4 +1,5 @@
 import ButtonUp from './ButtonUp';
+import React from 'react';
 
 it('verify buttonUp elements', () => {
   cy.mount(<ButtonUp></ButtonUp>);

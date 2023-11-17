@@ -1,4 +1,5 @@
 import EntryForm from './entryForm';
+import React from 'react';
 
 it('verify entry form elements', () => {
   cy.mount(<EntryForm></EntryForm>);
