@@ -1,22 +1,17 @@
-# ska-nextjs-skeleton
+# SKA NextJS Web App Skeleton
 
-## Getting started
+[![Documentation Status](https://readthedocs.org/projects/ska-react-webapp-skeleton/badge/?version=latest)](https://developer.skatelescope.org/projects/ska-react-webapp-skeleton/en/latest/?badge=latest)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+This project is intended to act as a skeleton for any SKA developer looking to make a NextJS based web application.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+It includes tools for linting, code formatting, and testing which are easily integrated into various IDEs.
 
-## Add your files
+### TODO - BELOW NEEDS TO BE IMPLEMENTED
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+# It also includes modular federation, exposing the Home() component, which can be imported into other applications as a remote
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/ska-telescope/templates/ska-nextjs-skeleton.git
-git branch -M main
-git push -uf origin main
-```
+### Requirements
+See /docs/src/ directory for further documentation or refer to 'Read The Docs'
 
 ## Integrate with your tools
 
