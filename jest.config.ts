@@ -43,6 +43,7 @@ const config: JestConfigWithTsJest = {
     'src/components/buttonDown/ButtonDown.cy.tsx',
     'src/components/buttonUp/ButtonUp.cy.tsx',
     'src/components/entryForm/entryForm.cy.tsx',
+    'src/components/entryForm/latexForm.cy.tsx',
     'src/components/welcomeBanner/welcomeBanner.cy.tsx',
   ],
   testEnvironment: 'jsdom',
