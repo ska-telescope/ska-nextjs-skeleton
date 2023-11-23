@@ -6,6 +6,6 @@ import LatexForm from './latexForm';
 describe('LatexForm', () => {
   it('renders with all props should return with appropriate attributes', () => {
     render(<LatexForm />);
-    expect(document.querySelectorAll('input').length).toBe(1);
+    expect(document.querySelectorAll('textarea').length).toBe(2);
   });
 });
