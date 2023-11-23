@@ -17,9 +17,7 @@ import theme from '@/theme';
 
 class SkaoDocument extends Document {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  static async getInitialProps(
-    ctx: DocumentContext,
-  ): Promise<DocumentInitialProps> {
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     // Resolution order
     //
     // On the server:

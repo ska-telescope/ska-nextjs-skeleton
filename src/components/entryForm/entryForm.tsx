@@ -2,12 +2,7 @@
 
 import React from 'react';
 import { Box, Grid } from '@mui/material';
-import {
-  DropDown,
-  NumberEntry,
-  Status,
-  TextEntry,
-} from '@ska-telescope/ska-gui-components';
+import { DropDown, NumberEntry, Status, TextEntry } from '@ska-telescope/ska-gui-components';
 
 export default function EntryForm() {
   const STATUS_LEVEL = 1;
@@ -24,19 +19,9 @@ export default function EntryForm() {
   const [theDropdown, setTheDropdown] = React.useState('');
 
   return (
-    <Grid
-      container
-      direction="column"
-      alignItems="center"
-      justifyContent="space-around"
-    >
+    <Grid container direction="column" alignItems="center" justifyContent="space-around">
       <Box m={1} sx={{ width: BOX_WIDTH }}>
-        <TextEntry
-          label="Text Label"
-          testId="textId"
-          value={theText}
-          setValue={setTheText}
-        />
+        <TextEntry label="Text Label" testId="textId" value={theText} setValue={setTheText} />
       </Box>
 
       <Box m={1} sx={{ width: BOX_WIDTH }}>

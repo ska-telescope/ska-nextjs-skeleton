@@ -10,12 +10,7 @@
     "prettier",
     "plugin:cypress/recommended"
   ],
-  "ignorePatterns": [
-    "**/*.test.ts",
-    "src/**/*.test.ts",
-    "__tests__/*",
-    "cypress/**/*.e2e.ts"
-  ],
+  "ignorePatterns": ["**/*.test.ts", "**/*.cy.ts", "__tests__/*", "cypress/**/*.e2e.ts"],
   "rules": {
     // enable additional rules
     "indent": ["error", 2],

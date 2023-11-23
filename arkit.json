@@ -1,38 +1,29 @@
 {
   "$schema": "https://arkit.js.org/schema.json",
-  "excludePatterns": [
-      "test/**",
-      "tests/**",
-      "**/*.test.*",
-      "**/*.spec.*",
-      "**/*.cy.*"
-  ],
+  "excludePatterns": ["test/**", "tests/**", "**/*.test.*", "**/*.spec.*", "**/*.cy.*"],
   "components": [
-      {
-          "type": "Dependency",
-          "patterns": ["node_modules/*"]
-      },
-      {
-          "type": "Component",
-          "patterns": ["**/*.ts", "**/*.tsx"]
-      }
+    {
+      "type": "Dependency",
+      "patterns": ["node_modules/*"]
+    },
+    {
+      "type": "Component",
+      "patterns": ["**/*.ts", "**/*.tsx"]
+    }
   ],
   "output": [
-      {
-        "path": "docs/src/_static/img/nextjs_structure_class.svg",
-        "groups": [
-            {
-                "first": true,
-                "components": [
-                    "Component",
-                    "nextjs"
-                ]
-            },
-            {
-                "type": "Dependencies",
-                "components": ["Dependency"]
-            }
-        ]
-      }
+    {
+      "path": "docs/src/_static/img/nextjs_structure_class.svg",
+      "groups": [
+        {
+          "first": true,
+          "components": ["Component", "nextjs"]
+        },
+        {
+          "type": "Dependencies",
+          "components": ["Dependency"]
+        }
+      ]
+    }
   ]
 }

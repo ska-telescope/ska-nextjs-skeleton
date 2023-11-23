@@ -11,6 +11,7 @@ It includes tools for linting, code formatting, and testing which are easily int
 # It also includes modular federation, exposing the Home() component, which can be imported into other applications as a remote
 
 ### Requirements
+
 See /docs/src/ directory for further documentation or refer to 'Read The Docs'
 
 ## Integrate with your tools
@@ -82,8 +83,7 @@ Run `yarn build` or `npm run build` to build the project. The build artifacts wi
 ### Rebuild the new Next.js project structure class diagram for ReadTheDoc
 
 Run `npm run arkit-diagram` or `yarn arkit-diagram` on the base directory of the project. It will
-generate the new diagram 'nextjs_structure_class.svg' within the docs/src/_static/img/ directory.
-
+generate the new diagram 'nextjs_structure_class.svg' within the docs/src/\_static/img/ directory.
 
 ### Running a front end development server
 
@@ -109,7 +109,6 @@ Run `yarn component:headless` or `npm run component:headless` to execute the com
 ### Running End-to-end tests coverage
 
 Run `yarn e2e:headless` or `npm run e2e:headless` to execute the End-to-end tests coverage.
-
 
 ## OSO Developer check-list before moving the ticket into Ready to Review
 
