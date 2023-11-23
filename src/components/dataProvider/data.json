@@ -1,0 +1,179 @@
+{
+    "ppt": {
+        "Projects": [
+            "Standard (PI) Proposal",
+            "Key Science Project",
+            "DDT"
+        ],
+        "ExistingProposal": [
+            {
+                "SKAID": "SKA2388",
+                "Title": "The Milky Way View",
+                "Cycle": "SKA_5000_2023",
+                "PI": "Van Loo Cheng",
+                "Status": "Submitted",
+                "Last Updated": "21/11/2023"
+            },
+            {
+                "SKAID": "SKA2311",
+                "Title": "The Milky Way View",
+                "Cycle": "SKA_5000_2023",
+                "PI": "Van Loo Cheng",
+                "Status": "Submitted",
+                "Last Updated": "21/11/2023"
+            },
+            {
+                "SKAID": "SKA2399",
+                "Title": "The Giant HII in the Orion",
+                "Cycle": "SKA_5000_2023",
+                "PI": "Keeper Sung",
+                "Status": "Accepted",
+                "Last Updated": "1/11/2023"
+            },
+            {
+                "SKAID": "SKA2319",
+                "Title": "The Dancing Star",
+                "Cycle": "SKA_5000_2023",
+                "PI": "Precious Luthan",
+                "Status": "Draft",
+                "Last Updated": "21/12/2022"
+            },
+            {
+                "SKAID": "SKA2317",
+                "Title": "Ionization in the Spiral galaxy",
+                "Cycle": "SKA_5000_2023",
+                "PI": "Ma James Nuka",
+                "Status": "Withdrawn",
+                "Last Updated": "21/01/2023"
+            }
+        ],
+        "ProjectAttributes": {
+            "Standard (PI) Proposal": [
+                "Target of opportunity",
+                "Joint SKA proposal",
+                "Coordinated Proposal",
+                "Long term proposal"
+            ],
+            "Key Science Project": [],
+            "DDT": []
+        },
+        "Targets": {
+            "No Target": null,
+            "List of Targets": {
+                "AddTarget": [
+                    "Name",
+                    "Right Ascension",
+                    "Declination",
+                    "Velocity / Redshift"
+                ],
+                "TargetItems": [
+                    {
+                        "RA": "01:00:00",
+                        "Dec": "00:00:00"
+                    },
+                    {
+                        "RA": "03:00:00",
+                        "Dec": "-10:00:00"
+                    },
+                    {
+                        "RA": "05:30:00",
+                        "Dec": "-10:00:00"
+                    }
+                ]
+            },
+            "Create Mosaic": null
+        },
+        "Team": [
+            {
+                "FirstName": "Van Loo",
+                "LastName": "Cheng",
+                "Email": "ask.lop@map.com",
+                "Country": "Lagoon",
+                "Affiliation": "University of Free Town",
+                "For PhD Thesis?": "No"
+            },
+            {
+                "FirstName": "Anu",
+                "LastName": "Vijay",
+                "Email": "ask.lop@map.com",
+                "Country": "Ocean",
+                "Affiliation": "University of Free Town",
+                "For PhD Thesis?": "Yes"
+            },
+            {
+                "FirstName": "Sady",
+                "LastName": "Field",
+                "Email": "ask.lop@map.com",
+                "Country": "Park",
+                "Affiliation": "University of Virginia",
+                "For PhD Thesis?": "No"
+            }
+        ],
+        "General": {
+            "Cycle": "SKA_5000_2023",
+            "Abstract": "ghjghjghjghjg hghjghj hghjghjgh jgjhghjghjg jhghjghjghj hjghjghjghj jgjhghj hjghjghjg",
+            "Science Category": [
+                "Cosmology",
+                "Cradle of Life",
+                "Epoch of Reionization",
+                "Extra Galactic continuum",
+                "Extra Galactic Spectral line",
+                "Gravitational Waves",
+                "High Energy Cosmic Particles",
+                "HI Galaxy science",
+                "Magnetism",
+                "Our Galaxy",
+                "Pulsars",
+                "Solar, Heliospheric and Ionospheric Physics",
+                "Transients",
+                "VLBI"
+            ],
+            "Science Sub-Category": []
+        },
+        "ScienceJust": "jkjdkjfdkslf dfkljdkfjd flsdjfkljdsfkljds lkjdkljfkldjf lkjkdsljf kd",
+        "TechnicalJust": "ojkdjf jkld jkljg klj lj ljkl lkjkl jkl kljklj jkl",
+        "Observation": {
+            "Array": [
+                "MID",
+                "LOW"
+            ],
+            "SUbArrayConfig": {
+                "MID": [
+                    "AA0.5",
+                    "AA1",
+                    "AA2",
+                    "AA* (15-m antennas only)",
+                    "AA4 (15-m antennas only)",
+                    "Custom"
+                ],
+                "LOW": [
+                    "AA0.5",
+                    "AA1",
+                    "AA2"
+                ]
+            },
+            "ObservingBand": {
+                "MID": [
+                    "Band 1 (0.35 - 1.05 GHz)",
+                    "Band 2 (0.95 - 1.76 GHz)",
+                    "Band 5a (4.6 - 8.5 GHz)",
+                    "Band 5b (8.3 - 15.4 GHz)"
+                ],
+                "LOW": null
+            },
+            "ObservationType": [
+                "Zoom",
+                "Continuum"
+            ],
+            "ImageWeighting": [
+                "Natural",
+                "Uniform",
+                "Briggs"
+            ],
+            "Bandwidth" : {
+                "MID":[],
+                "LOW":[]
+            }
+        }
+    }
+}
