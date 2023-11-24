@@ -3,6 +3,8 @@
 import React from 'react';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
+import InfoPanel from '@/components/infoPanel/infoPanel';
+
 import { Grid, Typography } from '@mui/material';
 
 export default function General() {
@@ -12,10 +14,11 @@ export default function General() {
       <Grid item>
         <PageBanner title="General"/>
       </Grid>
-      <Grid item>
-        <Typography variant="h6" m={2}>
+      <Grid p={1} item>
+        <Typography variant="h6">
           DETAILS NEEDED : CHLOE
         </Typography>
+        <InfoPanel title='TITLE' description='DESCRIPTION' additional='ADDITIONAL'/>
       </Grid>
       <Grid item>
         <PageFooter previousPageLabel='team' previousPageURL='/proposal/team' nextPageLabel='science' nextPageURL='/proposal/science' />
