@@ -137,7 +137,7 @@
         },
         "Targets": {
             "No Target": null,
-            "List of Targets": {
+            "ListOfTargets": {
                 "AddTarget": [
                     "Name",
                     "Right Ascension",
@@ -146,14 +146,20 @@
                 ],
                 "TargetItems": [
                     {
+                        "id": 1,
+                        "Name": "Target 1",
                         "RA": "01:00:00",
                         "Dec": "00:00:00"
                     },
                     {
+                        "id": 2,
+                        "Name": "Target 2",
                         "RA": "03:00:00",
                         "Dec": "-10:00:00"
                     },
                     {
+                        "id": 3,
+                        "Name": "Target 3",
                         "RA": "05:30:00",
                         "Dec": "-10:00:00"
                     }
