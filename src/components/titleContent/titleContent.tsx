@@ -14,30 +14,33 @@ export default function TitleContent() {
 
   const [theTitle, setTheTitle] = React.useState('');
   const [theProposal, setTheProposal] = React.useState(null);
-  // const [theSubProposal, setTheSubProposal] = React.useState(null);
+  const [theSubProposal, setTheSubProposal] = React.useState(null);
 
   function clickProposal(PROPOSAL: any) {
     setTheProposal(PROPOSAL);
   }
+  function clickSubProposal(PROPOSAL: any) {
+    setTheSubProposal(PROPOSAL);
+  }
 
-  const setProposalBG = (proposal: any) => {
-    return theProposal && theProposal === proposal ? theme.palette.secondary.main : theme.palette.primary.main;
+  const setCardBG = (in1:any, in2: any) => {
+    return in1 && in1 === in2 ? theme.palette.secondary.main : theme.palette.primary.main;
   };
-  const setProposalFG = (proposal: any) => {
-    return theProposal && theProposal === proposal ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText;
+  const setCardFG = (in1:any, in2: any) => {
+    return in1 && in1 === in2 ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText;
   };
 
   function ProposalType(PROPOSAL: any) {
     return (
       <Grid item xs={12} sm={6} md={4}>
         <Card
-          style={{ color: setProposalFG(PROPOSAL), backgroundColor: setProposalBG(PROPOSAL)}}
+          style={{ color: setCardFG(theProposal, PROPOSAL), backgroundColor: setCardBG(theProposal, PROPOSAL)}}
           onClick={() => clickProposal(PROPOSAL)}
           variant='outlined'
         >
           <CardHeader
             avatar={
-              <Avatar variant="rounded" style={{ color: setProposalBG(PROPOSAL), backgroundColor: setProposalFG(PROPOSAL)}}>
+              <Avatar variant="rounded" style={{ color: setCardBG(theProposal, PROPOSAL), backgroundColor: setCardFG(theProposal, PROPOSAL)}}>
                 <Typography variant="body2" component="div">
                   {PROPOSAL.code}
                 </Typography>
@@ -69,13 +72,13 @@ export default function TitleContent() {
     return (
       <Grid item xs={12} sm={6} md={3}>
         <Card
-          style={{ color: setProposalFG(PROPOSAL), backgroundColor: setProposalBG(PROPOSAL)}}
-          onClick={() => clickProposal(PROPOSAL)}
+          style={{ color: setCardFG(theSubProposal, PROPOSAL), backgroundColor: setCardBG(theSubProposal, PROPOSAL)}}
+          onClick={() => clickSubProposal(PROPOSAL)}
           variant='outlined'
         >
           <CardHeader
             avatar={
-              <Avatar variant="rounded" style={{ color: setProposalBG(PROPOSAL), backgroundColor: setProposalFG(PROPOSAL)}}>
+              <Avatar variant="rounded" style={{ color: setCardBG(theSubProposal, PROPOSAL), backgroundColor: setCardFG(theSubProposal, PROPOSAL)}}>
                 <Typography variant="body2" component="div">
                   {PROPOSAL.code}
                 </Typography>
@@ -109,8 +112,8 @@ export default function TitleContent() {
 
   return (
     <Grid container direction="column" alignItems="flex-start" justifyContent="space-evenly" >
-      <Grid container direction="row" justifyContent="space-around" alignItems="center" >
-        <Grid item>
+      <Grid pl={2} container direction="row" justifyContent="space-around" alignItems="center" spacing={2} >
+        <Grid item xs={3}>
           <TextEntry
             label="Title"
             testId="titleId"
@@ -118,19 +121,20 @@ export default function TitleContent() {
             setValue={setTheTitle}
           />
         </Grid>
-        <Grid item>
+        <Grid item xs={8}>
           <Typography variant="body2">
             This title should be used to allow for the identification of this proposal in a list of proposals
           </Typography>
         </Grid>
       </Grid>
-      <Grid container direction="row" justifyContent="space-around" alignItems="center" >
-        <Grid item>
+
+      <Grid pl={2} container direction="row" justifyContent="space-around" alignItems="center" >
+        <Grid item xs={3}>
           <Typography variant="body2">
             Proposal Type
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={8}>
           <Typography variant="body2">
             Below are the available Proposal Types that can be used as a basis for a new proposal.
           </Typography>
