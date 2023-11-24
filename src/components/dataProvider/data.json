@@ -5,46 +5,56 @@
             "Key Science Project",
             "DDT"
         ],
+        "PageStatus": {
+            "title": 0,
+            "team": 0,
+            "general": 1,
+            "science": 2,
+            "target": 3,
+            "observation": 5,
+            "technical": 5,
+            "data": 5
+        },
         "ExistingProposal": [
             {
-                "SKAID": "SKA2388",
-                "Title": "The Milky Way View",
-                "Cycle": "SKA_5000_2023",
-                "PI": "Van Loo Cheng",
-                "Status": "Submitted",
-                "Last Updated": "21/11/2023"
+                "id": "SKA2388",
+                "title": "The Milky Way View",
+                "cycle": "SKA_5000_2023",
+                "pi": "Van Loo Cheng",
+                "status": "Submitted",
+                "lastUpdated": "21/11/2023"
             },
             {
-                "SKAID": "SKA2311",
-                "Title": "The Milky Way View",
-                "Cycle": "SKA_5000_2023",
-                "PI": "Van Loo Cheng",
-                "Status": "Submitted",
-                "Last Updated": "21/11/2023"
+                "id": "SKA2311",
+                "title": "The Milky Way View",
+                "cycle": "SKA_5000_2023",
+                "pi": "Van Loo Cheng",
+                "status": "Submitted",
+                "lastUpdated": "21/11/2023"
             },
             {
-                "SKAID": "SKA2399",
-                "Title": "The Giant HII in the Orion",
-                "Cycle": "SKA_5000_2023",
-                "PI": "Keeper Sung",
-                "Status": "Accepted",
-                "Last Updated": "1/11/2023"
+                "id": "SKA2399",
+                "title": "The Giant HII in the Orion",
+                "cycle": "SKA_5000_2023",
+                "pi": "Keeper Sung",
+                "status": "Accepted",
+                "lastUpdated": "1/11/2023"
             },
             {
-                "SKAID": "SKA2319",
-                "Title": "The Dancing Star",
-                "Cycle": "SKA_5000_2023",
-                "PI": "Precious Luthan",
-                "Status": "Draft",
-                "Last Updated": "21/12/2022"
+                "id": "SKA2319",
+                "title": "The Dancing Star",
+                "cycle": "SKA_5000_2023",
+                "pi": "Precious Luthan",
+                "status": "Draft",
+                "lastUpdated": "21/12/2022"
             },
             {
-                "SKAID": "SKA2317",
-                "Title": "Ionization in the Spiral galaxy",
-                "Cycle": "SKA_5000_2023",
-                "PI": "Ma James Nuka",
-                "Status": "Withdrawn",
-                "Last Updated": "21/01/2023"
+                "id": "SKA2317",
+                "title": "Ionization in the Spiral galaxy",
+                "cycle": "SKA_5000_2023",
+                "pi": "Ma James Nuka",
+                "status": "Withdrawn",
+                "lastUpdated": "21/01/2023"
             }
         ],
         "ProjectAttributes": {

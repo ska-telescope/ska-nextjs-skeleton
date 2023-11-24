@@ -9,8 +9,8 @@ import PageBanner from '@/components/pageBanner/PageBanner';
 import PageFooter from '@/components/pageFooter/PageFooter';
 
 export default function ScienceJustification() {
-  const { proposalData } = React.useContext(DataContext);
-  const [latex, setLatex] = React.useState(proposalData.science);
+  const { data } = React.useContext(DataContext);
+  const [latex, setLatex] = React.useState(data.ScienceJust);
   const [isOpen, setIsOpen] = React.useState(false);
 
   function openModal() {

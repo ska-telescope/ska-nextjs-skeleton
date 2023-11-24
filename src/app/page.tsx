@@ -3,11 +3,11 @@
 import React from 'react';
 import { DataContext } from '@/components/dataProvider/DataProvider.jsx';
 import AddProposalButton from '@/components/button/addProposal/AddProposalButton';
-import DataGridWrapper from '../components/wrappers/dataGridWrapper/dataGridWrapper';
+import DataGridWrapper from '@/components/wrappers/dataGridWrapper/dataGridWrapper';
 import { Grid, Typography } from '@mui/material';
 
 export default function Home() {
-  const { listData } = React.useContext(DataContext);
+  const { data } = React.useContext(DataContext);
 
   const ClickFunction = () => {
     location.assign('/proposal/title');
@@ -35,7 +35,7 @@ export default function Home() {
       </Grid>
 
       <Grid p={1} container direction="column" alignItems="center" justifyContent="space-around">
-        <DataGridWrapper rows={listData} extendedColumns={extendedColumns} height={400} rowClick={ClickFunction} />
+        <DataGridWrapper rows={data.ExistingProposal} extendedColumns={extendedColumns} height={400} rowClick={ClickFunction} />
       </Grid>
     </>
   );
