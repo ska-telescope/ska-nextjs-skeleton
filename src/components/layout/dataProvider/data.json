@@ -3,7 +3,7 @@
         "Projects": [
             {
                 "id": 1,
-                "title": "Standard (PI) Proposal",
+                "title": "Standard Proposal",
                 "code": "PI",
                 "description": "Standard Observing Proposal"
             },
@@ -15,7 +15,7 @@
             },
             {
                 "id": 3,
-                "title": "Director's Discretionary Time (DDT) Proposal",
+                "title": "Director's Discretionary Time Proposal",
                 "code": "DDT",
                 "description": "Director's discretionary time proposal. It does not follow the normal proposal submission policies. It only requires approval from DG."
             }
@@ -73,7 +73,7 @@
             }
         ],
         "ProjectAttributes": {
-            "Standard (PI) Proposal": [
+            "PI": [
                 {
                     "title": "Target of opportunity",
                     "code": "ToO",
@@ -95,7 +95,7 @@
                     "description": "A proposal that spans multiple PROPOSAL CYCLES"
                 }
             ],
-            "Key Science Project": [],
+            "KSP": [],
             "DDT": []
         },
         "Targets": {
