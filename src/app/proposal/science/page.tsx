@@ -2,11 +2,11 @@
 
 import React from 'react';
 import Latex from 'react-latex-next';
-import { DataContext } from '@/components/dataProvider/DataProvider.jsx';
+import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import { Box, Grid, Modal, Paper } from '@mui/material';
 import LatexEntry from '@/components/latexEntry/latexEntry';
-import PageBanner from '@/components/pageBanner/PageBanner';
-import PageFooter from '@/components/pageFooter/PageFooter';
+import PageBanner from '@/components/layout/pageBanner/PageBanner';
+import PageFooter from '@/components/layout/pageFooter/PageFooter';
 
 export default function ScienceJustification() {
   const { data } = React.useContext(DataContext);

@@ -3,7 +3,7 @@
 import { Paper } from '@mui/material';
 import { Spacer, SPACER_VERTICAL } from '@ska-telescope/ska-gui-components';
 import { StoreProvider } from '@ska-telescope/ska-gui-local-storage';
-import ThemeClient from '@/components/themeClient/themeClient';
+import ThemeClient from '@/components/layout/themeClient/themeClient';
 
 const HEADER_HEIGHT = 70;
 const FOOTER_HEIGHT = 20;

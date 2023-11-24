@@ -2,9 +2,8 @@
 
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import { DataContext } from '@/components/dataProvider/DataProvider.jsx';
-import PageBanner from '@/components/pageBanner/PageBanner';
-import PageFooter from '@/components/pageFooter/PageFooter';
+import PageBanner from '@/components/layout/pageBanner/PageBanner';
+import PageFooter from '@/components/layout/pageFooter/PageFooter';
 
 export default function Title() {
 

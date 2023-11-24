@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import PageBanner from '@/components/pageBanner/PageBanner';
-import PageFooter from '@/components/pageFooter/PageFooter';
+import PageBanner from '@/components/layout/pageBanner/PageBanner';
+import PageFooter from '@/components/layout/pageFooter/PageFooter';
 import { Grid, Typography } from '@mui/material';
 
 export default function Data() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import { DataContext } from '@/components/dataProvider/DataProvider.jsx';
+import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import StatusWrapper from '@/components/wrappers/statusWrapper/StatusWrapper';
 
 export default function StatusArray() {

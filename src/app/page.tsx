@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { DataContext } from '@/components/dataProvider/DataProvider.jsx';
+import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import AddProposalButton from '@/components/button/addProposal/AddProposalButton';
 import DataGridWrapper from '@/components/wrappers/dataGridWrapper/dataGridWrapper';
 import { Grid, Typography } from '@mui/material';

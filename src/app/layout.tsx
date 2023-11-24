@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import StoreClient from '@/components/storeClient/storeClient';
-import DataProvider from '@/components/dataProvider/DataProvider';
+import StoreClient from '@/components/layout/storeClient/storeClient';
+import DataProvider from '@/components/layout/dataProvider/DataProvider';
 
 export const metadata: Metadata = {
   title: 'NextJS Skeleton',
