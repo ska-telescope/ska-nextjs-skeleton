@@ -95,8 +95,45 @@
                     "description": "A proposal that spans multiple PROPOSAL CYCLES"
                 }
             ],
-            "KSP": [],
-            "DDT": []
+            "KSP":  [
+                {
+                    "title": "Target of opportunity",
+                    "code": "ToO",
+                    "description": "A target of opportunity observing proposal"
+                },
+                {
+                    "title": "Joint SKA proposal",
+                    "code": "JTP",
+                    "description": "A proposal that requires both SKA-MID and Low telescopes"
+                },
+                {
+                    "title": "Coordinated Proposal",
+                    "code": "CP",
+                    "description": "A proposal requiring observing to be coordinated with another facility (either ground- or space-based) with user-specified SCHEDULING CONSTRAINTS provided. Note VLBI is considered a form of coordinated observing, though later more detailed requirements may create a specific VLBI proposal type."
+                },
+                {
+                    "title": "Long term proposal",
+                    "code": "LTP",
+                    "description": "A proposal that spans multiple PROPOSAL CYCLES"
+                }
+            ],
+            "DDT":  [
+                {
+                    "title": "Target of opportunity",
+                    "code": "ToO",
+                    "description": "A target of opportunity observing proposal"
+                },
+                {
+                    "title": "Joint SKA proposal",
+                    "code": "JTP",
+                    "description": "A proposal that requires both SKA-MID and Low telescopes"
+                },
+                {
+                    "title": "Coordinated Proposal",
+                    "code": "CP",
+                    "description": "A proposal requiring observing to be coordinated with another facility (either ground- or space-based) with user-specified SCHEDULING CONSTRAINTS provided. Note VLBI is considered a form of coordinated observing, though later more detailed requirements may create a specific VLBI proposal type."
+                }
+            ]
         },
         "Targets": {
             "No Target": null,
