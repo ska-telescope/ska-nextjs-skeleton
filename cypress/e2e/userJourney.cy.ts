@@ -16,7 +16,7 @@ context("Home Page", () => {
 
   it("Footer : Verify Title and Telescope selector", () => {
     cy.get('[data-testid="footerId"]')
-      .contains("Copyright 2023 | DRAFT")
+      .contains("SKAO 2023")
       .should("be.visible");
   });
 

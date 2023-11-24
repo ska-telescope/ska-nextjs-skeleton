@@ -38,7 +38,9 @@
     "test:headless": "cypress run video=false",
     "test:report": "jest --coverage --report-dir=build/reports --reporter=html",
     "test:report:ci": "jest --coverage --report-dir=build/reports --reporter=cobertura",
-    "test:summary": "jest --coverage --reporter=text-summary"
+    "test:summary": "jest --coverage --reporter=text-summary",
+    "chloe": "cypress run --e2e --headless --browser chrome --config video=false",
+    "chloe1": "npx nyc report --report-dir=build/reports --reporter=cobertura"
   },
   "resolutions": {
     "nth-check": "^2.0.1",
@@ -54,7 +56,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.18",
-    "@ska-telescope/ska-gui-components": "^0.1.67",
+    "@ska-telescope/ska-gui-components": "^0.1.68",
     "@ska-telescope/ska-gui-local-storage": "^0.0.3",
     "@types/node": "*",
     "@types/react": "^18.2.37",

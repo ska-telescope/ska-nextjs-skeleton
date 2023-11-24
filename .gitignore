@@ -23,6 +23,7 @@
 /reports
 linting.xml
 junit.xml
+cypress/downloads
 
 # profiling files
 chrome-profiler-events*.json
