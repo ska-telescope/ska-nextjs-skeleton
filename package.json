@@ -40,7 +40,10 @@
     "test:report:ci": "jest --coverage --report-dir=build/reports --reporter=cobertura",
     "test:summary": "jest --coverage --reporter=text-summary",
     "chloe": "cypress run --e2e --headless --browser chrome --config video=false",
-    "chloe1": "npx nyc report --report-dir=build/reports --reporter=cobertura"
+    "chloe1": "npx nyc report --report-dir=build/reports --reporter=cobertura",
+    "chloe2": "cypress run --component --headless --browser chrome --reporter junit --reporter-options mochaFile=build/tests/unit-tests[hash].xml --config video=false",
+    "chloe3": "cypress run --e2e --headless --browser chrome --reporter junit --config video=false --reporter-options mochaFile=build/tests/unit-tests[hash].xml",
+    "chloe4": "jrm build/reports/unit-tests.xml \"build/tests/*.xml\""
   },
   "resolutions": {
     "nth-check": "^2.0.1",
