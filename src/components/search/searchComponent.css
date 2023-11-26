@@ -1,0 +1,9 @@
+/* SearchComponent.css */
+
+.searchInput {
+    border-bottom: 1px solid #aaa; /* Adds a single line as an underline */
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    /* borderBottom: '1px solid #aaa', // Adds a single line as an underline
+    //   marginBottom: '10px', // Adjust spacing as needed */
+  }
+  

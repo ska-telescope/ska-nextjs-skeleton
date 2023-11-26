@@ -37,7 +37,8 @@
                 "cycle": "SKA_5000_2023",
                 "pi": "Van Loo Cheng",
                 "status": "Submitted",
-                "lastUpdated": "21/11/2023"
+                "lastUpdated": "21/11/2023",
+                "actions" : null
             },
             {
                 "id": "SKA2311",
@@ -45,7 +46,8 @@
                 "cycle": "SKA_5000_2023",
                 "pi": "Van Loo Cheng",
                 "status": "Submitted",
-                "lastUpdated": "21/11/2023"
+                "lastUpdated": "21/11/2023",
+                "actions" : null
             },
             {
                 "id": "SKA2399",
@@ -53,7 +55,8 @@
                 "cycle": "SKA_5000_2023",
                 "pi": "Keeper Sung",
                 "status": "Accepted",
-                "lastUpdated": "1/11/2023"
+                "lastUpdated": "1/11/2023",
+                "actions" : null
             },
             {
                 "id": "SKA2319",
@@ -61,7 +64,8 @@
                 "cycle": "SKA_5000_2023",
                 "pi": "Precious Luthan",
                 "status": "Draft",
-                "lastUpdated": "21/12/2022"
+                "lastUpdated": "21/12/2022",
+                "actions" : null
             },
             {
                 "id": "SKA2317",
@@ -69,7 +73,8 @@
                 "cycle": "SKA_5000_2023",
                 "pi": "Ma James Nuka",
                 "status": "Withdrawn",
-                "lastUpdated": "21/01/2023"
+                "lastUpdated": "21/01/2023",
+                "actions" : null
             }
         ],
         "ProjectAttributes": {

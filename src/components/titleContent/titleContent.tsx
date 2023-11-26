@@ -7,6 +7,7 @@ import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import { Avatar, Card, CardContent, CardHeader, Grid, Typography } from '@mui/material';
 import useTheme from '@mui/material/styles/useTheme';
 import { TextEntry } from '@ska-telescope/ska-gui-components';
+import './title.css';
 
 export default function TitleContent() {
   const { data } = React.useContext(DataContext);
@@ -34,7 +35,7 @@ export default function TitleContent() {
     return (
       <Grid item xs={12} sm={6} md={4}>
         <Card
-          style={{ color: setCardFG(theProposal, PROPOSAL), backgroundColor: setCardBG(theProposal, PROPOSAL)}}
+          style={{ color: setCardFG(theProposal, PROPOSAL), backgroundColor: setCardBG(theProposal, PROPOSAL), height: 200, width: 300}}
           onClick={() => clickProposal(PROPOSAL)}
           variant='outlined'
         >
@@ -146,12 +147,16 @@ export default function TitleContent() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={6}>
+      <div className='container'>
+      <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
         {data.Projects.map((proposalType: any) => ProposalType(proposalType))}
-      </Grid>
-      {theProposal && <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={6}>
+        </Grid>
+        </div>
+      
+      {theProposal && <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
         {subProjects().map((proposalType: any) => ProposalSubType(proposalType))}
       </Grid>}
+      
     </Grid>
   );
 }
