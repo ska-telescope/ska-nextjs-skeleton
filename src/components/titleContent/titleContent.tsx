@@ -153,7 +153,9 @@ export default function TitleContent() {
         </Grid>
         </div>
       
-      {theProposal && <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
+      {theProposal && 
+      
+      <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
         {subProjects().map((proposalType: any) => ProposalSubType(proposalType))}
       </Grid>}
       
