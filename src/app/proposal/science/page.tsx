@@ -13,7 +13,7 @@ export default function ScienceJustification() {
   const { data } = React.useContext(DataContext);
   const [latex, setLatex] = React.useState(data.ScienceJust);
   const [isOpen, setIsOpen] = React.useState(false);
-  const [pdfUrl, setPdfUrl] = React.useState('')
+  const [pdfUrl, setPdfUrl] = React.useState('');
 
   function openModal() {
     setIsOpen(true);
@@ -74,8 +74,12 @@ export default function ScienceJustification() {
       latex
     ].join('\n');
 
-    setPdfUrl('https://latexonline.cc/compile?text=' + encodeURIComponent(tex))
-  }
+    setPdfUrl('https://latexonline.cc/compile?text=' + encodeURIComponent(tex));
+  };
+
+  React.useEffect(() => {
+    updatePreview();
+  }, [data.ScienceJust]);
 
   const title = 'Preview PDF';
 
