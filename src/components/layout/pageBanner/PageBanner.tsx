@@ -5,7 +5,7 @@ import { Grid, Typography } from '@mui/material';
 import HomeButton from '@/components/button/home/HomeButton';
 import SaveButton from '@/components/button/save/SaveButton';
 import StatusArray from '@/components/statusArray/StatusArray';
-import SubmitButton from '@/components/button/Submit/SubmitButton';
+import SubmitButton from '@/components/button/submit/SubmitButton';
 import ValidateButton from '@/components/button/validate/ValidateButton';
 
 interface PageBannerProps {
