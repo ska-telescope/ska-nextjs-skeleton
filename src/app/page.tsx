@@ -6,10 +6,10 @@ import AddProposalButton from '@/components/button/addProposal/AddProposalButton
 import DataGridWrapper from '@/components/wrappers/dataGridWrapper/dataGridWrapper';
 import { Grid, Typography, Container } from '@mui/material';
 import styles from '../../styles/addproposal.module.css';
-import '../../styles/globals.css'
+import '../../styles/globals.css';
 import { DropDown } from '@ska-telescope/ska-gui-components';
-import {SearchComponent} from '../components/search/searchComponent'
-import {DropdownComponent} from '../components/dropDown/dropdownComponent'
+import {SearchComponent} from '../components/search/searchComponent';
+
 export default function Home() {
   const { data } = React.useContext(DataContext);
 
@@ -22,13 +22,6 @@ export default function Home() {
     { label: 'Option 2', value: '2' },
     { label: 'Option 3', value: '3' },
   ];
-
-  const handleSelection = (selectedValue: string | number) => {
-    // No console.log here; you can perform any other actions with the selected value
-    // For example:
-    alert(`Selected value in ParentComponent: ${selectedValue}`);
-  };
- 
   const columns = [
     { field: 'id', headerName: 'SKAO ID', width: 200 },
     { field: 'title', headerName: 'Title', width: 200 },
@@ -38,31 +31,32 @@ export default function Home() {
     { field: 'Actions', headerName: 'Actions', width: 200 }
   ];
   const extendedColumns = structuredClone(columns);
- 
+
 
   const handleSearch = (term: string) => {
+    // eslint-disable-next-line no-console
     console.log('Search term:', term);
     // Implement your search logic here
   };
   return (
     // <div className={styles.container}>
-      <Container disableGutters={true} maxWidth="xl"> 
+    <Container disableGutters={true} maxWidth="xl">
       <Grid p={1} container direction="column" alignItems="center" justifyContent="space-around">
         <Typography variant="h5">
           Proposals where you have either participated as a Co-Investigator or as a Principal Investigator.
         </Typography>
       </Grid>
-      
+
       <div className={styles.container}>
         <AddProposalButton />
         <div className={styles.dropdown}>
-        <DropDown options={options} testId='{tt}' value={30} label='All Status Types'  />      
-        </div>  
+          <DropDown options={options} testId='{tt}' value={30} label='All Status Types'  />
+        </div>
         {/* <DropdownComponent options={options} onSelect={handleSelection} label="Choose an option" /> */}
         <SearchComponent onSearch={handleSearch} />
       </div>
 
-    
+
       <Grid p={1} container direction="column" alignItems="flex-left" justifyContent="space-around">
         <DataGridWrapper rows={data.ExistingProposal} extendedColumns={extendedColumns} height={500} rowClick={ClickFunction} />
       </Grid>

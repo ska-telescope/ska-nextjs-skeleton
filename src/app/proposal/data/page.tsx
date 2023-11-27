@@ -16,20 +16,20 @@ export default function Data() {
       </Grid>
       <div className={styles.container}>
         <Typography variant="h6" m={2}>
-         <div className={styles.level1}>
-          SDP 
-          <Grid item xs={3}>
-          <TextEntry
-            label="Pipeline"
-            testId="titleId"
-            value={theTitle}
-            setValue={setTheTitle}
-          />
-          </Grid>
-         </div>
-         <div className={styles.level1}>
+          <div className={styles.level1}>
+          SDP
+            <Grid item xs={3}>
+              <TextEntry
+                label="Pipeline"
+                testId="titleId"
+                value={theTitle}
+                setValue={setTheTitle}
+              />
+            </Grid>
+          </div>
+          <div className={styles.level1}>
           SRC NET
-         </div>
+          </div>
         </Typography>
       </div>
       <Grid item>

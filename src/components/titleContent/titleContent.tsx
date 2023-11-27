@@ -148,17 +148,17 @@ export default function TitleContent() {
         </Grid>
       </Grid>
       <div className='container'>
-      <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
-        {data.Projects.map((proposalType: any) => ProposalType(proposalType))}
+        <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
+          {data.Projects.map((proposalType: any) => ProposalType(proposalType))}
         </Grid>
-        </div>
-      
-      {theProposal && 
-      
+      </div>
+
+      {theProposal &&
+
       <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
         {subProjects().map((proposalType: any) => ProposalSubType(proposalType))}
       </Grid>}
-      
+
     </Grid>
   );
 }
