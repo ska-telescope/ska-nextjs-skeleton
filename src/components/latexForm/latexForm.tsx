@@ -31,7 +31,7 @@ export default function LatexForm() {
         />
       </Box>
       <Box m={1} sx={{ width: BOX_WIDTH }}>
-        <Latex>{latex}</Latex>
+        <Latex strict={false}>{latex}</Latex>
       </Box>
     </Grid>
   );
