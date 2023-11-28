@@ -222,23 +222,25 @@
         "General": {
             "Cycle": "SKA_5000_2023",
             "Abstract": "ghjghjghjghjg hghjghj hghjghjgh jgjhghjghjg jhghjghjghj hjghjghjghj jgjhghj hjghjghjg",
-            "Science Category": [
-                "Cosmology",
-                "Cradle of Life",
-                "Epoch of Reionization",
-                "Extra Galactic continuum",
-                "Extra Galactic Spectral line",
-                "Gravitational Waves",
-                "High Energy Cosmic Particles",
-                "HI Galaxy science",
-                "Magnetism",
-                "Our Galaxy",
-                "Pulsars",
-                "Solar, Heliospheric and Ionospheric Physics",
-                "Transients",
-                "VLBI"
+            "ScienceCategory": [
+                { "label": "Cosmology", "value": 1 },
+                { "label": "Cradle of Life", "value": 2 },
+                { "label": "Epoch of Re-ionization", "value": 3 },
+                { "label": "Extra Galactic continuum", "value": 4 },
+                { "label": "Extra Galactic Spectral line", "value": 5 },
+                { "label": "Gravitational Waves", "value": 6 },
+                { "label": "High Energy Cosmic Particles", "value": 7 },
+                { "label": "HI Galaxy science", "value": 8 },
+                { "label": "Magnetism", "value": 9 },
+                { "label": "Our Galaxy", "value": 10 },
+                { "label": "Pulsars", "value": 11 },
+                { "label": "Solar, Heliospheric and Ionospheric Physics", "value": 12 },
+                { "label": "Transients", "value": 13 },
+                { "label": "VLBI", "value": 14 }
             ],
-            "Science Sub-Category": []
+            "ScienceSubCategory": [
+                { "label": "Not specified", "value": 1 }
+            ]
         },
         "ScienceJust": "\n\n% This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.\n\n\\documentclass{article} % \\documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble\n\n\\usepackage{amsmath} % \\usepackage is a command that allows you to add functionality to your LaTeX code\n\n\\title{Simple Sample} % Sets article title\n\\author{My Name} % Sets authors name\n\\date{\\today} % Sets date for date compiled\n\n% The preamble ends with the command \\begin{document}\n\\begin{document} % All begin commands must be paired with an end command somewhere\n    \\maketitle % creates title using information in preamble (title, author, date)\n    \n    \\section{Hello World!} % creates a section\n    \n    \\textbf{Hello World!} Today I am learning \\LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \\LaTeX\n     \\LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math\n     . I can also give equations their own space: \n    \\begin{equation} % Creates an equation environment and is compiled as math\n    \\gamma^2+\\theta^2=\\omega^2\n    \\end{equation}\n    If I do not leave any blank lines \\LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).  \n    Also notice how even though I hit enter after that sentence and here $\\downarrow$\n     \\LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.\n    \n    For a new paragraph I can leave a blank space in my code. \n\n\\end{document} % This is the end of the document\n",
         "TechnicalJust": "\n\n% This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.\n\n\\documentclass{article} % \\documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble\n\n\\usepackage{amsmath} % \\usepackage is a command that allows you to add functionality to your LaTeX code\n\n\\title{Simple Sample} % Sets article title\n\\author{My Name} % Sets authors name\n\\date{\\today} % Sets date for date compiled\n\n% The preamble ends with the command \\begin{document}\n\\begin{document} % All begin commands must be paired with an end command somewhere\n    \\maketitle % creates title using information in preamble (title, author, date)\n    \n    \\section{Hello World!} % creates a section\n    \n    \\textbf{Hello World!} Today I am learning \\LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \\LaTeX\n     \\LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math\n     . I can also give equations their own space: \n    \\begin{equation} % Creates an equation environment and is compiled as math\n    \\gamma^2+\\theta^2=\\omega^2\n    \\end{equation}\n    If I do not leave any blank lines \\LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).  \n    Also notice how even though I hit enter after that sentence and here $\\downarrow$\n     \\LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.\n    \n    For a new paragraph I can leave a blank space in my code. \n\n\\end{document} % This is the end of the document\n",
