@@ -4,10 +4,10 @@
 
 import React from 'react';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
-import { Avatar, Card, CardContent, CardHeader, Grid, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader, Grid, Typography, CardActions, Button } from '@mui/material';
 import useTheme from '@mui/material/styles/useTheme';
 import { TextEntry } from '@ska-telescope/ska-gui-components';
-import './title.css';
+import styles from '../../components/titleContent/title.module.css'
 
 export default function TitleContent() {
   const { data } = React.useContext(DataContext);
@@ -20,9 +20,9 @@ export default function TitleContent() {
   function clickProposal(PROPOSAL: any) {
     setTheProposal(PROPOSAL);
   }
-  function clickSubProposal(PROPOSAL: any) {
-    setTheSubProposal(PROPOSAL);
-  }
+  // function clickSubProposal(PROPOSAL: any) {
+  //   setTheSubProposal(PROPOSAL);
+  // }
 
   const setCardBG = (in1:any, in2: any) => {
     return in1 && in1 === in2 ? theme.palette.secondary.main : theme.palette.primary.main;
@@ -33,27 +33,29 @@ export default function TitleContent() {
 
   function ProposalType(PROPOSAL: any) {
     return (
-      <Grid item xs={12} sm={6} md={4}>
+      
+        <Grid className={styles.container}>
+      
         <Card
-          style={{ color: setCardFG(theProposal, PROPOSAL), backgroundColor: setCardBG(theProposal, PROPOSAL), height: 200, width: 300}}
+          style={{ width: 300, height: 200}}
           onClick={() => clickProposal(PROPOSAL)}
           variant='outlined'
         >
           <CardHeader
-            avatar={
-              <Avatar variant="rounded" style={{ color: setCardBG(theProposal, PROPOSAL), backgroundColor: setCardFG(theProposal, PROPOSAL)}}>
-                <Typography variant="body2" component="div">
-                  {PROPOSAL.code}
-                </Typography>
-              </Avatar>}
+          avatar={
+           <Avatar variant="rounded" style={{ color: setCardBG(theProposal, PROPOSAL), backgroundColor: setCardFG(theProposal, PROPOSAL)}}>
+                          <Typography variant="body2" component="div">
+                            {PROPOSAL.code}
+                          </Typography>
+                        </Avatar>}
             title={
-              <Typography variant="h6" component="div">
+              <Typography variant="h6" component="div" color="text.secondary" align="center" gutterBottom>
                 {PROPOSAL.title}
               </Typography>
             }
           />
           <CardContent>
-            <Typography variant="caption" component="div">
+            <Typography component="div" variant="h5" color="text.secondary" align="center" gutterBottom>
               {PROPOSAL.description.split('\n').map((c: string) => {
                 return (
                   // eslint-disable-next-line react/jsx-key
@@ -66,24 +68,28 @@ export default function TitleContent() {
           </CardContent>
         </Card>
       </Grid>
+    
+    
     );
   }
+
+
 
   function ProposalSubType(PROPOSAL: any) {
     return (
       <Grid item xs={12} sm={6} md={3}>
         <Card
-          style={{ color: setCardFG(theSubProposal, PROPOSAL), backgroundColor: setCardBG(theSubProposal, PROPOSAL)}}
+          style={{ color: setCardFG(theSubProposal, PROPOSAL), backgroundColor: setCardBG(theSubProposal, PROPOSAL), width: 350, height: 200}}
           onClick={() => clickSubProposal(PROPOSAL)}
           variant='outlined'
         >
           <CardHeader
-            avatar={
-              <Avatar variant="rounded" style={{ color: setCardBG(theSubProposal, PROPOSAL), backgroundColor: setCardFG(theSubProposal, PROPOSAL)}}>
-                <Typography variant="body2" component="div">
-                  {PROPOSAL.code}
-                </Typography>
-              </Avatar>}
+          avatar={
+                        <Avatar variant="rounded" style={{ color: setCardBG(theProposal, PROPOSAL), backgroundColor: setCardFG(theProposal, PROPOSAL)}}>
+                          <Typography variant="body2" component="div">
+                            {PROPOSAL.code}
+                          </Typography>
+                        </Avatar>}
             title={
               <Typography variant="h6" component="div">
                 {PROPOSAL.title}
@@ -112,9 +118,9 @@ export default function TitleContent() {
   }
 
   return (
-    <Grid container direction="column" alignItems="flex-start" justifyContent="space-evenly" >
-      <Grid pl={2} container direction="row" justifyContent="space-around" alignItems="center" spacing={2} >
-        <Grid item xs={3}>
+    <Grid container className={styles.toplevel} >
+      <Grid pl={2} container direction="row" justifyContent="space-around" alignItems="center" spacing={2}  >
+        <Grid item xs={3} >
           <TextEntry
             label="Title"
             testId="titleId"
@@ -122,7 +128,7 @@ export default function TitleContent() {
             setValue={setTheTitle}
           />
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={8} >
           <Typography variant="body2">
             This title should be used to allow for the identification of this proposal in a list of proposals
           </Typography>
@@ -147,18 +153,20 @@ export default function TitleContent() {
           </Typography>
         </Grid>
       </Grid>
-      <div className='container'>
-        <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
+      <div className={styles.container3}>
+      <Grid className={styles.container}>
+        {/* <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}> */}
           {data.Projects.map((proposalType: any) => ProposalType(proposalType))}
         </Grid>
-      </div>
-
+        </div>
+        <div className={styles.container3}>
       {theProposal &&
-
-      <Grid p={2} container direction="row" justifyContent="space-evenly" alignItems="baseline" spacing={2}>
+      
+      <Grid className={styles.containersub}>
         {subProjects().map((proposalType: any) => ProposalSubType(proposalType))}
-      </Grid>}
-
+      </Grid> }
+      </div>
+      
     </Grid>
   );
 }
