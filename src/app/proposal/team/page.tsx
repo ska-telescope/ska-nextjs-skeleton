@@ -94,7 +94,6 @@ export default function Team() {
                   label="Email"
                   testId="email"
                 />
-                <TeamInviteButton></TeamInviteButton>
               </Grid>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
@@ -119,6 +118,7 @@ export default function Team() {
             labelPlacement="end"
             sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
           />
+          <TeamInviteButton></TeamInviteButton>
         </Grid>
       </Grid>
       <Grid item>

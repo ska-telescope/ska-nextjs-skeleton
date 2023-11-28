@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska-gui-components';
-import FactCheckIcon from '@mui/icons-material/FactCheck';
-
+import EmailIcon from '@mui/icons-material/Email';
 export default function TeamInviteButton() {
   const ClickFunction = () => {
   };
@@ -16,6 +15,7 @@ export default function TeamInviteButton() {
       color={ButtonColorTypes.Secondary}
       label={title}
       onClick={ClickFunction}
+      icon={<EmailIcon/>}
       testId={title + 'Button'}
       variant={ButtonVariantTypes.Contained}
     />
