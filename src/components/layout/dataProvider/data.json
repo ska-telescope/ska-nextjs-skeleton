@@ -163,19 +163,28 @@
                         "id": 1,
                         "Name": "Target 1",
                         "RA": "01:00:00",
-                        "Dec": "00:00:00"
+                        "Dec": "00:00:00",
+                        "sc1": "82.48",
+                        "sc2": "20",
+                        "sc3": "34"
                     },
                     {
                         "id": 2,
                         "Name": "Target 2",
                         "RA": "03:00:00",
-                        "Dec": "-10:00:00"
+                        "Dec": "-10:00:00",
+                        "sc1": "82.48",
+                        "sc2": "20",
+                        "sc3": "34"
                     },
                     {
                         "id": 3,
                         "Name": "Target 3",
                         "RA": "05:30:00",
-                        "Dec": "-10:00:00"
+                        "Dec": "-10:00:00",
+                        "sc1": "82.48",
+                        "sc2": "20",
+                        "sc3": "34"
                     }
                 ]
             },
@@ -303,12 +312,12 @@
             ],
             "ObservationType": [
                 { "label": "Zoom","value": 0 },
-                 { "label": "Continuum","value": 1 }
+                { "label": "Continuum","value": 1 }
             ],
             "ImageWeighting": [
-                "Natural",
-                "Uniform",
-                "Briggs"
+                { "label": "Natural","value": 0 },
+                { "label": "Uniform","value": 1 },
+                { "label": "Briggs","value": 2 }
             ],
             "Bandwidth": {
                 "MID": [],

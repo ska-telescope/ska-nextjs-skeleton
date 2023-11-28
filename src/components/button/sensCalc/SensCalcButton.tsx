@@ -6,7 +6,7 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 
 export default function SensCalcButton() {
   const ClickFunction = () => {
-    // location.assign('/');
+    location.assign('/proposal/sensCalc');
   };
 
   const title = 'Sensitivity Calculator';

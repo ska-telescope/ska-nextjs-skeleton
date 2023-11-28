@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-'useClient';
+'use Client';
 import React from 'react';
 import { DataGrid } from '@ska-telescope/ska-gui-components';
 

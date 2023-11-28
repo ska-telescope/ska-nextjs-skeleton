@@ -18,7 +18,7 @@ export default function Observation() {
   };
 
   const columnsObservations = [
-    { field: 'array', headerName: 'Array' },
+    { field: 'array', headerName: 'Array', minWidth: 100 },
     { field: 'subarray', headerName: 'Subarray', minWidth: 200 },
     { field: 'linked', headerName: 'Linked Targets', minWidth: 200 },
     { field: 'type', headerName: 'Type', minWidth: 100 }
@@ -26,9 +26,9 @@ export default function Observation() {
   const extendedColumnsObservations = structuredClone(columnsObservations);
 
   const columnsTargets = [
-    { field: 'Name', headerName: 'Name' },
-    { field: 'RA', headerName: 'Right Ascension ( hh:mm:ss:s )', minWidth: 205 },
-    { field: 'Dec', headerName: 'Declination ( dd:mm:ss:s )', width: 180 }
+    { field: 'Name', headerName: 'Name', minWidth: 200 },
+    { field: 'RA', headerName: 'Right Ascension ( hh:mm:ss:s )', minWidth: 300 },
+    { field: 'Dec', headerName: 'Declination ( dd:mm:ss:s )', width: 300 }
   ];
   const extendedColumnsTargets = structuredClone(columnsTargets);
 
