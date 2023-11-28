@@ -68,14 +68,12 @@ export default function Team() {
       <Grid item>
         <PageBanner title="Team"/>
       </Grid>
-      <Grid p={1} container direction="row" alignItems="flex-left" justifyContent="space-around">
+      <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around">
         <Grid item>
           <DataGridWrapper rows={data.Team} extendedColumns={extendedColumns} height={400} rowClick={ClickFunction} />
-        </Grid>
-        <Grid item xs={5}>
-          <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around" >
+          <Grid item>
             <Box sx={{ width: '100%' }}>
-              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <Box sx={{ borderBottom: 1, borderColor: theme.palette.secondary.main }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                   <Tab label="Invite Team Member" {...a11yProps(0)} />
                   <Tab label="Import From File" {...a11yProps(1)} />
