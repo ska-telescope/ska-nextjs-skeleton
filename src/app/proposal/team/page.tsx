@@ -3,11 +3,16 @@
 import React from 'react';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
-import {Checkbox, FormControlLabel, Grid} from '@mui/material';
+import {Box, Checkbox, FormControlLabel, Grid, Tab, Tabs, Typography} from '@mui/material';
 import DataGridWrapper from '../../../components/wrappers/dataGridWrapper/dataGridWrapper';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import theme from '../../../theme';
 
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
 export default function Team() {
   const { data } = React.useContext(DataContext);
 
@@ -25,6 +30,39 @@ export default function Team() {
   const ClickFunction = () => {
   };
 
+  function CustomTabPanel(props: TabPanelProps) {
+    const { children, value, index, ...other } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+
+  function a11yProps(index: number) {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+    };
+  }
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
     <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
       <Grid item>
@@ -34,10 +72,26 @@ export default function Team() {
         <Grid item>
           <DataGridWrapper rows={data.Team} extendedColumns={extendedColumns} height={400} rowClick={ClickFunction} />
         </Grid>
-        <Grid item>
-          Tabbing to go in here.
-          <Grid container direction="column" alignItems="flex-start" justifyContent="space-between" >
-
+        <Grid item xs={5}>
+          <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around" >
+            <Box sx={{ width: '100%' }}>
+              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                  <Tab label="Invite Team Member" {...a11yProps(0)} />
+                  <Tab label="Import From File" {...a11yProps(1)} />
+                  <Tab label="Search For Member" {...a11yProps(2)} />
+                </Tabs>
+              </Box>
+              <CustomTabPanel value={value} index={0}>
+                Item One
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={1}>
+                Item Two
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={2}>
+                Item Three
+              </CustomTabPanel>
+            </Box>
             <FormControlLabel
               value="phdThesis"
               control={
