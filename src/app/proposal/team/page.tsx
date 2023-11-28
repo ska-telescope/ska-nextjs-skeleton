@@ -3,9 +3,10 @@
 import React from 'react';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
-import { Grid } from '@mui/material';
+import {Checkbox, FormControlLabel, Grid} from '@mui/material';
 import DataGridWrapper from '../../../components/wrappers/dataGridWrapper/dataGridWrapper';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
+import theme from '../../../theme';
 
 export default function Team() {
   const { data } = React.useContext(DataContext);
@@ -35,6 +36,24 @@ export default function Team() {
         </Grid>
         <Grid item>
           Tabbing to go in here.
+          <Grid container direction="column" alignItems="flex-start" justifyContent="space-between" >
+
+            <FormControlLabel
+              value="phdThesis"
+              control={
+                <Checkbox
+                  defaultChecked
+                  sx={{
+                    '&.Mui-checked': {
+                      color: theme.palette.secondary.main,
+                    },
+                  }}
+                />}
+              label="PhD Thesis"
+              labelPlacement="end"
+              sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+            />
+          </Grid>
         </Grid>
       </Grid>
       <Grid item>
