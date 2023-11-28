@@ -96,7 +96,7 @@ export default function ScienceJustification() {
             </Grid>
             <Grid item xs={6} >
               <Box m={1}>
-                <Typography variant='h5'>Latex Preview</Typography>
+                <Typography variant='h5'>LaTeX Preview</Typography>
                 <Latex>{latex}</Latex>
               </Box>
             </Grid>
