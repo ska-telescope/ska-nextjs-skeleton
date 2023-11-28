@@ -86,36 +86,43 @@ export default function Team() {
             </Box>
             <CustomTabPanel value={value} index={0}>
               <Grid item>
-                <TextEntry
-                  label="First Name"
-                  testId="firstName"
-                />
-                <TextEntry
-                  label="Last Name"
-                  testId="lastName"
-                />
-                <TextEntry
-                  label="Email"
-                  testId="email"
-                />
-                <FormControlLabel
-                  value="phdThesis"
-                  control={
-                    <Checkbox
-                      defaultChecked
-                      sx={{
-                        '&.Mui-checked': {
-                          color: theme.palette.secondary.main,
-                        },
-                      }}
-                    />}
-                  label="PhD Thesis"
-                  labelPlacement="end"
-                  sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
-                />
+                <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around">
+                  <Grid item xs={6}>
+                    <TextEntry
+                      label="First Name"
+                      testId="firstName"
+                    />
+                    <TextEntry
+                      label="Last Name"
+                      testId="lastName"
+                    />
+                    <TextEntry
+                      label="Email"
+                      testId="email"
+                    />
+                    <FormControlLabel
+                      value="phdThesis"
+                      control={
+                        <Checkbox
+                          defaultChecked
+                          sx={{
+                            '&.Mui-checked': {
+                              color: theme.palette.secondary.main,
+                            },
+                          }}
+                        />}
+                      label="PhD Thesis"
+                      labelPlacement="end"
+                      sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+                    />
+                  </Grid>
+                  <Grid item xs={4}>
+                    <InfoPanel title={help.title} description={help.description} additional={help.additional}/>
+                  </Grid>
+                </Grid>
+
                 <Grid item xs={3}>
                   <TeamInviteButton></TeamInviteButton>
-                  <InfoPanel title={help.title} description={help.description} additional={help.additional}/>
                 </Grid>
               </Grid>
             </CustomTabPanel>

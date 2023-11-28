@@ -4,10 +4,11 @@ import React from 'react';
 import Latex from 'react-latex-next';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska-gui-components';
-import { Box, Grid, Modal, Paper, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardHeader, Grid, IconButton, Modal, Typography } from '@mui/material';
 import LatexEntry from '@/components/latexEntry/latexEntry';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 export default function ScienceJustification() {
   const { data } = React.useContext(DataContext);
@@ -25,45 +26,30 @@ export default function ScienceJustification() {
   const latexModal = () => {
     return (
       <Modal open={isOpen}>
-        <Box>
-          <Paper>
-            <button onClick={closeModal}>Close</button>
-            <p>
-              IRCbot BOT 10:47 AM [irc] From KAROO_MKAT Alarm: new warn alarm -
-              Elasticsearch_health_status (cammon_logmon_status_health is
-              yellow)
-            </p>
-            <p>
-              10:49 AM [irc] From KAROO_MKAT Alarm: new warn alarm -
-              Elasticsearch_health_status (cammon_logmon_status_health is
-              yellow)
-            </p>
-            <p>
-              10:52 AM [irc] From KAROO_MKAT Alarm: new warn alarm -
-              Elasticsearch_health_status (cammon_logmon_status_health is
-              yellow)
-            </p>
-            <p>
-              10:54 AM [irc] From KAROO_MKAT Alarm: new warn alarm -
-              Elasticsearch_health_status (cammon_logmon_status_health is
-              yellow)
-            </p>
-            <p>
-              10:58 AM [irc] From KAROO_MKAT Alarm: new warn alarm -
-              Elasticsearch_health_status (cammon_logmon_status_health is
-              yellow)
-            </p>
-            <p>
-              11:00 AM [irc] From KAROO_MKAT Alarm: new warn alarm -
-              Elasticsearch_health_status (cammon_logmon_status_health is
-              yellow)
-            </p>
-            <p>
-              IRCbot BOT 11:13 AM [irc] From KAROO_MKAT Alarm: new warn alarm -
-              Elasticsearch_health_status (cammon_logmon_status_health is
-              yellow)
-            </p>
-          </Paper>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          minHeight="100vh"
+        >
+          <Card variant='outlined' sx={{  height:'90vh',  width:'90vw' }}>
+            <CardHeader
+              action={
+                <IconButton
+                  aria-label="DUMMY"
+                  sx={{ '&:hover': { backgroundColor: 'primary.dark' }, ml: 1 }}
+                  onClick={() => closeModal()}
+                  color="inherit"
+                >
+                  <HighlightOffIcon/>
+                </IconButton>}
+              title={<Typography variant='h6'>TITLE</Typography>} />
+            <CardContent>
+              <object data={pdfUrl} type="application/pdf" width="100%" height="100%">
+                <p>Syntax error or PDF not available </p>
+              </object>
+            </CardContent>
+          </Card>
         </Box>
       </Modal>
     );
