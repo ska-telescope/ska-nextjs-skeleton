@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import { Grid, IconButton, Tooltip } from '@mui/material';
+import { Grid, IconButton, Tooltip, TextField } from '@mui/material';
 import { TextEntry } from '@ska-telescope/ska-gui-components';
 import PreviewIcon from '@mui/icons-material/Preview';
 
@@ -22,16 +22,16 @@ export default function LatexEntry({value, setValue, setModal}:LatexEntryProps) 
       alignItems="flex-start"
       justifyContent="space-evenly"
     >
-      <Grid item>
+      <Grid item xs={11}>
         <TextEntry
-          label="Latex Input"
+          label="LaTeX Input"
           testId="latexId"
           rows={20}
           value={value}
           setValue={setValue}
         />
       </Grid>
-      <Grid item>
+      <Grid item xs={1}>
         <Tooltip title="LeTeX Display" arrow>
           <IconButton
             aria-label="DUMMY"

@@ -1,10 +1,13 @@
 'use client';
 
 import React from 'react';
+import 'katex/dist/katex.min.css';
 import Latex from 'react-latex-next';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska-gui-components';
 import { Box, Card, CardContent, CardHeader, Grid, IconButton, Modal, Typography } from '@mui/material';
+import PreviewPdfButton from '@/components/button/previewPdf/PreviewPdfButton'
+import UploadPdfButton from '@/components/button/uploadPdf/UploadPdfButton'
 import LatexEntry from '@/components/latexEntry/latexEntry';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
@@ -43,8 +46,8 @@ export default function ScienceJustification() {
                 >
                   <HighlightOffIcon/>
                 </IconButton>}
-              title={<Typography variant='h6'>TITLE</Typography>} />
-            <CardContent>
+              title={<Typography variant='h6'>PDF Preview</Typography>} />
+            <CardContent sx={{  height:'90vh',  width:'90vw' }}>
               <object data={pdfUrl} type="application/pdf" width="100%" height="100%">
                 <p>Syntax error or PDF not available </p>
               </object>
@@ -55,16 +58,17 @@ export default function ScienceJustification() {
     );
   };
 
-  const updatePreview = () => {
+  const updatePreview = (isOpenModal) => {
     const tex = [
       latex
     ].join('\n');
 
     setPdfUrl('https://latexonline.cc/compile?text=' + encodeURIComponent(tex));
+    if(isOpenModal) openModal();
   };
 
   React.useEffect(() => {
-    updatePreview();
+    updatePreview(false);
   }, [data.ScienceJust]);
 
   const title = 'Preview PDF';
@@ -78,37 +82,23 @@ export default function ScienceJustification() {
           <PageBanner title="Science Justification" />
         </Grid>
         <Grid item>
-          <Grid container direction="row" justifyContent="space-evenly" >
-            <Grid item xs={4} sx={{ bgColor: 'yellow' }}>
-              <Grid container direction="column" alignItems="center">
-                <Grid>
-                  <LatexEntry value={latex} setValue={setLatex} setModal={openModal} />
-                </Grid>
-                <Grid>
-                  <Button
-                    ariaDescription={title + 'Button'}
-                    color={ButtonColorTypes.Secondary}
-                    label={title}
-                    onClick={updatePreview}
-                    testId={title + 'Button'}
-                    variant={ButtonVariantTypes.Contained}
-                  >Preview PDF</Button>
+        <Grid container p={5} spacing={5} direction="row" justifyContent="space-evenly" >
+          <Grid item xs={6}>
+              <Grid container direction="column" alignItems="left">
+                <Typography variant='h5'>LaTeX Input</Typography>
+                <LatexEntry value={latex} setValue={setLatex} setModal={openModal} />
+                <Grid container direction="row" justifyContent="space-between">
+                  <PreviewPdfButton
+                    onClick={()=>updatePreview(true)} />
+                  <UploadPdfButton />
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={4} >
+            <Grid item xs={6} >
               <Box m={1}>
                 <Typography variant='h5'>Latex Preview</Typography>
                 <Latex>{latex}</Latex>
               </Box>
-            </Grid>
-            <Grid item xs={4} >
-
-              <Typography variant='h5'>PDF Preview</Typography>
-              <object data={pdfUrl} type="application/pdf" width="100%" height="100%">
-                <p>Syntax error or PDF not available </p>
-              </object>
-
             </Grid>
           </Grid>
         </Grid>
