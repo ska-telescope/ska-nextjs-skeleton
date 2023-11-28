@@ -21,6 +21,9 @@ export default function TargetListSection() {
   ];
   const extendedColumns = structuredClone(columns);
 
+  const ClickFunction = () => {
+  };
+
   function CustomTabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
 
