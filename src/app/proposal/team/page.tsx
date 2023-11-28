@@ -36,7 +36,6 @@ export default function Team() {
         hidden={value !== index}
         id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`}
-        {...other}
       >
         {value === index && (
           <Box sx={{ p: 3 }}>
@@ -72,7 +71,8 @@ export default function Team() {
         <Grid item>
           <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: theme.palette.secondary.main }}>
-              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+              <Tabs textColor="secondary"
+                indicatorColor="secondary" value={value} onChange={handleChange} aria-label="basic tabs example">
                 <Tab label="Invite Team Member" {...a11yProps(0)} />
                 <Tab label="Import From File" {...a11yProps(1)} />
                 <Tab label="Search For Member" {...a11yProps(2)} />
@@ -82,10 +82,10 @@ export default function Team() {
               Item One
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-              Item Two
+              <p>To be implemented at a later date</p>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
-              Item Three
+              <p>To be implemented at a later date</p>
             </CustomTabPanel>
           </Box>
           <FormControlLabel
