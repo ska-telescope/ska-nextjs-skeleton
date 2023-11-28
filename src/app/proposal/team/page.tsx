@@ -7,9 +7,11 @@ import {Box, Checkbox, FormControlLabel, Grid, Tab, Tabs, Typography} from '@mui
 import DataGridWrapper from '../../../components/wrappers/dataGridWrapper/dataGridWrapper';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import theme from '../../../theme';
+import {TextEntry} from '@ska-telescope/ska-gui-components';
+import TeamInviteButton from '../../../components/button/teamInvite/TeamInviteButton';
 
 interface TabPanelProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode;s
   index: number;
   value: number;
 }
@@ -79,7 +81,21 @@ export default function Team() {
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
-              Item One
+              <Grid item>
+                <TextEntry
+                  label="First Name"
+                  testId="firstName"
+                />
+                <TextEntry
+                  label="Last Name"
+                  testId="lastName"
+                />
+                <TextEntry
+                  label="Email"
+                  testId="email"
+                />
+                <TeamInviteButton></TeamInviteButton>
+              </Grid>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
               <p>To be implemented at a later date</p>
