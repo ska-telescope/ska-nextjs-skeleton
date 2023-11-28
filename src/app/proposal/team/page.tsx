@@ -9,6 +9,7 @@ import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import theme from '../../../theme';
 import {TextEntry} from '@ska-telescope/ska-gui-components';
 import TeamInviteButton from '../../../components/button/teamInvite/TeamInviteButton';
+import InfoPanel from '../../../components/infoPanel/infoPanel';
 
 interface TabPanelProps {
   children?: React.ReactNode;s
@@ -17,6 +18,9 @@ interface TabPanelProps {
 }
 export default function Team() {
   const { data } = React.useContext(DataContext);
+  const DEFAULT_HELP = { title: 'Help Title', description: 'Field sensitive help', additional: ''};
+  const [help] = React.useState(DEFAULT_HELP);
+
 
   const columns = [
     { field: 'LastName', headerName: 'Last Name', width: 200 },
@@ -94,6 +98,25 @@ export default function Team() {
                   label="Email"
                   testId="email"
                 />
+                <FormControlLabel
+                  value="phdThesis"
+                  control={
+                    <Checkbox
+                      defaultChecked
+                      sx={{
+                        '&.Mui-checked': {
+                          color: theme.palette.secondary.main,
+                        },
+                      }}
+                    />}
+                  label="PhD Thesis"
+                  labelPlacement="end"
+                  sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+                />
+                <Grid item xs={3}>
+                  <TeamInviteButton></TeamInviteButton>
+                  <InfoPanel title={help.title} description={help.description} additional={help.additional}/>
+                </Grid>
               </Grid>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
@@ -103,22 +126,6 @@ export default function Team() {
               <p>To be implemented at a later date</p>
             </CustomTabPanel>
           </Box>
-          <FormControlLabel
-            value="phdThesis"
-            control={
-              <Checkbox
-                defaultChecked
-                sx={{
-                  '&.Mui-checked': {
-                    color: theme.palette.secondary.main,
-                  },
-                }}
-              />}
-            label="PhD Thesis"
-            labelPlacement="end"
-            sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
-          />
-          <TeamInviteButton></TeamInviteButton>
         </Grid>
       </Grid>
       <Grid item>
