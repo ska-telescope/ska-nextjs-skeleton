@@ -4,20 +4,20 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
-import TitleContent from '@/components/titleContent/titleContent';
+import ObservationContent from '@/components/observationContent/observationContent';
 
 export default function Title() {
 
   return (
     <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
       <Grid item>
-        <PageBanner title="Title" addPage={true} />
+        <PageBanner title="Observation" addPage={true} />
       </Grid>
       <Grid item>
-        <TitleContent />
+        <ObservationContent />
       </Grid>
       <Grid item>
-        <PageFooter nextPageLabel='create' nextPageURL='/proposal/team' />
+        <PageFooter previousPageLabel='Back' previousPageURL='/proposal/observation' nextPageLabel='create' nextPageURL='/proposal/observation' />
       </Grid>
     </Grid>
   );
