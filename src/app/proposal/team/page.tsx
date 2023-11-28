@@ -74,20 +74,20 @@ export default function Team() {
         <Grid item>
           <DataGridWrapper rows={data.Team} extendedColumns={extendedColumns} height={400} rowClick={ClickFunction} />
         </Grid>
-        <Grid item>
+        <Grid sx={{ border: '1px solid grey' }} item>
           <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: theme.palette.secondary.main }}>
+            <Box>
               <Tabs textColor="secondary"
                 indicatorColor="secondary" value={value} onChange={handleChange} aria-label="basic tabs example">
-                <Tab label="Invite Team Member" {...a11yProps(0)} />
-                <Tab label="Import From File" {...a11yProps(1)} />
-                <Tab label="Search For Member" {...a11yProps(2)} />
+                <Tab label="Invite Team Member" {...a11yProps(0)} sx={{ border: '1px solid grey' }}/>
+                <Tab label="Import From File" {...a11yProps(1)} sx={{ border: '1px solid grey' }}/>
+                <Tab label="Search For Member" {...a11yProps(2)} sx={{ border: '1px solid grey' }}/>
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
               <Grid item>
-                <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around">
-                  <Grid item xs={6}>
+                <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around" >
+                  <Grid item xs={6} >
                     <TextEntry
                       label="First Name"
                       testId="firstName"
