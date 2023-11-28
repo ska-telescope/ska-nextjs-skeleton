@@ -19,10 +19,7 @@ export default function Team() {
   const columns = [
     { field: 'LastName', headerName: 'Last Name', width: 200 },
     { field: 'FirstName', headerName: 'First Name', width: 200 },
-    { field: 'Affiliation', headerName: 'Affiliation', width: 200 },
     { field: 'misc', headerName: 'Misc', width: 200 },
-    { field: 'bin', headerName: 'Discard', width: 200 },
-    { field: 'favourite', headerName: 'Favourite', width: 200 },
   ];
 
   const extendedColumns = structuredClone(columns);
