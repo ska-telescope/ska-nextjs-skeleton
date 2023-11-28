@@ -6,6 +6,9 @@ import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
 import { Grid, Typography, Card, CardContent, CardActionArea } from '@mui/material';
 import styles from '../../../../styles/target.module.css';
+import TargetListSection from './targetListSection';
+import TargetNoSpecificSection from './targetNoSpecificSection';
+import TargetMosaicSection from './targetMosaicSection';
 
 export default function Target() {
   const [selectedCards, setSelectedCards] = useState([
@@ -84,13 +87,13 @@ export default function Target() {
         </Grid>
         <Grid className={`${styles.contentContainer}`} container direction="column" justifyContent="flex-end" alignItems="center">
           <Grid item>
-            {selectedCards[0].isSelected && <h3>Content 1</h3>}
+            {selectedCards[0].isSelected && <TargetNoSpecificSection />}
           </Grid>
           <Grid item>
-            {selectedCards[1].isSelected && <h3>Content 2</h3>}
+            {selectedCards[1].isSelected && <TargetListSection />}
           </Grid>
           <Grid item>
-            {selectedCards[2].isSelected && <h3>Content 3</h3>}
+            {selectedCards[2].isSelected && <TargetMosaicSection />}
           </Grid>
         </Grid>
         <Grid item>
