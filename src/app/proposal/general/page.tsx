@@ -39,7 +39,7 @@ export default function General() {
             <TextEntry
               label="Abstract"
               testId="abstractId"
-              rows={5}
+              rows={10}
               value={abstract}
               setValue={setAbstract}
             />

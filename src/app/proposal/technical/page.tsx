@@ -3,10 +3,9 @@ import React from 'react';
 import 'katex/dist/katex.min.css';
 import Latex from 'react-latex-next';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
-import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska-gui-components';
 import { Box, Card, CardContent, CardHeader, Grid, IconButton, Modal, Typography } from '@mui/material';
-import PreviewPdfButton from '@/components/button/previewPdf/PreviewPdfButton'
-import UploadPdfButton from '@/components/button/uploadPdf/UploadPdfButton'
+// import PreviewPdfButton from '@/components/button/previewPdf/PreviewPdfButton'
+import UploadPdfButton from '@/components/button/uploadPdf/UploadPdfButton';
 import LatexEntry from '@/components/latexEntry/latexEntry';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
@@ -57,7 +56,7 @@ export default function Title() {
     );
   };
 
-  const updatePreview = (isOpenModal) => {
+  const updatePreview = (isOpenModal: boolean) => {
     const tex = [
       latex
     ].join('\n');
@@ -72,20 +71,19 @@ export default function Title() {
 
   return (
     <>
-    {latexModal()}
-    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
-      <Grid item>
-        <PageBanner title="Technical Justification" />
-      </Grid>
-      <Grid item>
-      <Grid container p={5} spacing={5} direction="row" justifyContent="space-evenly" >
-          <Grid item xs={6}>
+      {latexModal()}
+      <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
+        <Grid item>
+          <PageBanner title="Technical Justification" />
+        </Grid>
+        <Grid item>
+          <Grid container p={5} spacing={5} direction="row" justifyContent="space-evenly" >
+            <Grid item xs={6}>
               <Grid container direction="column" alignItems="left">
                 <Typography variant='h5'>LaTeX Input</Typography>
                 <LatexEntry value={latex} setValue={setLatex} setModal={openModal} />
                 <Grid container direction="row" justifyContent="space-between">
-                  <PreviewPdfButton
-                    onClick={()=>updatePreview(true)} />
+                  {/*<PreviewPdfButton onClick={()=>updatePreview(true)} /> */}
                   <UploadPdfButton />
                 </Grid>
               </Grid>
@@ -98,10 +96,10 @@ export default function Title() {
             </Grid>
           </Grid>
         </Grid>
-      <Grid item>
-        <PageFooter previousPageLabel='observation' previousPageURL='/proposal/observation' nextPageLabel='data' nextPageURL='/proposal/data' />
-      </Grid>
-    </Grid >
+        <Grid item>
+          <PageFooter previousPageLabel='observation' previousPageURL='/proposal/observation' nextPageLabel='data' nextPageURL='/proposal/data' />
+        </Grid>
+      </Grid >
     </>
   );
 }

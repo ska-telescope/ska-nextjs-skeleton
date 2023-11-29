@@ -5,12 +5,14 @@ import { useState } from 'react';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
 import { Grid, Typography, Card, CardContent, CardActionArea } from '@mui/material';
-import styles from '../../../../styles/target.module.css';
+import useTheme from '@mui/material/styles/useTheme';
 import TargetListSection from './targetListSection';
 import TargetNoSpecificSection from './targetNoSpecificSection';
 import TargetMosaicSection from './targetMosaicSection';
 
 export default function Target() {
+  const theme = useTheme();
+
   const [selectedCards, setSelectedCards] = useState([
     { index: 0, isSelected: false },
     { index: 1, isSelected: false },
@@ -28,6 +30,13 @@ export default function Target() {
     setSelectedCards(updatedSelectedCards);
   };
 
+  const setCardBG = (isSelected: boolean) => {
+    return isSelected ? theme.palette.secondary.main : theme.palette.primary.main;
+  };
+  const setCardFG = (isSelected: boolean) => {
+    return isSelected ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText;
+  };
+
   return (
     <Grid container direction="column" justifyContent="space-around" >
       <Grid item>
@@ -36,7 +45,9 @@ export default function Target() {
       <Grid container direction="row" alignItems="space-evenly" justifyContent="center" spacing={4}>
         <Grid item>
           <Grid item>
-            <Card sx={{ width: 275, height: 140 }} className={`${styles.card} ${selectedCards[0].isSelected && styles.selected}`}>
+            <Card sx={{ width: 275, height: 140 }}
+              style={{ color: setCardFG(selectedCards[0].isSelected), backgroundColor: setCardBG(selectedCards[0].isSelected)}}
+            >
               <CardActionArea onClick={() => handleClick(0)} sx={{ minHeight: 140 }}>
                 <CardContent>
                   <Typography variant="h5" color={() => selectedCards[0].isSelected ? 'white' : 'text.secondary'} align="center" gutterBottom>
@@ -51,7 +62,9 @@ export default function Target() {
           </Grid>
         </Grid>
         <Grid item>
-          <Card sx={{ width: 275, height: 140 }} className={`${styles.card} ${selectedCards[1].isSelected && styles.selected}`}>
+          <Card sx={{ width: 275, height: 140 }}
+            style={{ color: setCardFG(selectedCards[1].isSelected), backgroundColor: setCardBG(selectedCards[1].isSelected)}}
+          >
             <CardActionArea onClick={() => handleClick(1)} sx={{ minHeight: 140 }}>
               <CardContent>
                 <Typography variant="h5" color={() => selectedCards[1].isSelected ? 'white' : 'text.secondary'} align="center" gutterBottom>
@@ -66,7 +79,9 @@ export default function Target() {
         </Grid>
         <Grid item>
           <Grid item>
-            <Card sx={{ width: 275, height: 140 }} className={`${styles.card} ${selectedCards[2].isSelected && styles.selected}`}>
+            <Card sx={{ width: 275, height: 140 }}
+              style={{ color: setCardFG(selectedCards[2].isSelected), backgroundColor: setCardBG(selectedCards[2].isSelected)}}
+            >
               <CardActionArea onClick={() => handleClick(2)} sx={{ minHeight: 140 }}>
                 <CardContent>
                   <Typography variant="h5" color={() => selectedCards[2].isSelected ? 'white' : 'text.secondary'} align="center" gutterBottom>
@@ -82,7 +97,7 @@ export default function Target() {
         </Grid>
       </Grid>
 
-      <Grid className={`${styles.contentContainer}`} container direction="column" justifyContent="space-between" alignItems="center">
+      <Grid mt={4} container direction="column" justifyContent="space-between" alignItems="center">
         <Grid item>
           {selectedCards[0].isSelected && <TargetNoSpecificSection />}
         </Grid>

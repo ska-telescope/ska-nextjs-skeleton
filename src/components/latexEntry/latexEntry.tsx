@@ -2,9 +2,9 @@
 'use client';
 
 import React from 'react';
-import { Grid, IconButton, Tooltip, TextField } from '@mui/material';
+import { Grid, IconButton, Tooltip } from '@mui/material';
 import { TextEntry } from '@ska-telescope/ska-gui-components';
-import PreviewIcon from '@mui/icons-material/Preview';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
 interface LatexEntryProps {
   value: string;
@@ -24,7 +24,7 @@ export default function LatexEntry({value, setValue, setModal}:LatexEntryProps) 
     >
       <Grid item xs={11}>
         <TextEntry
-          label="LaTeX Input"
+          label=""
           testId="latexId"
           rows={20}
           value={value}
@@ -32,14 +32,14 @@ export default function LatexEntry({value, setValue, setModal}:LatexEntryProps) 
         />
       </Grid>
       <Grid item xs={1}>
-        <Tooltip title="LeTeX Display" arrow>
+        <Tooltip title="Preview PDF" arrow>
           <IconButton
             aria-label="DUMMY"
             sx={{ '&:hover': { backgroundColor: 'primary.dark' }, ml: 1 }}
             onClick={() => setModal ? setModal() : null}
             color="inherit"
           >
-            <PreviewIcon/>
+            <PictureAsPdfIcon/>
           </IconButton>
         </Tooltip>
       </Grid>

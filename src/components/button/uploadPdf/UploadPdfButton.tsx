@@ -11,11 +11,12 @@ export default function UploadPdfButton() {
   return (
     <Button
       ariaDescription={title + 'Button'}
-      color={ButtonColorTypes.Secondary}
+      color={ButtonColorTypes.Inherit}
       icon={<UploadFileIcon/>}
       label={title}
       testId={title + 'Button'}
       variant={ButtonVariantTypes.Contained}
+      toolTip='Eventually this will the allow the user to upload a number of PDFs. Finalized usage to be completed'
     />
   );
 }
