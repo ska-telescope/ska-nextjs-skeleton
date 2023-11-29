@@ -5,6 +5,8 @@ import { Box, Grid, Tab, Tabs, Typography, TextField } from '@mui/material';
 import DataGridWrapper from '../../../components/wrappers/dataGridWrapper/dataGridWrapper';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import theme from '../../../theme';
+import AddTargetButton from '../../../components/button/addTarget/AddTargetButton';
+import InfoPanel from '../../../components/infoPanel/infoPanel';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -84,12 +86,24 @@ export default function TargetListSection() {
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
-            <Grid container direction="column">
-              {inputs.map((input, index) => (
-                <Grid item key={index}>
-                  <TextField id="standard-basic" variant="standard" label={input.label} />
+
+
+            <Grid container direction="row" alignItems="center" justifyContent="space-evenly" spacing={2} >
+              <Grid item>
+                <Grid container direction="column" alignItems="center" justifyContent="space-evenly"  >
+                  {inputs.map((input, index) => (
+                    <Grid item key={index}>
+                      <TextField id="standard-basic" variant="standard" label={input.label} />
+                    </Grid>
+                  ))}
+                  <Grid mt={2} item >
+                    <AddTargetButton />
+                  </Grid>
                 </Grid>
-              ))}
+              </Grid>
+              <Grid item>
+                <InfoPanel title='FIELD TITLE HERE' description='FIELD DESCRIPTION IN HERE' additional='ADDITIONAL'/>
+              </Grid>
             </Grid>
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1}>
