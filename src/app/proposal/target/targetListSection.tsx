@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Grid, Tab, Tabs, Typography, TextField } from '@mui/material';
 import DataGridWrapper from '../../../components/wrappers/dataGridWrapper/dataGridWrapper';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
@@ -56,7 +56,16 @@ export default function TargetListSection() {
     setValue(newValue);
   };
 
-  const [inputs] = useState([{ value: '' }, { value: '' }, { value: '' }, { value: '' }]);
+  interface Input {
+    label: string;
+  }
+
+  const [inputs, setInputs] = useState<Input[]>([]);
+
+  useEffect(() => {
+    const newInputs = data.Targets.ListOfTargets.AddTarget.map((value:string) => ({ label: value }));
+    setInputs(newInputs);
+  }, []);
 
 
   return (
@@ -78,7 +87,7 @@ export default function TargetListSection() {
             <Grid container direction="column">
               {inputs.map((input, index) => (
                 <Grid item key={index}>
-                  <TextField id="standard-basic" label="Add text" variant="standard" />
+                  <TextField id="standard-basic" variant="standard" label={input.label} />
                 </Grid>
               ))}
             </Grid>
