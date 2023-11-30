@@ -8,13 +8,36 @@ import { Avatar, Card, CardHeader, Grid, Tooltip, Typography } from '@mui/materi
 import useTheme from '@mui/material/styles/useTheme';
 import { TextEntry } from '@ska-telescope/ska-gui-components';
 
+
 export default function TitleContent() {
   const { data } = React.useContext(DataContext);
   const theme = useTheme();
 
+  const emptyProposal = {
+    id: 0,
+    title: '',
+    code: '',
+    description: '',
+    subProjects: [
+      {
+        id: 0,
+        title: '',
+        code: '',
+        description: ''
+      }
+    ]
+  };
+
+  const emptySubProposal = {
+    id: 0,
+    title: '',
+    code: '',
+    description: ''
+  };
+
   const [theTitle, setTheTitle] = React.useState('');
-  const [theProposal, setTheProposal] = React.useState(null);
-  const [theSubProposal, setTheSubProposal] = React.useState(null);
+  const [theProposal, setTheProposal] = React.useState(emptyProposal);
+  const [theSubProposal, setTheSubProposal] = React.useState(emptySubProposal);
 
   function clickProposal(PROPOSAL: any) {
     setTheProposal(PROPOSAL);

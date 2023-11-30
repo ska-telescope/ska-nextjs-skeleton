@@ -101,7 +101,7 @@ export default function TargetListSection() {
                   alignItems="center"
                   justifyContent="space-evenly"
                 >
-                  {inputs.map((input, index) => (
+                  {inputs.map((input: { label: string }, index: React.Key | null | undefined) => (
                     <Grid item key={index}>
                       <TextField id="standard-basic" variant="standard" label={input.label} />
                     </Grid>
