@@ -9,7 +9,7 @@ interface NextPageProps {
   url?: string;
 }
 
-export default function NextPageButton({label = '', url = ''}:NextPageProps) {
+export default function NextPageButton({ label = '', url = '' }: NextPageProps) {
   const ClickFunction = () => {
     location.assign(url);
   };
@@ -18,7 +18,7 @@ export default function NextPageButton({label = '', url = ''}:NextPageProps) {
     <Button
       ariaDescription={label + 'Button'}
       color={ButtonColorTypes.Secondary}
-      icon={<ArrowForwardIosIcon/>}
+      icon={<ArrowForwardIosIcon />}
       label={label}
       onClick={ClickFunction}
       testId={label + 'Button'}

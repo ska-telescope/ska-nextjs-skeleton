@@ -5,9 +5,7 @@ import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska
 import AddIcon from '@mui/icons-material/Add';
 
 export default function AddTargetButton() {
-  const ClickFunction = () => {
-
-  };
+  const ClickFunction = () => {};
 
   const title = 'Add Target';
 
@@ -15,7 +13,7 @@ export default function AddTargetButton() {
     <Button
       ariaDescription={title + 'Button'}
       color={ButtonColorTypes.Secondary}
-      icon={<AddIcon/>}
+      icon={<AddIcon />}
       label={title}
       onClick={ClickFunction}
       testId={title + 'Button'}

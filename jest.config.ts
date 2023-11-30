@@ -35,9 +35,7 @@ const config: JestConfigWithTsJest = {
     '<rootDir>/node_modules/',
     '<rootDir>/out/',
   ],
-  coveragePathIgnorePatterns: [
-    '**/*.cy.tsx',
-  ],
+  coveragePathIgnorePatterns: ['**/*.cy.tsx'],
   testEnvironment: 'jsdom',
   transform: {
     // Use babel-jest to transpile tests with the next/babel preset

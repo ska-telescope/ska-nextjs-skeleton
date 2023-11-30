@@ -5,8 +5,7 @@ import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska
 import PublishIcon from '@mui/icons-material/Publish';
 
 export default function SaveButton() {
-  const ClickFunction = () => {
-  };
+  const ClickFunction = () => {};
 
   const title = 'Submit';
 
@@ -15,7 +14,7 @@ export default function SaveButton() {
       ariaDescription={title + 'Button'}
       color={ButtonColorTypes.Secondary}
       disabled={true}
-      icon={<PublishIcon/>}
+      icon={<PublishIcon />}
       label={title}
       onClick={ClickFunction}
       testId={title + 'Button'}

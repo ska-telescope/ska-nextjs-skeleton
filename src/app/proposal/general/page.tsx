@@ -11,7 +11,7 @@ import { Grid, Typography } from '@mui/material';
 
 export default function General() {
   const { data } = React.useContext(DataContext);
-  const DEFAULT_HELP = { title: 'Help Title', description: 'Field sensitive help', additional: ''};
+  const DEFAULT_HELP = { title: 'Help Title', description: 'Field sensitive help', additional: '' };
 
   const [abstract, setAbstract] = React.useState(data.General.Abstract);
   const [category, setCategory] = React.useState(1);
@@ -19,14 +19,14 @@ export default function General() {
   const [help] = React.useState(DEFAULT_HELP);
 
   return (
-    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
+    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around">
       <Grid item>
-        <PageBanner title="General"/>
+        <PageBanner title="General" />
       </Grid>
       <Grid item>
-        <Grid container direction="row" alignItems="center" justifyContent="center" >
+        <Grid container direction="row" alignItems="center" justifyContent="center">
           <Typography variant="body1" m={2}>
-              Cycle
+            Cycle
           </Typography>
           <Typography variant="h6" m={2}>
             <strong>{data.General.Cycle}</strong>
@@ -34,8 +34,8 @@ export default function General() {
         </Grid>
       </Grid>
       <Grid item>
-        <Grid container direction="row" alignItems="center" justifyContent="space-evenly" >
-          <Grid item xs={4} >
+        <Grid container direction="row" alignItems="center" justifyContent="space-evenly">
+          <Grid item xs={4}>
             <TextEntry
               label="Abstract"
               testId="abstractId"
@@ -44,17 +44,38 @@ export default function General() {
               setValue={setAbstract}
             />
           </Grid>
-          <Grid item xs={3} >
-            <DropDown options={data.General.ScienceCategory} testId='{tt}' value={category} setValue={setCategory} label='Scientific Category'  />
-            <DropDown options={data.General.ScienceSubCategory} testId='{tt}' value={subCategory} setValue={setSubCategory} label='Scientific sub-category'  />
+          <Grid item xs={3}>
+            <DropDown
+              options={data.General.ScienceCategory}
+              testId="{tt}"
+              value={category}
+              setValue={setCategory}
+              label="Scientific Category"
+            />
+            <DropDown
+              options={data.General.ScienceSubCategory}
+              testId="{tt}"
+              value={subCategory}
+              setValue={setSubCategory}
+              label="Scientific sub-category"
+            />
           </Grid>
           <Grid item xs={3}>
-            <InfoPanel title={help.title} description={help.description} additional={help.additional}/>
+            <InfoPanel
+              title={help.title}
+              description={help.description}
+              additional={help.additional}
+            />
           </Grid>
         </Grid>
       </Grid>
       <Grid item>
-        <PageFooter previousPageLabel='team' previousPageURL='/proposal/team' nextPageLabel='science' nextPageURL='/proposal/science' />
+        <PageFooter
+          previousPageLabel="team"
+          previousPageURL="/proposal/team"
+          nextPageLabel="science"
+          nextPageURL="/proposal/science"
+        />
       </Grid>
     </Grid>
   );

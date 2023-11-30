@@ -23,14 +23,20 @@ styled(() => {
 }));
 
 interface InfoPanelProps {
-        title: string;
-        description: string;
-        additional?: string;
-        sensCalc?: Boolean;
-        maxWidth?: number;
-      }
+  title: string;
+  description: string;
+  additional?: string;
+  sensCalc?: Boolean;
+  maxWidth?: number;
+}
 
-export default function InfoPanel({title, description, additional = '',sensCalc = false,  maxWidth = 400}:InfoPanelProps) {
+export default function InfoPanel({
+  title,
+  description,
+  additional = '',
+  sensCalc = false,
+  maxWidth = 400,
+}: InfoPanelProps) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -42,25 +48,25 @@ export default function InfoPanel({title, description, additional = '',sensCalc 
   };
 
   const getIcon = () => {
-    return additional ? <MoreVertIcon onClick={handleExpandClick}/> : sensCalc ? <CalculateIcon onClick={handleCalcClick}/> : null;
+    return additional ? (
+      <MoreVertIcon onClick={handleExpandClick} />
+    ) : sensCalc ? (
+      <CalculateIcon onClick={handleCalcClick} />
+    ) : null;
   };
 
   return (
-    <Card variant='outlined' sx={{ maxWidth: maxWidth }}>
+    <Card variant="outlined" sx={{ maxWidth: maxWidth }}>
       <CardHeader
-        title={<Typography variant='body2'>{title}</Typography>}
-        action={ getIcon() !== null &&
-          <IconButton aria-label="settings">
-            {getIcon()}
-          </IconButton>
-        }
+        title={<Typography variant="body2">{title}</Typography>}
+        action={getIcon() !== null && <IconButton aria-label="settings">{getIcon()}</IconButton>}
       />
       <CardContent>
-        <Typography variant='caption'>{description}</Typography>
+        <Typography variant="caption">{description}</Typography>
       </CardContent>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography variant='caption'>{additional}</Typography>
+          <Typography variant="caption">{additional}</Typography>
         </CardContent>
       </Collapse>
     </Card>

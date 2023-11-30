@@ -15,7 +15,7 @@ export default function AddObservationButton() {
     <Button
       ariaDescription={title + 'Button'}
       color={ButtonColorTypes.Secondary}
-      icon={<AddIcon/>}
+      icon={<AddIcon />}
       label={title}
       onClick={ClickFunction}
       testId={title + 'Button'}

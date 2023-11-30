@@ -3,24 +3,27 @@
 import React from 'react';
 import PageBanner from '@/components/layout/pageBanner/PageBanner';
 import PageFooter from '@/components/layout/pageFooter/PageFooter';
-import {Box, Checkbox, FormControlLabel, Grid, Tab, Tabs, Typography} from '@mui/material';
+import { Box, Checkbox, FormControlLabel, Grid, Tab, Tabs, Typography } from '@mui/material';
 import DataGridWrapper from '../../../components/wrappers/dataGridWrapper/dataGridWrapper';
 import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
 import theme from '../../../theme';
-import {TextEntry} from '@ska-telescope/ska-gui-components';
+import { TextEntry } from '@ska-telescope/ska-gui-components';
 import TeamInviteButton from '../../../components/button/teamInvite/TeamInviteButton';
 import InfoPanel from '../../../components/infoPanel/infoPanel';
 
 interface TabPanelProps {
-  children?: React.ReactNode;s
+  children?: React.ReactNode;
   index: number;
   value: number;
 }
 export default function Team() {
   const { data } = React.useContext(DataContext);
-  const DEFAULT_HELP = { title: 'Help Title', description: 'Field sensitive help', additional: ''};
+  const DEFAULT_HELP = { title: 'Help Title', description: 'Field sensitive help', additional: '' };
   const [help] = React.useState(DEFAULT_HELP);
 
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
+  const [email, setEmail] = React.useState('');
 
   const columns = [
     { field: 'LastName', headerName: 'Last Name', width: 200 },
@@ -30,11 +33,10 @@ export default function Team() {
 
   const extendedColumns = structuredClone(columns);
 
-  const ClickFunction = () => {
-  };
+  const ClickFunction = () => {};
 
   function CustomTabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
+    const { children, value, index } = props;
 
     return (
       <div
@@ -66,40 +68,65 @@ export default function Team() {
   };
 
   return (
-    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
+    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around">
       <Grid item>
-        <PageBanner title="Team"/>
+        <PageBanner title="Team" />
       </Grid>
       <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around">
         <Grid item>
-          <DataGridWrapper rows={data.Team} extendedColumns={extendedColumns} height={400} rowClick={ClickFunction} />
+          <DataGridWrapper
+            rows={data.Team}
+            extendedColumns={extendedColumns}
+            height={400}
+            rowClick={ClickFunction}
+          />
         </Grid>
         <Grid sx={{ border: '1px solid grey' }} item>
           <Box sx={{ width: '100%' }}>
             <Box>
-              <Tabs textColor="secondary"
-                indicatorColor="secondary" value={value} onChange={handleChange} aria-label="basic tabs example">
-                <Tab label="Invite Team Member" {...a11yProps(0)} sx={{ border: '1px solid grey' }}/>
-                <Tab label="Import From File" {...a11yProps(1)} sx={{ border: '1px solid grey' }}/>
-                <Tab label="Search For Member" {...a11yProps(2)} sx={{ border: '1px solid grey' }}/>
+              <Tabs
+                textColor="secondary"
+                indicatorColor="secondary"
+                value={value}
+                onChange={handleChange}
+                aria-label="basic tabs example"
+              >
+                <Tab
+                  label="Invite Team Member"
+                  {...a11yProps(0)}
+                  sx={{ border: '1px solid grey' }}
+                />
+                <Tab label="Import From File" {...a11yProps(1)} sx={{ border: '1px solid grey' }} />
+                <Tab
+                  label="Search For Member"
+                  {...a11yProps(2)}
+                  sx={{ border: '1px solid grey' }}
+                />
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
               <Grid item>
-                <Grid p={1} container direction="row" alignItems="space-evenly" justifyContent="space-around" >
-                  <Grid item xs={6} >
+                <Grid
+                  p={1}
+                  container
+                  direction="row"
+                  alignItems="space-evenly"
+                  justifyContent="space-around"
+                >
+                  <Grid item xs={6}>
                     <TextEntry
                       label="First Name"
                       testId="firstName"
+                      value={firstName}
+                      setValue={setFirstName}
                     />
                     <TextEntry
                       label="Last Name"
                       testId="lastName"
+                      value={lastName}
+                      setValue={setLastName}
                     />
-                    <TextEntry
-                      label="Email"
-                      testId="email"
-                    />
+                    <TextEntry label="Email" testId="email" value={email} setValue={setEmail} />
                     <FormControlLabel
                       value="phdThesis"
                       control={
@@ -110,14 +137,19 @@ export default function Team() {
                               color: theme.palette.secondary.main,
                             },
                           }}
-                        />}
+                        />
+                      }
                       label="PhD Thesis"
                       labelPlacement="end"
                       sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
                     />
                   </Grid>
                   <Grid item xs={4}>
-                    <InfoPanel title={help.title} description={help.description} additional={help.additional}/>
+                    <InfoPanel
+                      title={help.title}
+                      description={help.description}
+                      additional={help.additional}
+                    />
                   </Grid>
                 </Grid>
 
@@ -136,7 +168,12 @@ export default function Team() {
         </Grid>
       </Grid>
       <Grid item>
-        <PageFooter previousPageLabel='title' previousPageURL='/proposal/title' nextPageLabel='general' nextPageURL='/proposal/general' />
+        <PageFooter
+          previousPageLabel="title"
+          previousPageURL="/proposal/title"
+          nextPageLabel="general"
+          nextPageURL="/proposal/general"
+        />
       </Grid>
     </Grid>
   );

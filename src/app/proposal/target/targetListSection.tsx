@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Box, Grid, Tab, Tabs, Typography, TextField } from '@mui/material';
 import DataGridWrapper from '../../../components/wrappers/dataGridWrapper/dataGridWrapper';
-import { DataContext } from '@/components/layout/dataProvider/DataProvider.jsx';
+import { DataContext } from '../../../components/layout/dataProvider/DataProvider.jsx';
 import theme from '../../../theme';
 import AddTargetButton from '../../../components/button/addTarget/AddTargetButton';
 import InfoPanel from '../../../components/infoPanel/infoPanel';
@@ -23,11 +23,10 @@ export default function TargetListSection() {
   ];
   const extendedColumns = structuredClone(columns);
 
-  const ClickFunction = () => {
-  };
+  const ClickFunction = () => {};
 
   function CustomTabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
+    const { children, value, index } = props;
 
     return (
       <div
@@ -54,55 +53,70 @@ export default function TargetListSection() {
 
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
-  interface Input {
-    label: string;
-  }
-
-  const [inputs, setInputs] = useState<Input[]>([]);
-
-  useEffect(() => {
-    const newInputs = data.Targets.ListOfTargets.AddTarget.map((value:string) => ({ label: value }));
-    setInputs(newInputs);
-  }, []);
-
+  const [inputs] = React.useState(
+    data.Targets.ListOfTargets.AddTarget.map((value: string) => ({ label: value })),
+  );
 
   return (
     <Grid container direction="row" alignItems="space-evenly" justifyContent="space-evenly">
       <Grid item>
-        <DataGridWrapper rows={data.Targets.ListOfTargets.TargetItems} extendedColumns={extendedColumns} height={400} rowClick={ClickFunction} />
+        <DataGridWrapper
+          rows={data.Targets.ListOfTargets.TargetItems}
+          extendedColumns={extendedColumns}
+          height={400}
+          rowClick={ClickFunction}
+        />
       </Grid>
       <Grid item>
         <Box sx={{ width: '100%', border: '1px solid grey', borderTop: 'none' }}>
           <Box sx={{ borderBottom: 1, borderColor: theme.palette.secondary.main }}>
-            <Tabs textColor="secondary"
-              indicatorColor="secondary" value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Tabs
+              textColor="secondary"
+              indicatorColor="secondary"
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+            >
               <Tab label="Add Target" {...a11yProps(0)} sx={{ border: '1px solid grey' }} />
               <Tab label="Import From File" {...a11yProps(1)} sx={{ border: '1px solid grey' }} />
               <Tab label="Spatial Imaging" {...a11yProps(2)} sx={{ border: '1px solid grey' }} />
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
-
-
-            <Grid container direction="row" alignItems="center" justifyContent="space-evenly" spacing={2} >
+            <Grid
+              container
+              direction="row"
+              alignItems="center"
+              justifyContent="space-evenly"
+              spacing={2}
+            >
               <Grid item>
-                <Grid container direction="column" alignItems="center" justifyContent="space-evenly"  >
+                <Grid
+                  container
+                  direction="column"
+                  alignItems="center"
+                  justifyContent="space-evenly"
+                >
                   {inputs.map((input, index) => (
                     <Grid item key={index}>
                       <TextField id="standard-basic" variant="standard" label={input.label} />
                     </Grid>
                   ))}
-                  <Grid mt={2} item >
+                  <Grid mt={2} item>
                     <AddTargetButton />
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item>
-                <InfoPanel title='FIELD TITLE HERE' description='FIELD DESCRIPTION IN HERE' additional='ADDITIONAL'/>
+                <InfoPanel
+                  title="FIELD TITLE HERE"
+                  description="FIELD DESCRIPTION IN HERE"
+                  additional="ADDITIONAL"
+                />
               </Grid>
             </Grid>
           </CustomTabPanel>
@@ -116,5 +130,4 @@ export default function TargetListSection() {
       </Grid>
     </Grid>
   );
-
 }

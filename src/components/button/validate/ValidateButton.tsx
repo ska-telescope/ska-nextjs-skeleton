@@ -5,8 +5,7 @@ import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska
 import FactCheckIcon from '@mui/icons-material/FactCheck';
 
 export default function ValidateButton() {
-  const ClickFunction = () => {
-  };
+  const ClickFunction = () => {};
 
   const title = 'Validate';
 
@@ -14,7 +13,7 @@ export default function ValidateButton() {
     <Button
       ariaDescription={title + 'Button'}
       color={ButtonColorTypes.Secondary}
-      icon={<FactCheckIcon/>}
+      icon={<FactCheckIcon />}
       label={title}
       onClick={ClickFunction}
       testId={title + 'Button'}

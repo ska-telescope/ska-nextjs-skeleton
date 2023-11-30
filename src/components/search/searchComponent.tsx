@@ -7,13 +7,18 @@ interface SearchProps {
   value: string;
   // eslint-disable-next-line @typescript-eslint/ban-types
   setValue?: Function;
-
 }
 
-export default function SearchComponent({value, setValue }:SearchProps) {
-
+export default function SearchComponent({ value, setValue }: SearchProps) {
   return (
-    <Grid p={1} spacing={2} container direction="row" alignItems="center" justifyContent="flex-start">
+    <Grid
+      p={1}
+      spacing={2}
+      container
+      direction="row"
+      alignItems="center"
+      justifyContent="flex-start"
+    >
       <Grid mt={3} item xs={1}>
         <IconButton>
           <SearchIcon />
@@ -30,4 +35,4 @@ export default function SearchComponent({value, setValue }:SearchProps) {
       </Grid>
     </Grid>
   );
-};
+}

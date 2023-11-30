@@ -5,8 +5,7 @@ import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska
 import SaveIcon from '@mui/icons-material/Save';
 
 export default function SaveButton() {
-  const ClickFunction = () => {
-  };
+  const ClickFunction = () => {};
 
   const title = 'Save';
 
@@ -14,7 +13,7 @@ export default function SaveButton() {
     <Button
       ariaDescription={title + 'Button'}
       color={ButtonColorTypes.Secondary}
-      icon={<SaveIcon/>}
+      icon={<SaveIcon />}
       label={title}
       onClick={ClickFunction}
       testId={title + 'Button'}

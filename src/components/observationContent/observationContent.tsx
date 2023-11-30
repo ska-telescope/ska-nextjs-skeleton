@@ -30,25 +30,58 @@ export default function TitleContent() {
 
   return (
     <>
-      <Card variant='outlined' sx={{ border: 'none' }}>
+      <Card variant="outlined" sx={{ border: 'none' }}>
         <CardContent>
-          <Grid container direction="row" alignItems="center" justifyContent="space-evenly" spacing={2} >
-            <Grid item xs={2} >
-              <Grid container direction="column" alignItems="center" justifyContent="space-evenly"  >
-                <DropDown options={data.Observation.array} testId='{tt}' value={array} setValue={setArray} label='Array Configuration'  />
-                {array && <DropDown options={data.Observation.array[arrNum].subarray} testId='{tt}' value={subarray} setValue={setSubarray} label='Subarray Configuration'  />}
+          <Grid
+            container
+            direction="row"
+            alignItems="center"
+            justifyContent="space-evenly"
+            spacing={2}
+          >
+            <Grid item xs={2}>
+              <Grid container direction="column" alignItems="center" justifyContent="space-evenly">
+                <DropDown
+                  options={data.Observation.array}
+                  testId="{tt}"
+                  value={array}
+                  setValue={setArray}
+                  label="Array Configuration"
+                />
+                {array && (
+                  <DropDown
+                    options={data.Observation.array[arrNum].subarray}
+                    testId="{tt}"
+                    value={subarray}
+                    setValue={setSubarray}
+                    label="Subarray Configuration"
+                  />
+                )}
               </Grid>
             </Grid>
 
-            <Grid item xs={2} >
-              <Grid container direction="column" alignItems="center" justifyContent="flex-start"  >
-                {array &&  data.Observation.array[arrNum].band && <DropDown options={data.Observation.array[arrNum].band} testId='{tt}' value={band} setValue={setBand} label='Observing Band'  />}
+            <Grid item xs={2}>
+              <Grid container direction="column" alignItems="center" justifyContent="flex-start">
+                {array && data.Observation.array[arrNum].band && (
+                  <DropDown
+                    options={data.Observation.array[arrNum].band}
+                    testId="{tt}"
+                    value={band}
+                    setValue={setBand}
+                    label="Observing Band"
+                  />
+                )}
                 <Grid item />
               </Grid>
             </Grid>
 
-            <Grid item xs={4} >
-              <Grid container direction="column" alignItems="flex-start" justifyContent="space-evenly"  >
+            <Grid item xs={4}>
+              <Grid
+                container
+                direction="column"
+                alignItems="flex-start"
+                justifyContent="space-evenly"
+              >
                 <TextEntry
                   label="Elevation"
                   testId="elevationId"
@@ -63,36 +96,83 @@ export default function TitleContent() {
                 />
               </Grid>
             </Grid>
-            <Grid item xs={1}/>
-            <Grid item xs={3} >
-              <InfoPanel title='FIELD TITLE HERE' description='FIELD DESCRIPTION IN HERE' additional='ADDITIONAL'/>
+            <Grid item xs={1} />
+            <Grid item xs={3}>
+              <InfoPanel
+                title="FIELD TITLE HERE"
+                description="FIELD DESCRIPTION IN HERE"
+                additional="ADDITIONAL"
+              />
             </Grid>
           </Grid>
         </CardContent>
       </Card>
-      <Card variant='outlined'>
+      <Card variant="outlined">
         <CardContent>
-          <Grid container direction="row" alignItems="center" justifyContent="space-evenly" spacing={2} >
-            <Grid item xs={2} >
-              <Grid container direction="column" alignItems="center" justifyContent="space-evenly"  >
-                <DropDown options={data.Observation.ObservationType} testId='{tt}' value={obType} setValue={setObType} label='Observation Type'  />
-                <DropDown options={data.Observation.ImageWeighting} testId='{tt}' value={tapering} setValue={setTapering} label='Tapering'  />
+          <Grid
+            container
+            direction="row"
+            alignItems="center"
+            justifyContent="space-evenly"
+            spacing={2}
+          >
+            <Grid item xs={2}>
+              <Grid container direction="column" alignItems="center" justifyContent="space-evenly">
+                <DropDown
+                  options={data.Observation.ObservationType}
+                  testId="{tt}"
+                  value={obType}
+                  setValue={setObType}
+                  label="Observation Type"
+                />
+                <DropDown
+                  options={data.Observation.ImageWeighting}
+                  testId="{tt}"
+                  value={tapering}
+                  setValue={setTapering}
+                  label="Tapering"
+                />
               </Grid>
             </Grid>
-            <Grid item xs={2} >
-              <Grid container direction="column" alignItems="center" justifyContent="space-evenly"  >
-                <DropDown options={data.Observation.ImageWeighting} testId='{tt}' value={weighting} setValue={setWeighting} label='Image Weighting'  />
-                <DropDown options={data.Observation.ImageWeighting} testId='{tt}' value={bandwidth} setValue={setBandwidth} label='Bandwidth'  />
-            `</Grid>
-            </Grid>
-            <Grid item xs={2} >
-              <Grid container direction="column" alignItems="center" justifyContent="space-evenly"  >
-                <DropDown options={data.Observation.ImageWeighting} testId='{tt}' value={sensitivity} setValue={setSensitivity} label='Sensitivity'  />
-                <DropDown options={data.Observation.ImageWeighting} testId='{tt}' value={robust} setValue={setRobust} label='Robust Value'  />
+            <Grid item xs={2}>
+              <Grid container direction="column" alignItems="center" justifyContent="space-evenly">
+                <DropDown
+                  options={data.Observation.ImageWeighting}
+                  testId="{tt}"
+                  value={weighting}
+                  setValue={setWeighting}
+                  label="Image Weighting"
+                />
+                <DropDown
+                  options={data.Observation.ImageWeighting}
+                  testId="{tt}"
+                  value={bandwidth}
+                  setValue={setBandwidth}
+                  label="Bandwidth"
+                />
+                `
               </Grid>
             </Grid>
-            <Grid item xs={2} >
-              <Grid container direction="column" alignItems="center" justifyContent="space-evenly"  >
+            <Grid item xs={2}>
+              <Grid container direction="column" alignItems="center" justifyContent="space-evenly">
+                <DropDown
+                  options={data.Observation.ImageWeighting}
+                  testId="{tt}"
+                  value={sensitivity}
+                  setValue={setSensitivity}
+                  label="Sensitivity"
+                />
+                <DropDown
+                  options={data.Observation.ImageWeighting}
+                  testId="{tt}"
+                  value={robust}
+                  setValue={setRobust}
+                  label="Robust Value"
+                />
+              </Grid>
+            </Grid>
+            <Grid item xs={2}>
+              <Grid container direction="column" alignItems="center" justifyContent="space-evenly">
                 <TextEntry
                   label={sensitivity ? sensitivity.toString() : 'unknown'}
                   testId="frequencyId"
@@ -105,12 +185,22 @@ export default function TitleContent() {
                   value={frequency}
                   setValue={setFrequency}
                 />
-                <DropDown options={data.Observation.ImageWeighting} testId='{tt}' value={averaging} setValue={setAveraging} label='Spectral Averaging'  />
+                <DropDown
+                  options={data.Observation.ImageWeighting}
+                  testId="{tt}"
+                  value={averaging}
+                  setValue={setAveraging}
+                  label="Spectral Averaging"
+                />
               </Grid>
             </Grid>
-            <Grid item xs={1}/>
-            <Grid item xs={3} >
-              <InfoPanel title='Sensitivity Calculator' description='Sensitivity Calculator description in here' sensCalc={true}/>
+            <Grid item xs={1} />
+            <Grid item xs={3}>
+              <InfoPanel
+                title="Sensitivity Calculator"
+                description="Sensitivity Calculator description in here"
+                sensCalc={true}
+              />
             </Grid>
           </Grid>
         </CardContent>

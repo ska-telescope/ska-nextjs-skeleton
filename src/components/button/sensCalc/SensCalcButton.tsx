@@ -15,7 +15,7 @@ export default function SensCalcButton() {
     <Button
       ariaDescription={title + 'Button'}
       color={ButtonColorTypes.Inherit}
-      icon={<CalculateIcon/>}
+      icon={<CalculateIcon />}
       label={title}
       onClick={ClickFunction}
       testId={title + 'Button'}

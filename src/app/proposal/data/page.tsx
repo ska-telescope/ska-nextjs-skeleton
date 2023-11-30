@@ -10,14 +10,14 @@ import styles from './datapage.module.css';
 export default function Data() {
   const [theTitle, setTheTitle] = React.useState('');
   return (
-    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
+    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around">
       <Grid item>
-        <PageBanner title="Data"/>
+        <PageBanner title="Data" />
       </Grid>
       <div className={styles.container}>
         <Typography variant="h6" m={2}>
           <div className={styles.level1}>
-          SDP
+            SDP
             <Grid item xs={3}>
               <TextEntry
                 label="Pipeline"
@@ -27,15 +27,12 @@ export default function Data() {
               />
             </Grid>
           </div>
-          <div className={styles.level1}>
-          SRC NET
-          </div>
+          <div className={styles.level1}>SRC NET</div>
         </Typography>
       </div>
       <Grid item>
-        <PageFooter previousPageLabel='technical' previousPageURL='/proposal/technical' />
+        <PageFooter previousPageLabel="technical" previousPageURL="/proposal/technical" />
       </Grid>
     </Grid>
   );
 }
-

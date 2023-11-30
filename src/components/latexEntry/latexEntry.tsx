@@ -10,36 +10,23 @@ interface LatexEntryProps {
   value: string;
   setValue?: Function;
   setModal?: Function;
-
 }
 
-export default function LatexEntry({value, setValue, setModal}:LatexEntryProps) {
-
+export default function LatexEntry({ value, setValue, setModal }: LatexEntryProps) {
   return (
-    <Grid
-      container
-      direction="row"
-      alignItems="flex-start"
-      justifyContent="space-evenly"
-    >
+    <Grid container direction="row" alignItems="flex-start" justifyContent="space-evenly">
       <Grid item xs={11}>
-        <TextEntry
-          label=""
-          testId="latexId"
-          rows={20}
-          value={value}
-          setValue={setValue}
-        />
+        <TextEntry label="" testId="latexId" rows={20} value={value} setValue={setValue} />
       </Grid>
       <Grid item xs={1}>
         <Tooltip title="Preview PDF" arrow>
           <IconButton
             aria-label="DUMMY"
             sx={{ '&:hover': { backgroundColor: 'primary.dark' }, ml: 1 }}
-            onClick={() => setModal ? setModal() : null}
+            onClick={() => (setModal ? setModal() : null)}
             color="inherit"
           >
-            <PictureAsPdfIcon/>
+            <PictureAsPdfIcon />
           </IconButton>
         </Tooltip>
       </Grid>

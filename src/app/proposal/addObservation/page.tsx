@@ -7,9 +7,8 @@ import PageFooter from '@/components/layout/pageFooter/PageFooter';
 import ObservationContent from '@/components/observationContent/observationContent';
 
 export default function Title() {
-
   return (
-    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
+    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around">
       <Grid item>
         <PageBanner title="Observation" addPage={true} />
       </Grid>
@@ -17,7 +16,12 @@ export default function Title() {
         <ObservationContent />
       </Grid>
       <Grid item>
-        <PageFooter previousPageLabel='Back' previousPageURL='/proposal/observation' nextPageLabel='create' nextPageURL='/proposal/observation' />
+        <PageFooter
+          previousPageLabel="Back"
+          previousPageURL="/proposal/observation"
+          nextPageLabel="create"
+          nextPageURL="/proposal/observation"
+        />
       </Grid>
     </Grid>
   );

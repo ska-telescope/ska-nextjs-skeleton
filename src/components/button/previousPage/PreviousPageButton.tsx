@@ -9,7 +9,7 @@ interface PreviousPageProps {
   url?: string;
 }
 
-export default function PreviousPageButton({label = '', url = ''}:PreviousPageProps) {
+export default function PreviousPageButton({ label = '', url = '' }: PreviousPageProps) {
   const ClickFunction = () => {
     location.assign(url);
   };
@@ -18,7 +18,7 @@ export default function PreviousPageButton({label = '', url = ''}:PreviousPagePr
     <Button
       ariaDescription={label + 'Button'}
       color={ButtonColorTypes.Inherit}
-      icon={<ArrowBackIosIcon/>}
+      icon={<ArrowBackIosIcon />}
       label={label}
       onClick={ClickFunction}
       testId={label + 'Button'}

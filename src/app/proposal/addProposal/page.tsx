@@ -7,9 +7,8 @@ import PageFooter from '@/components/layout/pageFooter/PageFooter';
 import TitleContent from '@/components/titleContent/titleContent';
 
 export default function Title() {
-
   return (
-    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around" >
+    <Grid container direction="column" alignItems="space-evenly" justifyContent="space-around">
       <Grid item>
         <PageBanner title="Title" addPage={true} />
       </Grid>
@@ -17,7 +16,7 @@ export default function Title() {
         <TitleContent />
       </Grid>
       <Grid item>
-        <PageFooter nextPageLabel='create' nextPageURL='/proposal/team' />
+        <PageFooter nextPageLabel="create" nextPageURL="/proposal/team" />
       </Grid>
     </Grid>
   );

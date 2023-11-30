@@ -3,8 +3,7 @@
 import React from 'react';
 import { Button, ButtonColorTypes, ButtonVariantTypes } from '@ska-telescope/ska-gui-components';
 
-export default function PreviewPdfButton({onClick}) {
-
+export default function PreviewPdfButton({ onClick }) {
   const title = 'Preview PDF';
 
   return (

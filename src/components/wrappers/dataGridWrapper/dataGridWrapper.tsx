@@ -4,15 +4,19 @@ import React from 'react';
 import { DataGrid } from '@ska-telescope/ska-gui-components';
 
 interface DataGridWrapperProps {
-    rows: any;
-    extendedColumns: any;
-    height: number;
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    rowClick: Function;
-  }
+  rows: any;
+  extendedColumns: any;
+  height: number;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  rowClick: Function;
+}
 
-export default function DataGridWrapper({rows, extendedColumns, height, rowClick}:DataGridWrapperProps) {
-
+export default function DataGridWrapper({
+  rows,
+  extendedColumns,
+  height,
+  rowClick,
+}: DataGridWrapperProps) {
   return (
     <DataGrid
       testId={rows}

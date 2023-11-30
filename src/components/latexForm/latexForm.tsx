@@ -7,20 +7,14 @@ import { TextEntry } from '@ska-telescope/ska-gui-components';
 import 'katex/dist/katex.min.css';
 import Latex from 'react-latex-next';
 
-
 export default function LatexForm() {
-  const DEFAULT_LATEX = 'We give illustrations for the three processes $e^+e^-$, gluon-gluon and $\\gamma\\gamma \\to W t\\bar b$.';
+  const DEFAULT_LATEX =
+    'We give illustrations for the three processes $e^+e^-$, gluon-gluon and $\\gamma\\gamma \\to W t\\bar b$.';
   const BOX_WIDTH = '50%';
   const [latex, setLatex] = React.useState(DEFAULT_LATEX);
 
-
   return (
-    <Grid
-      container
-      direction="row"
-      alignItems="center"
-      justifyContent="space-evenly"
-    >
+    <Grid container direction="row" alignItems="center" justifyContent="space-evenly">
       <Box m={1} sx={{ width: BOX_WIDTH }}>
         <TextEntry
           label="Latex Input"

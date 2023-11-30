@@ -15,7 +15,7 @@ export default function HomeButton() {
     <Button
       ariaDescription={title + 'Button'}
       color={ButtonColorTypes.Inherit}
-      icon={<HomeIcon/>}
+      icon={<HomeIcon />}
       label={title}
       onClick={ClickFunction}
       testId={title + 'Button'}

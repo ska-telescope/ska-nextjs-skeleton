@@ -29,7 +29,7 @@ export default function Home() {
     { field: 'pi', headerName: 'PI', width: 200 },
     { field: 'status', headerName: 'Status', width: 200 },
     { field: 'lastUpdated', headerName: 'Last Updated', width: 200 },
-    { field: 'Actions', headerName: 'Actions', width: 200 }
+    { field: 'Actions', headerName: 'Actions', width: 200 },
   ];
   const extendedColumns = structuredClone(columns);
 
@@ -46,16 +46,30 @@ export default function Home() {
     <Container disableGutters={true} maxWidth="xl">
       <Grid p={1} container direction="column" alignItems="center" justifyContent="space-around">
         <Typography variant="h5">
-          Proposals where you have either participated as a Co-Investigator or as a Principal Investigator.
+          Proposals where you have either participated as a Co-Investigator or as a Principal
+          Investigator.
         </Typography>
       </Grid>
 
-      <Grid p={1} spacing={2} container direction="row" alignItems="center" justifyContent="flex-start">
-        <Grid item xs={2} >
+      <Grid
+        p={1}
+        spacing={2}
+        container
+        direction="row"
+        alignItems="center"
+        justifyContent="flex-start"
+      >
+        <Grid item xs={2}>
           <AddProposalButton />
         </Grid>
         <Grid item xs={2}>
-          <DropDown options={options} testId='{tt}' value={searchType} setValue={setSearchType} label='All Status Types'  />
+          <DropDown
+            options={options}
+            testId="{tt}"
+            value={searchType}
+            setValue={setSearchType}
+            label="All Status Types"
+          />
         </Grid>
         <Grid item xs={4}>
           {/* <DropdownComponent options={options} onSelect={handleSelection} label="Choose an option" /> */}
@@ -64,7 +78,12 @@ export default function Home() {
       </Grid>
 
       <Grid p={1} container direction="column" alignItems="flex-left" justifyContent="space-around">
-        <DataGridWrapper rows={data.ExistingProposal} extendedColumns={extendedColumns} height={500} rowClick={ClickFunction} />
+        <DataGridWrapper
+          rows={data.ExistingProposal}
+          extendedColumns={extendedColumns}
+          height={500}
+          rowClick={ClickFunction}
+        />
       </Grid>
     </Container>
   );

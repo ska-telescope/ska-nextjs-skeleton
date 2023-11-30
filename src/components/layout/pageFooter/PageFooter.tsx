@@ -12,12 +12,28 @@ interface PageFooterProps {
   nextPageURL?: string;
 }
 
-export default function PageFooter({previousPageLabel = '', previousPageURL, nextPageLabel = '', nextPageURL,}:PageFooterProps) {
+export default function PageFooter({
+  previousPageLabel = '',
+  previousPageURL,
+  nextPageLabel = '',
+  nextPageURL,
+}: PageFooterProps) {
   return (
-    <Paper sx={{ bgcolor: 'transparent', position: 'fixed', bottom: 30, left: 0, right: 0 }} elevation={0}>
-      <Grid p={1} container direction="row" alignItems="space-between" justifyContent="space-between">
+    <Paper
+      sx={{ bgcolor: 'transparent', position: 'fixed', bottom: 30, left: 0, right: 0 }}
+      elevation={0}
+    >
+      <Grid
+        p={1}
+        container
+        direction="row"
+        alignItems="space-between"
+        justifyContent="space-between"
+      >
         <Grid item>
-          {previousPageLabel?.length > 0 && <PreviousPageButton label={previousPageLabel} url={previousPageURL} />}
+          {previousPageLabel?.length > 0 && (
+            <PreviousPageButton label={previousPageLabel} url={previousPageURL} />
+          )}
         </Grid>
         <Grid item></Grid>
         <Grid item>
